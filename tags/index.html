@@ -34,7 +34,7 @@
     <header id="header" class="inner">
         <a href="/" class="profilepic">
             
-            <img lazy-src="/img/avatar.png" class="js-avatar">
+            <img lazy-src="/img/apple-touch-icon.png" class="js-avatar">
             
         </a>
 
@@ -42,6 +42,8 @@
           <h1 class="header-author"><a href="/">粽小喵</a></h1>
         </hgroup>
 
+        
+        <p class="header-subtitle">产品经理|专栏作者|猫奴</p>
         
                 
 
@@ -107,9 +109,9 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <li id="Email"><a class="Email" target="_blank" href="mailto:123@123.com" title="Email"></a></li>
+                                <li id="Email"><a class="Email" target="_blank" href="/nora93@sina.com" title="Email"></a></li>
                             
-                                <li id="GitHub"><a class="GitHub" target="_blank" href="/#" title="GitHub"></a></li>
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/anne93/anne93.github.io" title="GitHub"></a></li>
                             
                                 <li id="RSS"><a class="RSS" target="_blank" href="/atom.xml" title="RSS"></a></li>
                             
@@ -129,11 +131,11 @@
                 <section class="switch-part switch-part3">
                     <div id="js-friends">
                     
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.woshipm.com/author/tutti93">人人都是产品经理</a>
                     
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.jianshu.com/users/e0695d7614af/latest_articles">简书专栏</a>
                     
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.mojiax.com/user?uid=%E7%B2%BD%E5%B0%8F%E5%96%B5">墨加专栏</a>
                     
                     </div>
                 </section>
@@ -160,11 +162,13 @@
     <div class="intrude-less">
         <header id="header" class="inner">
             <a href="/" class="profilepic">
-                <img lazy-src="/img/avatar.png" class="js-avatar">
+                <img lazy-src="/img/apple-touch-icon.png" class="js-avatar">
             </a>
             <hgroup>
               <h1 class="header-author"><a href="/" title="回到主页">粽小喵</a></h1>
             </hgroup>
+            
+            <p class="header-subtitle">产品经理|专栏作者|猫奴</p>
             
             <nav class="header-menu">
                 <ul>
@@ -183,9 +187,9 @@
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <li id="Email"><a class="Email" target="_blank" href="mailto:123@123.com" title="Email"></a></li>
+                                <li id="Email"><a class="Email" target="_blank" href="/nora93@sina.com" title="Email"></a></li>
                             
-                                <li id="GitHub"><a class="GitHub" target="_blank" href="/#" title="GitHub"></a></li>
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/anne93/anne93.github.io" title="GitHub"></a></li>
                             
                                 <li id="RSS"><a class="RSS" target="_blank" href="/atom.xml" title="RSS"></a></li>
                             
@@ -414,21 +418,30 @@
 <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="/js/main.js" type="text/javascript"></script>
 
-    <script>
-        $(document).ready(function() {
-            var iPad = window.navigator.userAgent.indexOf('iPad');
-            if (iPad > -1 || $(".left-col").css("display") === "none") {
-                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
-                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
-                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
-            }
-            else {
-                var backgroundnum = 5;
-                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
-            }
-        })
-    </script>
+    <style>
+        body {
+          background: lightgray;
+        }
+        #container .left-col {
+          background: white;
+        }
+        .article-inner {
+          background: white;
+          margin-bottom: 1em;
+        }
+        .post-nav-button {
+          background: #ececec;
+        }
+        #header .header-nav .social #GitHub {
+          background-color: #bfd3ec;
+        }
+        #post-nav-button a {
+          background: rgba(215, 216, 215, .2);
+        }
+        .post-list {
+          background: white;
+        }
+    </style>
 
 
 
