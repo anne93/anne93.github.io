@@ -197,8 +197,8 @@
     <article id="post-用户体验作为一种方法论" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/06/用户体验作为一种方法论/" class="article-date">
-      <time datetime="2016-01-06T15:52:43.000Z" itemprop="datePublished">2016-01-06</time>
+      <a href="/2016/01/07/用户体验作为一种方法论/" class="article-date">
+      <time datetime="2016-01-06T16:00:30.000Z" itemprop="datePublished">2016-01-07</time>
 </a>
     </div>
   
@@ -211,7 +211,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/06/用户体验作为一种方法论/">用户体验作为一种方法论</a>
+      <a class="article-title" href="/2016/01/07/用户体验作为一种方法论/">用户体验作为一种方法论</a>
     </h1>
   
 
@@ -235,7 +235,7 @@
       
       
         <p class="article-more-link">
-          <a  href="/2016/01/06/用户体验作为一种方法论/#more">more >></a>
+          <a  href="/2016/01/07/用户体验作为一种方法论/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -391,30 +391,21 @@
 <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="/js/main.js" type="text/javascript"></script>
 
-    <style>
-        body {
-          background: lightgray;
-        }
-        #container .left-col {
-          background: white;
-        }
-        .article-inner {
-          background: white;
-          margin-bottom: 1em;
-        }
-        .post-nav-button {
-          background: #ececec;
-        }
-        #header .header-nav .social #GitHub {
-          background-color: #bfd3ec;
-        }
-        #post-nav-button a {
-          background: rgba(215, 216, 215, .2);
-        }
-        .post-list {
-          background: white;
-        }
-    </style>
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
 
 
 
