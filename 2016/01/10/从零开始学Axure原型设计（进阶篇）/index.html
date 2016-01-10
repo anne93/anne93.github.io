@@ -3,34 +3,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>从零开始学Sketch——进阶篇 | 粽小喵</title>
+  <title>从零开始学Axure原型设计（进阶篇） | 粽小喵</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Sketch是一款矢量绘图应用，而矢量绘图无疑是目前进行网页、图标以及界面设计的最好方式。
-在初识了Sketch的界面布局和基础工具之后，我们就可以开始进入高阶的Sketch工具篇学习了。这篇文章主要会涉及Sketch模板、插件的使用，以及Sketch在具体使用过程中的一些技巧分享。
-如果你曾接触过PS、AI、Axure等软件，那么接下来的内容你应该不会陌生，因为所有的设计软件学习的路径都是相似的">
+  <meta name="description" content="Axure不仅能制作静态的视觉稿、页面，还能添加交互动作，是进行原型设计的最佳软件之一。在认识了Axure的界面和部件库之后，我们可以用它来画线框图了，但是静态的线框图在表达上不如有交互的原型图来得直观。
+Axure进阶篇中将会介绍什么是交互，如何玩转Axure中最频繁使用的动态面板部件，做出狂拽炫酷的交互效果。另外，还会介绍母版（主要是触发事件）的使用。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从零开始学Sketch——进阶篇">
-<meta property="og:url" content="http://zongxiaomiao.com/2016/01/08/从零开始学Sketch——进阶篇/index.html">
+<meta property="og:title" content="从零开始学Axure原型设计（进阶篇）">
+<meta property="og:url" content="http://zongxiaomiao.com/2016/01/10/从零开始学Axure原型设计（进阶篇）/index.html">
 <meta property="og:site_name" content="粽小喵">
-<meta property="og:description" content="Sketch是一款矢量绘图应用，而矢量绘图无疑是目前进行网页、图标以及界面设计的最好方式。
-在初识了Sketch的界面布局和基础工具之后，我们就可以开始进入高阶的Sketch工具篇学习了。这篇文章主要会涉及Sketch模板、插件的使用，以及Sketch在具体使用过程中的一些技巧分享。
-如果你曾接触过PS、AI、Axure等软件，那么接下来的内容你应该不会陌生，因为所有的设计软件学习的路径都是相似的">
-<meta property="og:image" content="http://image.woshipm.com/wp-files/2016/01/1209576-1f47b58bb3fb2cbf.png">
-<meta property="og:image" content="http://image.woshipm.com/wp-files/2016/01/1209576-5fd96b100396d2d5.png">
-<meta property="og:image" content="http://image.woshipm.com/wp-files/2016/01/1209576-f10894f2ac4a2f5b.png">
-<meta property="og:image" content="http://image.woshipm.com/wp-files/2016/01/1209576-fe6547134a19f17c.png">
-<meta property="og:image" content="http://image.woshipm.com/wp-files/2016/01/1209576-23421d9b0b977a15.gif">
-<meta property="og:image" content="http://image.woshipm.com/wp-files/2016/01/1209576-1430738a8c2d982a.png">
-<meta property="og:image" content="http://image.woshipm.com/wp-files/2016/01/1209576-851c2016319479d5.png">
-<meta property="og:image" content="http://image.woshipm.com/wp-files/2016/01/1209576-de6b317368e0133b.png">
-<meta property="og:image" content="http://image.woshipm.com/wp-files/2016/01/1209576-a122a31254cc5260-3.png">
-<meta property="og:image" content="http://image.woshipm.com/wp-files/2016/01/1209576-e605cc5124525b5e.png">
-<meta property="og:updated_time" content="2016-01-09T06:17:42.000Z">
+<meta property="og:description" content="Axure不仅能制作静态的视觉稿、页面，还能添加交互动作，是进行原型设计的最佳软件之一。在认识了Axure的界面和部件库之后，我们可以用它来画线框图了，但是静态的线框图在表达上不如有交互的原型图来得直观。
+Axure进阶篇中将会介绍什么是交互，如何玩转Axure中最频繁使用的动态面板部件，做出狂拽炫酷的交互效果。另外，还会介绍母版（主要是触发事件）的使用。">
+<meta property="og:image" content="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160110%2F569237927886a.jpg">
+<meta property="og:image" content="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160110%2F5692379300601.jpg">
+<meta property="og:image" content="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160110%2F56923793a44d0.jpg">
+<meta property="og:image" content="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160110%2F56923794e4da3.jpg">
+<meta property="og:image" content="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160110%2F56923795edb84.jpg">
+<meta property="og:updated_time" content="2016-01-10T10:57:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从零开始学Sketch——进阶篇">
-<meta name="twitter:description" content="Sketch是一款矢量绘图应用，而矢量绘图无疑是目前进行网页、图标以及界面设计的最好方式。
-在初识了Sketch的界面布局和基础工具之后，我们就可以开始进入高阶的Sketch工具篇学习了。这篇文章主要会涉及Sketch模板、插件的使用，以及Sketch在具体使用过程中的一些技巧分享。
-如果你曾接触过PS、AI、Axure等软件，那么接下来的内容你应该不会陌生，因为所有的设计软件学习的路径都是相似的">
+<meta name="twitter:title" content="从零开始学Axure原型设计（进阶篇）">
+<meta name="twitter:description" content="Axure不仅能制作静态的视觉稿、页面，还能添加交互动作，是进行原型设计的最佳软件之一。在认识了Axure的界面和部件库之后，我们可以用它来画线框图了，但是静态的线框图在表达上不如有交互的原型图来得直观。
+Axure进阶篇中将会介绍什么是交互，如何玩转Axure中最频繁使用的动态面板部件，做出狂拽炫酷的交互效果。另外，还会介绍母版（主要是触发事件）的使用。">
   
     <link rel="alternative" href="/atom.xml" title="粽小喵" type="application/atom+xml">
   
@@ -217,11 +209,11 @@ var _hmt = _hmt || [];
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-从零开始学Sketch——进阶篇" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-从零开始学Axure原型设计（进阶篇）" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/08/从零开始学Sketch——进阶篇/" class="article-date">
-      <time datetime="2016-01-08T13:33:22.000Z" itemprop="datePublished">2016-01-08</time>
+      <a href="/2016/01/10/从零开始学Axure原型设计（进阶篇）/" class="article-date">
+      <time datetime="2016-01-10T10:53:02.000Z" itemprop="datePublished">2016-01-10</time>
 </a>
     </div>
   
@@ -234,7 +226,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      从零开始学Sketch——进阶篇
+      从零开始学Axure原型设计（进阶篇）
     </h1>
   
 
@@ -249,7 +241,7 @@ var _hmt = _hmt || [];
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sketch/">Sketch</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型/">原型</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Axure/">Axure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型/">原型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -258,79 +250,94 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Sketch是一款矢量绘图应用，而矢量绘图无疑是目前进行网页、图标以及界面设计的最好方式。</p>
-<p>在初识了Sketch的界面布局和基础工具之后，我们就可以开始进入高阶的Sketch工具篇学习了。这篇文章主要会涉及Sketch模板、插件的使用，以及Sketch在具体使用过程中的一些技巧分享。</p>
-<p>如果你曾接触过PS、AI、Axure等软件，那么接下来的内容你应该不会陌生，因为所有的设计软件学习的路径都是相似的，都是从认识基本功能框架到外部资源整合运用，最终形成个人风格的一个过程。</p>
+        <p>Axure不仅能制作静态的视觉稿、页面，还能添加交互动作，是进行原型设计的最佳软件之一。在认识了Axure的界面和部件库之后，我们可以用它来画线框图了，但是静态的线框图在表达上不如有交互的原型图来得直观。</p>
+<p>Axure进阶篇中将会介绍什么是交互，如何玩转Axure中最频繁使用的动态面板部件，做出狂拽炫酷的交互效果。另外，还会介绍母版（主要是触发事件）的使用。</p>
 <a id="more"></a>
-<h2 id="Sketch_u6A21_u677F"><a href="#Sketch_u6A21_u677F" class="headerlink" title="Sketch模板"></a>Sketch模板</h2><h3 id="Sketch_u81EA_u5E26_u6A21_u677F"><a href="#Sketch_u81EA_u5E26_u6A21_u677F" class="headerlink" title="Sketch自带模板"></a>Sketch自带模板</h3><p>Sketch自带模板也就是Sketch在file菜单栏下的template。</p>
-<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-1f47b58bb3fb2cbf.png" alt="1209576-1f47b58bb3fb2cbf"></p>
-<p>进入Template</p>
-<p>在使用的过程中，我们只需要将所需的模板<strong>复制</strong>到我们的Artboard中就好了。需要注意的是，在调整大小时需要固定长款比例。</p>
-<h3 id="Sketch_u81EA_u5B9A_u4E49_u6A21_u677F"><a href="#Sketch_u81EA_u5B9A_u4E49_u6A21_u677F" class="headerlink" title="Sketch自定义模板"></a>Sketch自定义模板</h3><p>在Sketchappsources网站中，有许多Sketch的模板可以下载，我们可以将这些控件导入到Sketch中。</p>
-<p>亦或是在工作中，团队经常用到一些固定的组件，为避免重复劳动，我们可以把它们转存为模板。这个复用的思维跟Axure中的自定义母版是一样的。</p>
-<p>具体的步骤如下：</p>
-<p>Step 1：下载或自建一个Sketch文档，内含需要导入的模板；</p>
-<p>Step 2：点击File下的“Save as template”；</p>
-<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-5fd96b100396d2d5.png" alt="1209576-5fd96b100396d2d5"></p>
-<p>所有的Sketch文件都可以直接Save as template</p>
-<p>Step 3：给你的自定义模板命名；</p>
-<p>Step 4：点击模板菜单栏目录时就会出现你所自定义的模板了。</p>
-<p>要运用好模板，除了平时多加积累素材之外，还需要注意模板与模板之间的独立不重复和规格的统一，比如iPhone手机顶端信号栏的宽度这样的细节。</p>
-<h2 id="Sketch_u63D2_u4EF6"><a href="#Sketch_u63D2_u4EF6" class="headerlink" title="Sketch插件"></a>Sketch插件</h2><p>插件是设计软件必备的神器，无论是PS还是AI都有强大的插件库，当然Sketch也是如此。</p>
-<h3 id="u5B89_u88C5_u63D2_u4EF6_u7684_u65B9_u6CD5"><a href="#u5B89_u88C5_u63D2_u4EF6_u7684_u65B9_u6CD5" class="headerlink" title="安装插件的方法"></a>安装插件的方法</h3><p>Sketch的插件多是技术大牛写的，获取的方法有三个：</p>
-<p>方法一：下载Sketch Toolbox这个工具，在里面之间下载你所需要的插件库，然后在Sketch工具栏中点击Plugins就可以看到你下载的插件库了；</p>
-<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-f10894f2ac4a2f5b.png" alt="1209576-f10894f2ac4a2f5b"></p>
-<p>Sketch Toolbox</p>
-<p>方法二：在Github上搜索自己需要的插件名，然后直接打包下载就好了。</p>
-<p>方法三：在Sketch的Plugin菜单下点击manage plugins，在弹出的对话框中点击“get plugins”。</p>
-<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-fe6547134a19f17c.png" alt="1209576-fe6547134a19f17c"></p>
-<p>点击Get plugins，会跳转到sketch的官网插件库</p>
-<h3 id="u63A8_u8350_u51E0_u4E2A_u8D85_u70AB_u63D2_u4EF6"><a href="#u63A8_u8350_u51E0_u4E2A_u8D85_u70AB_u63D2_u4EF6" class="headerlink" title="推荐几个超炫插件"></a>推荐几个超炫插件</h3><p>关于插件，建议一开始的时候不要安装太多。推荐以下几个插件库，可以满足日常工作需求：</p>
-<p><strong>Content Generator：</strong>可以自动填充类型图片、姓名、联系方式等信息，避免手动输入带来的不便；</p>
-<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-23421d9b0b977a15.gif" alt="1209576-23421d9b0b977a15"></p>
-<p>自动填充用户头像.gif</p>
-<p><strong>Rename it：</strong></p>
-<p>这个插件的用途是批量修改图形名称。</p>
-<p>比如上面那个动图，我们可以全选所有的矩形，然后点击rename it插件，将其命名为“%N”，即可得到一串倒序排列的矩形命名。<br>主要的规则有：</p>
+<h2 id="u4EA4_u4E92_u57FA_u7840_u77E5_u8BC6"><a href="#u4EA4_u4E92_u57FA_u7840_u77E5_u8BC6" class="headerlink" title="交互基础知识"></a>交互基础知识</h2><p>开始使用Axure做交互之前，我们先来看看Axure的安身立命之本，即交互这个概念。<br>创建交互包括四个模块：</p>
 <ul>
-<li>输入 “%N” 将对象编号；</li>
-<li>输入“+”和“button”可以将所有选中的对象名变为以button结尾的命名；</li>
-<li>输入新的图层名时，使用 “_” 号代替原图层名。如：big _button，表示的是保留原命名，并在一头一尾加入big和button；</li>
-<li>输入 “%w” 或者 “%h” 来添加图层的长和宽。<br><strong>Sketch Measure插件：</strong></li>
-</ul>
-<p>这个插件可以添加图形尺寸、距离、颜色和文本属性的标注，并会自动把附注编组，方便你自己修改和管理。</p>
-<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-1430738a8c2d982a.png" alt="1209576-1430738a8c2d982a"></p>
-<p>图形的长宽标注</p>
-<p>运用Sketch Measure插件可以在团队合作的时候，可以更方便的把设计稿交付给相关同事。</p>
-<p><strong>Sketch Notebook：</strong></p>
-<p>给一个对象添加注释、评论，可以更加自由地对设计稿进行标注和说明。</p>
-<p><strong>Sketch Color Swatches：</strong></p>
-<p>这个插件便于我们在设计初期参考一些别的网站基础配色。</p>
-<p>配合Sip这款取色工具，我们可以直接获得我们想要的网站配色。以简书为例：</p>
-<ul>
-<li><p>首先，吸取5个简书官网的主色色值；<br><img src="http://image.woshipm.com/wp-files/2016/01/1209576-851c2016319479d5.png" alt="1209576-851c2016319479d5"></p>
+<li><p>交互（interaction）：3W= When + Where + What<br>例如：当鼠标在菜单栏悬停时，菜单栏颜色变深。</p>
 </li>
-<li><p>然后，在Swatch插件中输入色值编号，得到色板。<br><img src="http://image.woshipm.com/wp-files/2016/01/1209576-de6b317368e0133b.png" alt="1209576-de6b317368e0133b"></p>
+<li><p>事件（events）：主要有两类，页面事件和部件事件。交互是由事件触发的，事件用于执行某个动作。</p>
+</li>
+<li><p>用例(cases)：给同一个任务创建不同的路径。用例由一系列动作组成，</p>
+</li>
+<li><p>动作(actions)：由用例定义的对事件的响应。例如弹出窗口，打开链接等等。</p>
 </li>
 </ul>
-<p>Color Swatches: 输入色值，得到色板</p>
-<ul>
-<li>Export as Flinto Document: 这个插件可以将我们的设计稿转换为Flinto文件形式，以便在Flinto这个软件中完成动态交互设计，因为Sketch是不提供动态交互功能的。<br>当然，现在也越来越流行Sketch+Keynote的结合了，说白了就是把Sketch里设计好的帧画面和元件拖拽到Keynote里，然后用Keynote构造原型。这也是一个不错的选择哦！</li>
+<p><strong>小贴士</strong>：<br>用例是可以复用的，当你想要把一个用例上的动作迁移到其他部件上时，只需要右键点击该用例，然后点击复制，再点击响应事件选择粘贴即可。</p>
+<p>Axure实现交互的方式非常多，只要你明白了其中的原理，随着对这款软件的熟悉，你就能驾驭它的使用。</p>
+<h2 id="u6DF1_u5165_u7406_u89E3_u52A8_u6001_u9762_u677F"><a href="#u6DF1_u5165_u7406_u89E3_u52A8_u6001_u9762_u677F" class="headerlink" title="深入理解动态面板"></a>深入理解动态面板</h2><p>在实际工作中，动态面板是我们使用得最多的部件，通过它我们可以实现<strong>图片轮播、手风琴菜单、灯箱效果、标签控制和拖拽</strong>等效果。与函数变量结合后还可以做出用户登陆提示、进度条效果等。</p>
+<h4 id="u52A8_u6001_u9762_u677F_u4E8B_u4EF6"><a href="#u52A8_u6001_u9762_u677F_u4E8B_u4EF6" class="headerlink" title="动态面板事件"></a>动态面板事件</h4><ul>
+<li><p>状态改变时：<br>这个事件经常用来触发面板状态的一系列交互，例如：状态1的情况下展示图片1，状态2的情况下展示图片2（制作图片轮播）。</p>
+</li>
+<li><p>拖动时：<br>这个事件是由面板的点击、拖拽、释放而触发的。例如：APP原型中的向右滑动某个图片则进入到下一张图片的预览。</p>
+</li>
+<li><p>滚动时：<br>这个事件是由动态面板滚动栏的滚动所触发的。要触发一个特定滚动位置交互，可以添加条件如：[[this.ScrollX]] 和 [[this.ScrollY]]，X\Y表示X轴和Y轴，通过设置距离来控制动态面板的状态。</p>
+</li>
+<li><p>大小改变时：<br>这个事件由面板大小的改变来触发的。</p>
+</li>
+<li><p>载入时事件：<br>这个事件是由页面初始加载动态面板时触发的。原理跟页面载入时事件一样。</p>
+</li>
+<li><p>拖拽事件：</p>
+</li>
+<li><p>开始拖拽时</p>
+</li>
+<li><p>正在拖拽时</p>
+</li>
+<li><p>结束拖拽时<br>拖拽事件的每个阶段都可以添加交互。*   拖拽时移动面板：<br>这个事件是拖拽一个部件的同时移动面板这个动作。</p>
+<p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160110%2F569237927886a.jpg" alt=""></p>
+<p>拖拽事件的选项</p>
+</li>
+<li><p>拖拽时使用条件：</p>
+</li>
 </ul>
-<h2 id="Sketch_Mirror"><a href="#Sketch_Mirror" class="headerlink" title="Sketch Mirror"></a>Sketch Mirror</h2><p>要说Sketch脱颖而出的理由，很重要的一点就是它满足了实时在手机端查看的功能，这是Axure所不具备的。</p>
-<p>在手机上下载Sketch Mirror这款APP，然后在Mac端工具栏中点击Sketch mirror，只要两台设备在同一wifi环境下，就可以同步查看了。</p>
-<h3 id="u4F7F_u7528Sketch_u7684_u5FEB_u6377_u952E"><a href="#u4F7F_u7528Sketch_u7684_u5FEB_u6377_u952E" class="headerlink" title="使用Sketch的快捷键"></a>使用Sketch的快捷键</h3><p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-a122a31254cc5260-3.png" alt="1209576-a122a31254cc5260-3"></p>
-<p>快捷键一览表，感谢图片作者：康上明学</p>
-<h2 id="u5B9E_u6218_uFF1A_u5236_u4F5C_u56FE_u7247_u5206_u4EABAPP-_u4E2A_u4EBA_u5C55_u793A_u9875"><a href="#u5B9E_u6218_uFF1A_u5236_u4F5C_u56FE_u7247_u5206_u4EABAPP-_u4E2A_u4EBA_u5C55_u793A_u9875" class="headerlink" title="实战：制作图片分享APP-个人展示页"></a>实战：制作图片分享APP-个人展示页</h2><p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-e605cc5124525b5e.png" alt="1209576-e605cc5124525b5e"></p>
-<p>运用模板和插件制作图片分享APP个人展示页</p>
-<p>制作的步骤如下：</p>
+<h4 id="u8BBE_u7F6E_u52A8_u6001_u9762_u677F"><a href="#u8BBE_u7F6E_u52A8_u6001_u9762_u677F" class="headerlink" title="设置动态面板"></a>设置动态面板</h4><p>动态面板可用的动作包括：设置动态面板状态和设置动态面板尺寸。</p>
 <ul>
-<li>画布设置与布局：选择iPhone 5作为Artboard，将画布分割为上下两部分，用矩形分割，将元素分组；</li>
-<li>打开template，选择iOS design UI模板，负责头部信号栏（白色）置于画布顶端，并调整大小；</li>
-<li>将图片展示部分用20个小正方形分割，并用content generator插件填充自定义为“views”的风景图片，同时设置将头像和封面照；</li>
-<li>输入文字，调整细节。<br>关于Sketch的进阶篇就介绍到这里。大家在平时的生活中可以多思考一下优秀APP的页面如果让你来做，你的思路是怎样的，然后去实践、运用，遇到不懂的地方就上论坛去问；同时，养成复盘每一个作品制作过程的习惯，想一想哪些地方可以优化，哪怕是很小的细节改善，都能带来很大的效率提升。</li>
+<li><p>动态面板大小：</p>
+</li>
+<li><p>在编辑动态面板时，你会注意到一个蓝色虚线轮廓，这表示你在动态面板中只能看到蓝色虚线轮廓范围内的内容。</p>
+</li>
+<li><p>如果你添加的部件大小超过了动态面板轮廓范围，那么你可能需要使用添加滚动栏或调整动态面板大小以适合内容。*   动态面板状态：</p>
+</li>
 </ul>
-<p>一起进步吧！</p>
+<p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160110%2F5692379300601.jpg" alt=""></p>
+<p>动态面板状态管理器</p>
+<h4 id="u52A8_u6001_u9762_u677F_u5B9E_u6218_u6848_u4F8B_uFF1A_u5236_u4F5C_u9996_u9875_u5E7F_u544A_u8F6E_u64AD"><a href="#u52A8_u6001_u9762_u677F_u5B9E_u6218_u6848_u4F8B_uFF1A_u5236_u4F5C_u9996_u9875_u5E7F_u544A_u8F6E_u64AD" class="headerlink" title="动态面板实战案例：制作首页广告轮播"></a>动态面板实战案例：制作首页广告轮播</h4><p>主要的思路是通过创建包含多个图片层的动态面板，并通过按钮（上一张，下一张）控制显示的图片，同时可以通过设置用例条件使得图片轮播能够自动循环播放。</p>
+<ul>
+<li><p>Step 1：<br>拖拽动态面板到设计区域，或拖拽图片部件到设计区域并右键转化为动态面板。并添加左侧（上一张）和右侧（下一张）的按钮。<br>你还可以设置轮播圆点来控制图片的播放，每一个小圆点对应一张图片即可。</p>
+</li>
+<li><p>Step 2：<br>添加点击按钮改变面板状态事件。<br>选中右侧按钮，添加『鼠标点击时』事件，在弹出的对话框中，选择『设置面板状态』动作，并在右侧按钮的配置动作中，将动态面板状态下拉列表选择为 NEXT。同时设置动态面板状态的循环和动画以及过渡效果。</p>
+</li>
+</ul>
+<p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160110%2F56923793a44d0.jpg" alt=""></p>
+<p>制作图片轮播</p>
+<p>案例的下载和演示链接见文末。</p>
+<h2 id="u6BCD_u7248_u7684_u4F7F_u7528"><a href="#u6BCD_u7248_u7684_u4F7F_u7528" class="headerlink" title="母版的使用"></a>母版的使用</h2><p>什么是母版？可以把母版形象地比喻为PPT中的模板，即你创建一次，就能重复使用，你改变模板后，所有使用该模板的页面都会同时发生相应的变化。</p>
+<ul>
+<li><p>新建母版：有两种方法，一是在母版面板中点击『新增面板』；二是在设计区选中需要转换为母版的部件（可以批量选中），右键点击『转换为母版』。</p>
+</li>
+<li><p>母版的拖放行为：</p>
+</li>
+<li><p>任何位置：可以拖动母版到任何位置；</p>
+</li>
+<li><p>锁定母版位置：固定母版在创建时的位置；</p>
+</li>
+<li><p>从母版脱离：当拖动母版到设计区域时，其中包含的部件变成可以编辑的个体，不再归属于母版。*   触发事件：</p>
+</li>
+<li><p>触发事件（又称自定义事件）是Axure母版的专用，只有它可以触发事件。</p>
+</li>
+<li><p>使用场景：一个母版上的触发事件出现在该母版的每一个实例的交互行为上，如果一个母版的一个实例和另一个实例的交互行为有很大不同，那么可以创建触发事件来实现。*   触发事件的名称必须是字母数字且不包含空格，如：OnMyButtonClick(鼠标单击时)。</p>
+</li>
+<li><p>为母版添加事件可以直接新增用例，在用例编辑器中新增『触发事件』动作，然后将母版拖动到其他页面时即可看到已创建的动作。在页面中可以对已创建的动作添加新的用例。</p>
+</li>
+</ul>
+<p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160110%2F56923794e4da3.jpg" alt="为母版创建触发事件"></p>
+<p>为母版创建触发事件。</p>
+<p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160110%2F56923795edb84.jpg" alt="创建后拖动到任意页面可看到创建的事件"></p>
+<p>创建后拖动到任意页面可看到创建的事件。</p>
+<hr>
+<p>下载动态面板案例：<br><a href="http://pan.baidu.com/s/1eQP1kbS" target="_blank" rel="external">百度云下载链接</a><br>密码: zmpk<br><a href="http://xublyx.axshare.com/" target="_blank" rel="external">案例展示</a></p>
+<p></p>
 
       
       
@@ -340,13 +347,13 @@ var _hmt = _hmt || [];
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/01/08/从零开始学Sketch——进阶篇/">从零开始学Sketch——进阶篇</a></p>
+        <p><span>本文标题:</span><a href="/2016/01/10/从零开始学Axure原型设计（进阶篇）/">从零开始学Axure原型设计（进阶篇）</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 粽小喵 的个人博客">粽小喵</a></p>
-        <p><span>发布时间:</span>2016年01月08日 - 21时33分</p>
-        <p><span>最后更新:</span>2016年01月09日 - 14时17分</p>
+        <p><span>发布时间:</span>2016年01月10日 - 18时53分</p>
+        <p><span>最后更新:</span>2016年01月10日 - 18时57分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/01/08/从零开始学Sketch——进阶篇/" title="从零开始学Sketch——进阶篇">http://zongxiaomiao.com/2016/01/08/从零开始学Sketch——进阶篇/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://zongxiaomiao.com/2016/01/08/从零开始学Sketch——进阶篇/　　作者: 粽小喵" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/01/10/从零开始学Axure原型设计（进阶篇）/" title="从零开始学Axure原型设计（进阶篇）">http://zongxiaomiao.com/2016/01/10/从零开始学Axure原型设计（进阶篇）/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zongxiaomiao.com/2016/01/10/从零开始学Axure原型设计（进阶篇）/　　作者: 粽小喵" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -360,15 +367,15 @@ var _hmt = _hmt || [];
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/01/08/什么是原型设计（简而言之版）/">
-                    什么是原型设计（简而言之版）
+                <a href="/2016/01/10/从零开始学Axure（入门篇）/">
+                    从零开始学Axure（入门篇）
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/01/08/从零开始学Sketch——入门篇/">
-                    从零开始学Sketch——入门篇
+                <a href="/2016/01/09/社交红利带给我们什么？/">
+                    读书|社交红利带给我们什么？
                 </a>
             </div>
         
@@ -379,7 +386,7 @@ var _hmt = _hmt || [];
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Sketch_u6A21_u677F"><span class="toc-number">1.</span> <span class="toc-text">Sketch模板</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Sketch_u81EA_u5E26_u6A21_u677F"><span class="toc-number">1.1.</span> <span class="toc-text">Sketch自带模板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sketch_u81EA_u5B9A_u4E49_u6A21_u677F"><span class="toc-number">1.2.</span> <span class="toc-text">Sketch自定义模板</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sketch_u63D2_u4EF6"><span class="toc-number">2.</span> <span class="toc-text">Sketch插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u5B89_u88C5_u63D2_u4EF6_u7684_u65B9_u6CD5"><span class="toc-number">2.1.</span> <span class="toc-text">安装插件的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u63A8_u8350_u51E0_u4E2A_u8D85_u70AB_u63D2_u4EF6"><span class="toc-number">2.2.</span> <span class="toc-text">推荐几个超炫插件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sketch_Mirror"><span class="toc-number">3.</span> <span class="toc-text">Sketch Mirror</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u4F7F_u7528Sketch_u7684_u5FEB_u6377_u952E"><span class="toc-number">3.1.</span> <span class="toc-text">使用Sketch的快捷键</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5B9E_u6218_uFF1A_u5236_u4F5C_u56FE_u7247_u5206_u4EABAPP-_u4E2A_u4EBA_u5C55_u793A_u9875"><span class="toc-number">4.</span> <span class="toc-text">实战：制作图片分享APP-个人展示页</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u4EA4_u4E92_u57FA_u7840_u77E5_u8BC6"><span class="toc-number">1.</span> <span class="toc-text">交互基础知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6DF1_u5165_u7406_u89E3_u52A8_u6001_u9762_u677F"><span class="toc-number">2.</span> <span class="toc-text">深入理解动态面板</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#u52A8_u6001_u9762_u677F_u4E8B_u4EF6"><span class="toc-number">2.0.1.</span> <span class="toc-text">动态面板事件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u8BBE_u7F6E_u52A8_u6001_u9762_u677F"><span class="toc-number">2.0.2.</span> <span class="toc-text">设置动态面板</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u52A8_u6001_u9762_u677F_u5B9E_u6218_u6848_u4F8B_uFF1A_u5236_u4F5C_u9996_u9875_u5E7F_u544A_u8F6E_u64AD"><span class="toc-number">2.0.3.</span> <span class="toc-text">动态面板实战案例：制作首页广告轮播</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6BCD_u7248_u7684_u4F7F_u7528"><span class="toc-number">3.</span> <span class="toc-text">母版的使用</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -443,7 +450,7 @@ var _hmt = _hmt || [];
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/01/08/从零开始学Sketch——进阶篇/" data-title="从零开始学Sketch——进阶篇" data-url="http://zongxiaomiao.com/2016/01/08/从零开始学Sketch——进阶篇/"></div>
+    <div class="ds-thread" data-thread-key="2016/01/10/从零开始学Axure原型设计（进阶篇）/" data-title="从零开始学Axure原型设计（进阶篇）" data-url="http://zongxiaomiao.com/2016/01/10/从零开始学Axure原型设计（进阶篇）/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -468,7 +475,7 @@ var _hmt = _hmt || [];
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/01/08/什么是原型设计（简而言之版）/" title="上一篇: 什么是原型设计（简而言之版）">
+            <a href="/2016/01/10/从零开始学Axure（入门篇）/" title="上一篇: 从零开始学Axure（入门篇）">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -476,7 +483,7 @@ var _hmt = _hmt || [];
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/01/08/从零开始学Sketch——入门篇/" title="下一篇: 从零开始学Sketch——入门篇">
+            <a href="/2016/01/09/社交红利带给我们什么？/" title="下一篇: 读书|社交红利带给我们什么？">
                 <i class="fa fa-angle-right"></i>
             </a>
         
