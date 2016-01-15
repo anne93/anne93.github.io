@@ -1,0 +1,2247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[粽小喵]]></title>
+  <subtitle><![CDATA[产品经理|专栏作者|猫奴]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://zongxiaomiao.com/"/>
+  <updated>2016-01-15T06:28:23.000Z</updated>
+  <id>http://zongxiaomiao.com/</id>
+  
+  <author>
+    <name><![CDATA[粽小喵]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[从零开始学Axure原型设计（高级篇）]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/15/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6Axure%E5%8E%9F%E5%9E%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E9%AB%98%E7%BA%A7%E7%AF%87%EF%BC%89/"/>
+    <id>http://zongxiaomiao.com/2016/01/15/从零开始学Axure原型设计（高级篇）/</id>
+    <published>2016-01-15T04:59:28.000Z</published>
+    <updated>2016-01-15T06:28:23.000Z</updated>
+    <content type="html"><![CDATA[<p>如果你熟悉了Axure的部件库，那么你可以得心应手地画出心目中产品的线框图；如果你会用Axure的母版、动态面板功能，那么你应该能够画出一些简单网站的原型图；但只有你精通了Axure的条件逻辑、变量、函数等高级交互，才能将心中的产品形态恣意地通过这款软件表现出来。</p>
+<p>下面小喵就给大家仔细梳理一下Axure的高级交互内容，以及如何运用Axure这款软件自带的界面规范文档来提高交付的原型在开发和设计阶段的精准度。</p>
+<p>虽然标题用的是高级篇，其实是相对于入门篇和进阶篇而言的，没有大家想象的那么『高级』和复杂。</p>
+<a id="more"></a>
+<h2 id="u6761_u4EF6_u751F_u6210_u5668"><a href="#u6761_u4EF6_u751F_u6210_u5668" class="headerlink" title="条件生成器"></a>条件生成器</h2><h5 id="u6761_u4EF6_u903B_u8F91"><a href="#u6761_u4EF6_u903B_u8F91" class="headerlink" title="条件逻辑"></a>条件逻辑</h5><pre><code>if (condition 1) {
+当 condition 1 为 true 时执行的动作};
+else if (condition 2) {
+当 condition 2 为 true 时执行的动作};
+else {
+当 condition 1 和 condition 2 都不为 true 时执行的动作};
+</code></pre><p>在Javascript语言中的if-then-else语句是最常见的条件逻辑。</p>
+<p>And和Or是条件运算符，用于连接两个或两个以上的句子。</p>
+<h4 id="u65B0_u589E_u6761_u4EF6"><a href="#u65B0_u589E_u6761_u4EF6" class="headerlink" title="新增条件"></a>新增条件</h4><p>在用例编辑器顶部有『新增条件』的选项，点击后进入条件生成器。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-1d265057bbb66d83.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>新增条件</p>
+<p>当我们进入条件生成器对话框时，首先看到的是满足以下『全部』或『任意』一个条件，在描述框中我们可以看到，如果选择『全部』则是『And』，如果选择『任意』则是『Or』。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-36e4e38045ee3060.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>条件生成器的多个条件控制</p>
+<p>条件生成器允许用户创建条件表达式，将你需要满足的条件通过填空的形式告诉Axure，如下图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-82e2171eab14d7bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>条件生成器和可创建的表达式</p>
+<p>其中，<strong>值的类型</strong>包括：</p>
+<table><thead><tr class="firstRow"><th>值的类型</th><th>描述</th></tr></thead><tbody><tr><td>值（Value）</td><td>文本或数字的值或变量</td></tr><tr><td>变量值（Value of Variable）</td><td>存储在变量中的当前值</td></tr><tr><td>变量值长度(Length of Variable Value)</td><td>一个变量的值的字符数</td></tr><tr><td>部件文字(Text on Widget)</td><td>每个部件上面可编辑的文字，不包含: 动态面板、图片热区、垂直线、水平线、内部框架、下拉列表、列表框。</td></tr><tr><td>焦点部件上的文字(Text on Focused Widget)</td><td>光标焦点所在部件上的文字</td></tr><tr><td>部件值长度(Length of Widget Value)</td><td>表单中文本的字符数，仅包含单行和多行文本框、下拉列表和列表框。</td></tr><tr><td>选中项文字(Selected Option of)</td><td>下拉列表或列表选择框被选中项的文字。</td></tr><tr><td>选中状态值(Is selected of)</td><td>检测复选框或单选按钮是否选中, 或者一个部件是否是选中状态。</td></tr><tr><td>动态面板状态(State of panel)</td><td>动态面板的当前状态。</td></tr><tr><td>部件可见性(Visibility of widget)</td><td>无论一个部件当前状态是可见还是隐藏。</td></tr><tr><td>按下的键 (Key pressed)</td><td>键盘上按下的键或组合。</td></tr><tr><td>鼠标拖拽(Drag cursor)</td><td>拖拽过程中光标的位置。</td></tr><tr><td>部件范围(Area of widget)</td><td>部件之间是否接触（拖拽使用）。</td></tr><tr><td>自适应视图(Adaptive view)</td><td>自适应视图当前的视图。</td></tr></tbody></table>
+
+<p>这些值的类型不用可以记住，用的时候参照就好了，用多了就记住了。</p>
+<h4 id="u6761_u4EF6_u6848_u4F8B_u5B9E_u6218_u2014_u2014_u7528_u6237_u767B_u9646_u6846"><a href="#u6761_u4EF6_u6848_u4F8B_u5B9E_u6218_u2014_u2014_u7528_u6237_u767B_u9646_u6846" class="headerlink" title="条件案例实战——用户登陆框"></a>条件案例实战——用户登陆框</h4><ul>
+<li>Step 1<br>以简书的登陆框为例，截图登陆框，并拖入『单行文本框』覆盖掉原有的两个文本输入框，分别命名为『用户名输入框』和『密码输入框』，将『密码输入框』的属性设置为密码，这样输入密码时会自动变成不显示的状态；拖入图片热区，完全覆盖掉原有的登陆按钮，并命名为『登陆按钮』。</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-55cde81d0f22e385.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>制作登陆框</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-7a38b621c677ba8e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>密码输入框的属性设置为密码</p>
+<p>-Step 2<br>假设用户名为zongxiaomiao，密码为123456。点击『登陆按钮』部件，建立两个条件用例：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-0577bea545be7f70.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>设置条件用例</p>
+<p>因为我们需要同时满足用户名和密码都正确才能登陆，所以连接两个条件的是and而不是or，也就是满足全部条件而不是任意条件。</p>
+<p>如果文本输入框里的文字同时满足了两个条件，我们就打开简书的主页，在链接——打开链接中输入外部链接地址为：www.jianshu.com。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-ba75fdd84f8293bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>如果同时满足两个条件则进入简书主页</p>
+<ul>
+<li>Step 3<br>如果两个条件中有一个条件不满足，则在登陆框上显示如下字样：</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-b06f2c9322054e27.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>登陆失败提示字样</p>
+<p>我们将这个图片置于设计区域，将其设置为隐藏状态（右键——设为隐藏），并命名为『登陆失败提示』。</p>
+<p>同时新增用例2，设置else if true时触发的动作时显示（我们默认加载页面时会隐藏它）提示登陆失败的字样，并且加入淡入淡出的动画，动画时间为500毫秒，这样加载时不会太生硬。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-8e22af145a0e3b92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>将新增动作设置为『显示』，配置为显示登录失败提示的图片</p>
+<p>在文末可以下载案例和观看演示。</p>
+<h2 id="u53D8_u91CF"><a href="#u53D8_u91CF" class="headerlink" title="变量"></a>变量</h2><h4 id="Axure_u4E2D_u7684_u53D8_u91CF"><a href="#Axure_u4E2D_u7684_u53D8_u91CF" class="headerlink" title="Axure中的变量"></a>Axure中的变量</h4><ul>
+<li><p>局部变量：顾名思义，局部变量即在局部的动作中生效。</p>
+</li>
+<li><p>全局变量：在整个原型中都有效。当一个数据从页面A传递到页面B时就需要全局变量。<br>因此，局部变量可以有相同名称，而全局变量不能重复名称。默认情况下有一个叫『OnLoadVariable』的变量。变量名的命名规则是字母或数字，少于25字符，不包含空格。</p>
+</li>
+</ul>
+<h4 id="u53D8_u91CF_u5B9E_u6218_u6848_u4F8B_uFF1A_u5168_u5C40_u53D8_u91CF_u5728_u9875_u9762_u95F4_u7684_u52A8_u6001_u9762_u677F_u4EA4_u4E92"><a href="#u53D8_u91CF_u5B9E_u6218_u6848_u4F8B_uFF1A_u5168_u5C40_u53D8_u91CF_u5728_u9875_u9762_u95F4_u7684_u52A8_u6001_u9762_u677F_u4EA4_u4E92" class="headerlink" title="变量实战案例：全局变量在页面间的动态面板交互"></a>变量实战案例：全局变量在页面间的动态面板交互</h4><p>做出这个页面的<a href="http://www.xinli001.com/ceshi/99897458/start/" target="_blank" rel="external">一张图揭示你散发出的核心气质心理测试</a>的页面间跳转的效果，可以运用『全局变量』+『动态面板』来实现。大家可以先去网站做一下这个心理测试，然后构思一下如何用全局变量和动态面板在两个页面之间完成这个交互。</p>
+<ul>
+<li>Step 1<br>在Axure中创建两个页面Home和Page 1，在Home页面中导入测试所需的图片，并拖入下拉列表框，在下拉列表框中设置『第一张』到『第九张』的选项。注意，要想默认选项为空，则新建一个选项，输入空格键即可。</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-1d33054202140f82.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>下拉列表框</p>
+<ul>
+<li>Step 2<br>选中下拉列表框，点击『当选项改变时』新建用例1，新增条件为当选中项值的选项为『第一张』时（也就是用户在下拉列表中选择了第一张这个选项）。</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-50ee4ff38202e1b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>新建用例，添加条件判断</p>
+<p>然后退出条件设置对话框，在用力编辑器中选择『设置变量值』，在配置动作一览中新增变量『MyChoice』，并将MyChoice这个变量的值设为『第一张』</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-942f8bcf89439ca3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>设置全局变量，并设置跳转页面</p>
+<p>以此类推，新增9个用例，分别对应9个选项，如下图所示：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-17e3e4d4ba3a36f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>设置选项对应的变量值</p>
+<ul>
+<li>Step 3<br>在Page 1页面中创建动态面板，拖入多行文本框，将每个选项对应的测试结果输入其中。</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-b1150e306f34926f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>设置动态面板状态内容</p>
+<ul>
+<li>Step 4<br>在页面交互栏新增用例『页面载入时』，设置动态面板状态，在状态下拉列表框中选择状态『Value』，并点击『名称或状态』旁的函数fx，选择我们之前设置好的全局变量『MyChoice』即可。</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-17d5e04f53a326ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>全局变量对应的动态面板的状态设置</p>
+<p>打开预览，即可看到效果。</p>
+<p>案例下载和演示见文末。</p>
+<h2 id="u51FD_u6570"><a href="#u51FD_u6570" class="headerlink" title="函数"></a>函数</h2><p>理解了变量和条件逻辑，再来学习函数就不难了。Axure中的函数类型非常多，一共有10类，并且每一类下面还有很多细分，总结如下图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-fafef6c1a2d57980.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>函数类型和举例</p>
+<p>除了条件逻辑、变量和函数之外，Axure还有一个特别强大的部件叫做『中继器』。但是中继器这个部件的使用频率并不是很高，在这里就不详细展开了。</p>
+<p>简单来说，中继器扮演的是一个『数据库』的角色，但这不是一个真正存在的数据库，你可以对中继器数据集中的数据按条件进行<strong>增加、删除、修改、排序和过滤</strong>等操作。中继器用来显示重复的文本、图片和链接。</p>
+<p>中继器由项和数据集组成。在数据集中可以填充我们预先准备的数据，这些数据可以是文字也可以是图片（右键数据输入框可导入图片）。</p>
+<p>因为中继器是部件，所以也需要通过添加用例交互来控制动作。同时，通过变量、函数来控制其展示的数据。</p>
+<p>Axure从入门到精通需要大量的实战练习。软件本身是不断变化的，掌握其根本的原理，融会贯通，多思考和练习就能让这款软件为你发挥最大的功效。</p>
+<hr>
+<p>案例下载：</p>
+<ol>
+<li><p><a href="http://pan.baidu.com/s/1dDYqRnF" target="_blank" rel="external">用户登陆案例下载</a><br>下载密码: ejsx<br><a href="http://4znmgh.axshare.com/#c=2" target="_blank" rel="external">案例演示</a></p>
+</li>
+<li><p><a href="http://pan.baidu.com/s/1i4znpWx" target="_blank" rel="external">全局变量案例下载</a><br>下载密码: tddw<br><a href="http://etq7wr.axshare.com/" target="_blank" rel="external">案例演示</a></p>
+</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>如果你熟悉了Axure的部件库，那么你可以得心应手地画出心目中产品的线框图；如果你会用Axure的母版、动态面板功能，那么你应该能够画出一些简单网站的原型图；但只有你精通了Axure的条件逻辑、变量、函数等高级交互，才能将心中的产品形态恣意地通过这款软件表现出来。</p>
+<p>下面小喵就给大家仔细梳理一下Axure的高级交互内容，以及如何运用Axure这款软件自带的界面规范文档来提高交付的原型在开发和设计阶段的精准度。</p>
+<p>虽然标题用的是高级篇，其实是相对于入门篇和进阶篇而言的，没有大家想象的那么『高级』和复杂。</p>]]>
+    
+    </summary>
+    
+      <category term="Axure" scheme="http://zongxiaomiao.com/tags/Axure/"/>
+    
+      <category term="原型" scheme="http://zongxiaomiao.com/tags/%E5%8E%9F%E5%9E%8B/"/>
+    
+      <category term="工具" scheme="http://zongxiaomiao.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="交互设计" scheme="http://zongxiaomiao.com/categories/%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[产品经理必知必会——产品策划全流程]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/14/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E2%80%94%E2%80%94%E4%BA%A7%E5%93%81%E7%AD%96%E5%88%92%E5%85%A8%E6%B5%81%E7%A8%8B/"/>
+    <id>http://zongxiaomiao.com/2016/01/14/产品经理必知必会——产品策划全流程/</id>
+    <published>2016-01-14T09:24:33.000Z</published>
+    <updated>2016-01-14T09:30:17.000Z</updated>
+    <content type="html"><![CDATA[<p>作者开篇便直接了当地提出：<strong>决定产品成功与否的都只有一个因素，那就是它的目的。</strong>目的是某件事物存在的原因，是你的产品试图解决的问题——俗称“痛点”。</p>
+<p>作者从产品为何说起，试图阐释如何理解市场和客户的需求，如何撰写文案（用户故事），如何改进产品（包括需求挖掘、优先级判定），如何完成最简产品的快速发布以及衡量成功与否。</p>
+<a id="more"></a>
+<h2 id="u4E86_u89E3_u4EA7_u54C1_u7684_u671F_u671B"><a href="#u4E86_u89E3_u4EA7_u54C1_u7684_u671F_u671B" class="headerlink" title="了解产品的期望"></a>了解产品的期望</h2><p>产品的设计和开发是为了满足某种需求，这当然不是什么惊天动地的消息，问题是你如何发现需求，以满足期望。这其中需求不是由产品人员说了算，而是由使用的人说了算，你设计出的东西与越多的人产生共鸣，便有可能获得越大的市场。</p>
+<p>但现实生活中，同类的产品实在是很多，比如一个社交软件就有微信、陌陌、领英等等，如何找到自己与竞争对手的差异（比如内容、设计、性能、功能），才可能在竞争中脱颖而出。</p>
+<p>在这里作者为我们提供了一个高大上的衡量标准：哈维球图。这张图使得产品经理有了更强的说服力，当与设计和开发交涉的时候。</p>
+<p>这个图长这样：</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Rh2wpYzr0Ps67raurD9PyPc6FyhQ5PtABAae4r5I6spYhCd28eZysqVnpEGib0O9wyFtTAMHb51qTQ/0?wx_fmt=png" alt=""></p>
+<p>当然，竞品分析只是充分理解市场需求的开始。更重要的是研究使用你产品的对象。</p>
+<p>这里，作者非常敏锐地注意到了产品经理所处的真实情景。他将用户拆解为了内部和外部，内部也就是boss，强调的是对领导层战略目的的满足；外部用户也就是使用这个产品的对象，强调的是用调研的方式（电话、见面、CE）了解他们的意见。</p>
+<p>民间总流传乔老爷是一个非常不注重用户调研结果的人，但是乔老爷不相信的是所谓用研给出的数字和“群相结论”，乔老爷相信的是个体在实际使用产品过程中的反应，于是乎他经常自己跑到苹果体验店外面一个不起眼的角落仔细观察那些使用苹果产品的人。因为只有了解了真实的日常需求，切实可行的解决方案才会出现。</p>
+<p>而内部需求的满足也是非常重要的。新版支付宝推出之后，生活圈的设计被人吐槽无数。但是大家有没有想过，为神马支付宝就是不放弃社交这一块呢？它的生活圈与微信的朋友圈真的是一回事吗？</p>
+<p>仔细思考之后我们会发现，只有社交才能连接更多的人和服务，所以支付宝需要做社交，这是战略目的；而支付宝的生活圈提供的更多是哪里打折了、哪里吃的好玩的好，比微信的日常化分享更加细分，是吃货们、血拼族的聚集地，从消费者到商家转化率也比微信朋友圈更直接。</p>
+<p>了解了内部和外部对产品的期望之后，就可以开始下一步的行动：提取目标以指导工作。</p>
+<h2 id="u5199_u7528_u6237_u6545_u4E8B"><a href="#u5199_u7528_u6237_u6545_u4E8B" class="headerlink" title="写用户故事"></a>写用户故事</h2><p>这时作者提出的解决方案跟你我想象的不同。他并不着急着写所谓的产品需求文档，而是让设计、开发、产品经理以<strong>第一人称</strong>，站在用户的角度进行角色扮演，不要用任何技术术语，而是像写小学生作文一样，简单平实地写一个“用户故事”，例如：“我是一个白领，我想要用这个东西来满足我每天下班后不用挤公交的愿望，最好我还能跟我的朋友们一起回家。”</p>
+<p>看到没有，这其实就是产品经理<strong>同理心</strong>的体现。从这样一个用户故事中，我们可以提炼出这个产品的产出，即“便捷搭车”和“与朋友一起搭车”。这时再将这个需求转化为可执行的方案。</p>
+<p>再比如“我是一个学生，我希望用这个东西帮助我在论文写作过程中正确地引用文献，让我的论文符合学校的文献引用标准，从而获得更高的分数。”</p>
+<p>这个用户故事包含了产品的产出（顾客需要做什么）、成果（做这样的事情达到什么效果）和影响（对公司来说有什么意义）。这个时候我们拆借这个目标，就变成了：符合标准（技术实现）、更好成绩（加入语法修改功能——提供产品增值服务——对公司的意义）。</p>
+<p>用户故事有助于将要解决的任务和需求变得人性化，从而超越需求本身的要求，做出超出预期的产品。</p>
+<p>但是这里作者忽略了一点，那就是这个所谓的用户是谁，他们占整个产品的使用者的多少。事实上，在给出一个需求时，解释这个需求为谁而做非常重要。</p>
+<h2 id="u786E_u5B9A_u4F18_u5148_u7EA7"><a href="#u786E_u5B9A_u4F18_u5148_u7EA7" class="headerlink" title="确定优先级"></a>确定优先级</h2><p>好了，现在我们终于知道要做什么了。撕逼开始了！该先做哪个，再做哪个，如何排期呢？</p>
+<p>这个时候作者又给出了两个高大上的词汇：马斯洛需求层次理论以及Kano模型。下面这三张图非常清楚地说明了如何拿捏先做什么再做什么，其实都是常识性的，但人们总是在这些基本问题上争论不休，不是吗？</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Rh2wpYzr0Ps67raurD9PyPcQfJYp17LFeGribpd7rV98QGxibPgyKJ3ibVI4EBFpPW8aWJzSK8ib7nquA/0?wx_fmt=png" alt=""></p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Rh2wpYzr0Ps67raurD9PyPcicypXxEoXcUFMxrOQNUn6tP5DcgNeDCMoiarNd6Ml3ppyYDmxR6ZZ4KQ/0?wx_fmt=png" alt=""></p>
+<h2 id="u7070_u5EA6_u6D4B_u8BD5"><a href="#u7070_u5EA6_u6D4B_u8BD5" class="headerlink" title="灰度测试"></a>灰度测试</h2><p>好了，优先级确定了，是不是可以开始埋头执行了呢？不，先做一个简单版本，所谓“灰度测试”，过程如下：</p>
+<p>白板描绘——原型设计（用白纸铅笔，高保真只用于验证细节和演示）——构建部分功能——发布功能——获取反馈（焦点小组、在线调查、可用性测试）——进行改进</p>
+<h2 id="u9A8C_u8BC1_u9700_u6C42"><a href="#u9A8C_u8BC1_u9700_u6C42" class="headerlink" title="验证需求"></a>验证需求</h2><p>好了，现在产品基本做出来了，现在要去衡量这个产品成功与否，第一步就是回到用户故事中去。看看产出、成果、影响三个要素都满足与否，这些目标是否发生了新的改变？</p>
+<p>最后作者还提到了用数据可视化来呈现产品的成效，这部分的内容需要根据产品自身的特点和目的做不一样的设置，关键数据指标因产品而异，内容型产品和工具型产品在数据指标的追求上肯定不同，需要具体问题具体分析。</p>
+<p>同时，不仅仅需要建立数据库，还需要建立数据背后的重要的背景资料，看看运营数据变化背后的原因是什么。</p>
+<p>产品经理可以在每周对内发布一个产品报告，总结产品进展、外部（用户）反馈、数据表现和原因分析、接下来需要解决的问题，发送给老板、项目经理、设计师、开发人员等，让大家有成就感，同时明确工作目标。</p>
+<blockquote>
+<p>书名：《产品经理必知必会》</p>
+<p>作者：（美）Layon, K.</p>
+<p>出版社：人民邮电出版社（2015年）</p>
+</blockquote>
+<p> <img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Rh2wpYzr0Ps67raurD9PyPcTQvsq5TX3sGKf1iaX7rogBAqbHrqpnlEdU9gCPvVCYib3ic43PDYr6FicQ/0?wx_fmt=jpeg" alt=""></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>作者开篇便直接了当地提出：<strong>决定产品成功与否的都只有一个因素，那就是它的目的。</strong>目的是某件事物存在的原因，是你的产品试图解决的问题——俗称“痛点”。</p>
+<p>作者从产品为何说起，试图阐释如何理解市场和客户的需求，如何撰写文案（用户故事），如何改进产品（包括需求挖掘、优先级判定），如何完成最简产品的快速发布以及衡量成功与否。</p>]]>
+    
+    </summary>
+    
+      <category term="PM" scheme="http://zongxiaomiao.com/tags/PM/"/>
+    
+      <category term="产品" scheme="http://zongxiaomiao.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="读书有疑" scheme="http://zongxiaomiao.com/categories/%E8%AF%BB%E4%B9%A6%E6%9C%89%E7%96%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[大型网站技术架构]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/13/%E5%A4%A7%E5%9E%8B%E7%BD%91%E7%AB%99%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/"/>
+    <id>http://zongxiaomiao.com/2016/01/13/大型网站技术架构/</id>
+    <published>2016-01-13T13:17:44.000Z</published>
+    <updated>2016-01-13T13:32:46.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="u5168_u4E66_u7ED3_u6784"><a href="#u5168_u4E66_u7ED3_u6784" class="headerlink" title="全书结构"></a>全书结构</h1><p><strong>写在前面</strong></p>
+<p>作为一个技术小白，在我读到此书之前对于网站架构几乎一无所知。以前以为产品经理做好功能、界面就是本职所在，然而缺乏对产品性能思考的产品经理绝做不成现象级的产品。</p>
+<p>技术的短板必须要弥补，宁可一思进，莫在一思停。</p>
+<p><strong>框架结构</strong></p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwoEiasDUibBwQt9ibrP89tLffQEgSia2hJhdc90yPRdfyPHe20otf0FQLfQ/0?wx_fmt=png" alt=""></p>
+<p><em>《大型网站技术架构：核心原理与案例分析》行文结构</em></p>
+<h1 id="u5927_u578B_u7F51_u7AD9_u67B6_u6784_u6F14_u5316"><a href="#u5927_u578B_u7F51_u7AD9_u67B6_u6784_u6F14_u5316" class="headerlink" title="大型网站架构演化"></a>大型网站架构演化</h1><p><strong>1.大型网站软件系统的特点</strong></p>
+<blockquote>
+<p>高并发，大流量</p>
+<p>高可用：7*24小时不间断服务</p>
+<p>海量数据：储存、管理大量数据，需要大量服务器。</p>
+<p>用户分布广泛，网络环境复杂</p>
+<p>安全环境恶劣</p>
+<p>需求快速变更，发布频繁</p>
+<p>渐进式发展：不断运营、演化</p>
+</blockquote>
+<a id="more"></a>
+<p><strong>2. 大型网站架构演化发展历程（10个进化阶段）</strong></p>
+<p>1）初始阶段：小型网站一开始只需要<strong>一台服务器</strong>（承载应用程序、数据库、文件等资源），服务器操作系统用linux，应用程序用php开发，部署在Apache（web服务器）上，数据库用MySQL，统称“LAMP”技术。</p>
+<p>2）第二阶段：应用服务与数据服务分离，整个网站使用<strong>三台服务器：应用服务器（cpu快而强大）、文件服务器（硬盘大）和数据库服务器（磁盘检索＋数据缓存）。</strong></p>
+<p>3）第三阶段：使用缓存改善网站性能。内容的二八原则——把小部分频繁访问的数据缓存在内存（<strong>本地缓存于应用服务器内＋远程分布式缓存服务器</strong>内）中，减少数据库的访问压力。</p>
+<p>4）第四阶段：使用<strong>应用服务器集群</strong>（负载均衡调度的多个应用服务器）改善网站的并发处理能力。</p>
+<p>5）第五阶段：数据库读写分离（<strong>两台数据库服务器</strong>主从复制），在应用服务器端使用专门的数据访问摩卡。</p>
+<p>6）第六阶段：使用<strong>反向代理和CDN</strong>，加速网站响应。</p>
+<p>反向代理（部署在网站的中心机房，反向代理服务器缓存）和CDN（部署在网络提供商的机房，就近原则获取数据）基本原理都是缓存。</p>
+<p>7）第七阶段：使用<strong>分布式文件系统和分布式数据库系统</strong>（业务分库）。</p>
+<p>8）第八阶段：使用NoSQL（非关系数据库技术）和搜索引擎（非数据库查询技术），对可伸缩的分布式特性具有很好的支持。应用服务器通过一个统一数据访问模块访问各种数据。</p>
+<p>9）第九阶段：业务拆分（将一个网站拆分成许多不同的应用，之间建立超链接）。</p>
+<p>10）第十阶段：分布式服务（共用业务独立部署，可复用的业务连接数据库调用）。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwP6R3JibqULUSRicLGylkXWh83sH1Lv2yxE9UhFXgMCdibUkJWkY9UHEqQ/0?wx_fmt=png" alt=""></p>
+<p><em>大型网站架构</em></p>
+<p>趋势：技术方案产品化，按需购买，线性伸缩。</p>
+<p>想清楚一个事情：技术是为业务服务的，业务架构的设计合理与否应该先于技术方案的考虑。</p>
+<h1 id="u5927_u578B_u7F51_u7AD9_u67B6_u6784_u6A21_u5F0F"><a href="#u5927_u578B_u7F51_u7AD9_u67B6_u6784_u6A21_u5F0F" class="headerlink" title="大型网站架构模式"></a>大型网站架构模式</h1><ul>
+<li><strong>网站架构模式</strong></li>
+</ul>
+<p>1）分层（横向切分）：企业应用系统的常见模式，分为应用层（负责具体业务和视图展示）、服务层（为应用层提供服务支持）、数据层（提供数据存储访问服务）。</p>
+<p>2）分割（纵向切分）：业务分割，小粒度，独立部署。</p>
+<p>3）分布式：分层和分割的目的是为了分布式部署。</p>
+<p>4）集群：多台服务器部署相同应用构成一个集群，通过负载均衡设备共同对外提供服务。</p>
+<p>5）缓存：缓存就是将数据存放在距离计算最近的位置以加快处理速度。前提：一，数据访问热点不均衡；二，数据不会很快过期。</p>
+<p>CDN：内容分发网络，网络服务商。应用：视频网站和门户网站的热点内容。</p>
+<p>反向代理：网站前端架构，缓存静态资源。</p>
+<p>本地缓存：应用服务器本地的热点数据，无需访问数据库。</p>
+<p>分布式缓存：应用程序通过网络通信访问缓存数据。</p>
+<p>6）异步：将一个业务操作分成多个阶段，每个阶段之间通过共享数据的方式异步执行进行协作。</p>
+<p>7）冗余：当某台服务器宕机时，可以将其上的服务和数据访问转移到其他机器上（热备份）。</p>
+<p>8）自动化：发布自动化，自动化代码管理，自动化测试，自动化安全检测，自动化部署等。</p>
+<p>9）安全：身份认证等手段。</p>
+<ul>
+<li><strong>案例：新浪微博的架构模式</strong></li>
+</ul>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotw3EwcoutibfbbFeD2wRbVdDt5X8UrLkApUTseUuBCdZRaASicmN91fvEg/0?wx_fmt=png" alt=""></p>
+<p><em>图片来源：<a href="http://timyang.net/architecture/weibo" target="_blank" rel="external">http://timyang.net/architecture/weibo</a></em></p>
+<p>层次：3层，基础服务层——平台服务与应用服务层——API和新浪微博的业务层</p>
+<p>好的设计绝对不是生搬硬套某个模式，而是在于对问题和需求是否真正理解与把握。</p>
+<h1 id="u5927_u578B_u7F51_u7AD9_u6838_u5FC3_u67B6_u6784_u8981_u7D20"><a href="#u5927_u578B_u7F51_u7AD9_u6838_u5FC3_u67B6_u6784_u8981_u7D20" class="headerlink" title="大型网站核心架构要素"></a>大型网站核心架构要素</h1><p>架构就是“最高层次的规划，难以改变的决定”。</p>
+<p><strong>1. 性能</strong></p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwtHCwqtAAW4ia2Oia6dGlHfXdSoBOYJia6HT48sqTMASticuqewBb71u2qw/0?wx_fmt=png" alt=""></p>
+<p><em>用户视角的网站性能</em></p>
+<p>衡量指标：响应时间、并发数（同时提交请求的用户数目）、吞吐量（单位时间内系统处理的请求数量）、系统性能计数器（服务器或操作系统性能的数据指标，包括系统负载、对象与线程数等）等。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwIVmyjW85b6WwN0MEDFetmsRWb2D5ibnPSmvhsdNY4esdgVRibR5icKjAA/0?wx_fmt=png" alt=""></p>
+<p><em>性能测试曲线</em></p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwrsZtn3K1Niaqo4tntAX2BIkUZbpXia1CJKfzDSIL1ngK0VVt2Tnoxh3Q/0?wx_fmt=png" alt=""></p>
+<p><em>并发用户访问响应时间曲线</em></p>
+<p>影响到用户请求的所有环节都可以进行性能优化，如下：</p>
+<p><strong>1）浏览器端：</strong></p>
+<p>浏览器缓存、页面压缩、合理布局、减少cookie传输等手段改善性能；</p>
+<p>i. 减少http请求：合并CSS、 JavaScript、合并图片。</p>
+<p>ii. 使用浏览器缓存：通过设置HTTP头重的Cache-Control和Expires的属性，将静态素材文件缓存在浏览器中；更新这些资源时不要批量更新，而是逐步更新，并中间间隔时间。</p>
+<p>iii. 启用压缩：减少传输数据量，但会对服务器和浏览器产生一定压力；</p>
+<p>iiii. CSS放在页面最上面，JavaScript放在页面最下面（除了在页面解析时就需要用到JavaScript时）；</p>
+<p>iiiii. 减少cookie传输：静态资源使用独立域名访问，避免请求静态资源时发送cookie。</p>
+<p><strong>2）CDN（content distribute network）和反向代理</strong></p>
+<p>CDN就是将网站静态内容（图片、文字、css、script脚本、静态网页等）分发至离用户最近的网络服务商机房，使用户通过最短访问路径获取数据。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwJ3XqoLQn8b4HQsA2JDajZ0nIGbBle92ciaIvgiaPtus9q6tYHr0tKa4g/0?wx_fmt=png" alt=""></p>
+<p>利用反向代理的网站架构</p>
+<p>反向代理：缓存静态内容+动态内容。用户请求——缓存在代理服务器上——直接返回。同时具有安全功能和负载均衡功能。</p>
+<p>3）应用服务器端：使用服务器本地缓存和分布式缓存。</p>
+<p>i. 分布式缓存：</p>
+<blockquote>
+<p>网站性能优化第一定律：优先考虑使用缓存优化性能。</p>
+</blockquote>
+<p>缓存的基本原理：讲数据存储在相对较高访问速度的存储介质中，以供系统处理。</p>
+<p>缓存的本质：内存Hash表，数据缓存以一对Key, Value的形式存储在内存Hash表中。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwBSDVNotVDNgdiaWNnu6vtp0gicoP9scrXI3YLIa9KVmLdj8YMJ2g0xHw/0?wx_fmt=png" alt=""></p>
+<p>使用缓存存取数据</p>
+<p>分布式缓存架构：</p>
+<p>JBoss Cache: 需更新同步的分布式缓存——企业应用系统中常见；</p>
+<p>Memcached: 不互相通信的分布式缓存——大型网站。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwkzO07HIZ0uiau1Y2ELr95ga9f7l5zfMYLGLiaVqfvElchwQCEJiaJ4B2g/0?wx_fmt=png" alt=""></p>
+<p>JBoss Cache: 需更新同步的分布式缓存</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwes8HEBy7ZrsRPRxttqNL1E21aPicM1cLhA3e4uaUmbLY6OIMuHAmYQQ/0?wx_fmt=png" alt=""></p>
+<p>Memcached: 不互相通信的分布式缓存</p>
+<p>ii. 异步操作：将用户请求发送至消息队列等待处理，而当前请求直接返回响应给用户。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwt96jQW12QMUydS24gA3Hia2lrGVc1zqToweia4KFc5OkVPicR66ObdGFw/0?wx_fmt=png" alt=""></p>
+<p>使用消息队列消除并发访问高峰</p>
+<p>iii. 使用集群：高并发访问场景下，使用负载均衡技术为一个应用构建一个由多台服务器组成的服务器集群，将并发访问请求分发到多台服务器上处理。</p>
+<p>iiii. 代码优化：多线程、资源复用（单例、对象池）、数据结构、垃圾回收。</p>
+<p>4）存储性能优化</p>
+<p>i. 机械硬盘 vs. 固态硬盘</p>
+<p>ii. B+树（传统关系数据库） vs. LSM树（NoSQL产品）</p>
+<p>iii. RAID vs. HDFS</p>
+<p>总结一句话：性能优化最终对于用户而言是一种主观感受，让他们觉得快是目的。</p>
+<p><strong>2. 可用性(Availability)</strong></p>
+<p>衡量指标：假设系统中多台服务器宕机、以及其他不可预期的问题时，系统整体依然可用。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotw8ePbeiaceY2UhicBzdSdOichia3BEKM1Ibsg7C3Q1fLiafUekYBickaaBYKw/0?wx_fmt=png" alt=""></p>
+<p>分层后按模块分割的网站架构模型</p>
+<p>应用层负责具体业务逻辑处理，服务层负责提供可复用的服务，数据层负责数据的存储和访问。</p>
+<p>提高网站可用性的手段，如下：</p>
+<p>1）冗余：应用部署在多台服务器上同时提供访问，数据存储在多台服务器上互相备份。</p>
+<p>2）应用服务器端：负载均衡，集群，切换。</p>
+<p>在集群环境下，Session管理主要有以下几种手段：</p>
+<p>i. Session复制：不适用于大型网站（占用服务器和网络的大量资源，系统不堪负担）；</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwu6GGpzDDib2nh0mWraSXXWwibU6LFeHnuJPKNTNfzJhMokp2wwq26J8g/0?wx_fmt=png" alt=""></p>
+<p>使用Session复制实现应用服务器共享Session</p>
+<p>ii. Session绑定：也不符合大型网站的要求。</p>
+<p>iii. 利用Cookie记录Session：</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwb1kbKzmDYiaIjTvt3ZTfYuJa57KkMhzFmQtHAnAeCB5icf8fljMosNUQ/0?wx_fmt=png" alt=""></p>
+<p>利用Cookie记录Session信息</p>
+<p>iiii. Session服务器</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwribb7YbQH3CdyS0fNeyMZv48UlwMjzG3icsicPEmIW4sXicCTFT6ibK9ghQ/0?wx_fmt=png" alt=""></p>
+<p>利用Session服务器共享Session</p>
+<p>将应用该服务器的状态分离，分为无状态的应用服务器和有状态的Session服务器。</p>
+<p>3）高可用的服务：</p>
+<p>i. 分级管理：</p>
+<p>ii. 超时设置：</p>
+<p>iii. 异步调用</p>
+<p>iiii. 服务降级</p>
+<p>iiiii. 幂等性设计</p>
+<p>4）高可用的数据</p>
+<p>含义：数据持久性、数据可访问性、分区耐受性（难以同时满足三个条件）</p>
+<p>5）高可用网站的软件质量保证</p>
+<p>6）网站运行监控：不允许没有监控的系统上线。</p>
+<p>i. 监控数据采集：用户行为日志、业务运行数据、运维工程师和开发工程师使用的系统性能数据；</p>
+<p>ii. 监控管理： 系统报警、失效转移、自动优雅降级（双11，淘宝关闭确认收货和评价功能）</p>
+<p><strong>3. 伸缩性</strong></p>
+<p>所谓伸缩性就是通过不断向集群中加入服务器的手段来缓解不断上升的用户并发访问压力和不断增长的数据存储需求，不需要改变网站的软硬件设计，仅仅通过改变部署的服务器数量就可以扩大或者缩小网站的服务处理能力。</p>
+<blockquote>
+<p>当一头牛拉不动车的时候，不要去寻找一头更强壮的牛，而是用两头牛来拉车。</p>
+</blockquote>
+<p>提升手段如下：</p>
+<p>1）应用服务器集群：合适的负载均衡设备；</p>
+<p>i. HTTP重定向负载均衡：并不多见；</p>
+<p>ii. DNS域名解析负载均衡：支持基于地理位置的域名解析，加快用户访问速度。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotww8QDWS1FNIrKQEA40eDb1QyWib53d9rS3Z1kGIq19LaMZTwQSoPuubg/0?wx_fmt=png" alt=""></p>
+<p>DNS域名解析负载均衡原理</p>
+<p>iii. 反向代理负载均衡：</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwxx1cyFf9b2Wl29KNegPk26t9uzzvDic029tDSUJoOkbvOdbfDXmcA7g/0?wx_fmt=png" alt=""></p>
+<p><em>反向代理负载均衡原理</em></p>
+<p>iiii. IP负载均衡：吞吐量受限于负载均衡服务器网卡带宽。</p>
+<p>iiiii. 数据链路层负载均衡：在通信协议的数据链层修改mac地址进行负载均衡——使用三角传输模式的链路层负载均衡是目前使用最广的一种负载均衡手段。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwBwMUHLg090ww6SgnHWPCMWCOgVBZ2ia0U5uBEpwLD2AX5zLznExUkWA/0?wx_fmt=png" alt=""></p>
+<p>数据链路层负载均衡原理</p>
+<p>2）分布式缓存服务器集群：改进缓存路由算法，保证缓存数据的可访问性；</p>
+<p>（这部分内容非常专业，看了很多遍也没懂，以后再看看补充）</p>
+<p>3）关系数据库集群：路由分区等手段；</p>
+<p><strong>4. 扩展性</strong></p>
+<p>主要关注网站的功能需求，快速响应新增业务的变化。核心思想：模块化。</p>
+<p>低耦合的系统更容易扩展，低耦合的模块更容易复用。</p>
+<p>提升手段如下：</p>
+<p>1）事件驱动架构：利用消息队列实现；</p>
+<p>2）分布式服务：将业务和可复用服务分离，通过分布式服务框架调用，新增的产品可以通过调用可复用的服务时限自身的业务逻辑，而对现有产品没有影响。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwjbTzMMVUiaibLic2WQHd8BGTY74x2y3wZ3k1jTzQAPevDz3QAyxFlIjSQ/0?wx_fmt=png" alt=""></p>
+<p>业务及模块拆分独立部署的分布式服务架构</p>
+<p>3）开放平台接口：针对第三方开发者。</p>
+<p><strong>5. 安全性</strong></p>
+<p>衡量标准：对于潜在和现存的攻击和窃密，是否有可靠的应对策略。</p>
+<hr>
+<p>作者在最后介绍了架构师的职场攻略，他山之石，可以攻玉，产品经理也可以在自己的工作中借鉴：</p>
+<ol>
+<li>新人怎么做：新员工不要着急证明自己的能力和做出所谓的“成绩”，而是要和团队先达成一片，知道了水的深浅之后，再择机而动。</li>
+</ol>
+<p>就好比，做一个田野调查，公司也就是一个田野，很多时候，普遍的、先进的解决方法并不会适用于这个田野，你也不会知道谁是这个田野里的gate keeper, 所以往往难以调度。而只有go native之后，才可能因地制宜。</p>
+<ol>
+<li><p>如何寻求支持：寻找利益共同点，或者他人的利益点。</p>
+</li>
+<li><p>如何沟通：给上司做选择题，给下属做开放题。</p>
+</li>
+</ol>
+<hr>
+<p>附录：大型网站架构技术一览</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwGwGZT6Wa2Mek2gnlm50WNsB87U98l7JHVQ1M1ia2zjHzcY20K4IqXiag/0?wx_fmt=png" alt=""></p>
+<p>网站系统架构层次</p>
+<ul>
+<li>前端架构：前端指用户请求到达网站应用服务器之前经历的环节，通常不包含网站业务逻辑，不处理动态内容。</li>
+</ul>
+<p>1）浏览器优化技术：优化响应页面，加快加载和显示。</p>
+<p>2）CDN：内容分发网络。</p>
+<p>3）动静分离：静态资源，如JS、CSS等文件部署在专门的服务器集群上，和Web应用动态内容服务分离，并使用专门的（二级）域名。</p>
+<p>4）图片服务：用户上传的图片。也应用独立部署的图片服务器集群，并使用二级域名。</p>
+<p>5）反向代理：</p>
+<p>6）DNS：</p>
+<ul>
+<li>应用层架构：应用层是处理网站主要业务逻辑的地方。</li>
+</ul>
+<p>1）开发框架：分离关注面，易于协作，内置安全策略等。</p>
+<p>2）页面渲染：将分别开发维护的动态内容和静态页面模板集成起来，组合成最终的展示页面；</p>
+<p>3）负载均衡：</p>
+<p>4）Session管理：</p>
+<p>5）动态页面静态化：</p>
+<p>6）业务拆分：</p>
+<p>7）虚拟化服务器。</p>
+<ul>
+<li>服务层架构：提供基础服务，供应用层调用，完成网站业务。</li>
+</ul>
+<p>分布式消息、分布式服务、分布式缓存、分布式配置。</p>
+<ul>
+<li>存储层架构：提供数据、文件的持久化存储访问和管理服务。</li>
+</ul>
+<p>1）分布式文件；</p>
+<p>2）关系数据库：</p>
+<p>3）NoSQL数据库：HBase;</p>
+<p>4）数据同步。</p>
+<ul>
+<li>后台架构：后台非实时数据分析处理。</li>
+</ul>
+<p>1）搜索引擎；</p>
+<p>2）数据仓库；</p>
+<p>3）推荐系统。</p>
+<p>作者的忠告：</p>
+<p>不要企图设计大型网站，网站是演化出来的。</p>
+<blockquote>
+<p>书目名称：大型网站技术架构——核心原理与案例分析</p>
+<p>作者：李智慧</p>
+<p>出版社：电子工业出版社，2013年</p>
+</blockquote>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Rh2wpYzr0Ps67raurD9PyPcTQvsq5TX3sGKf1iaX7rogBAqbHrqpnlEdU9gCPvVCYib3ic43PDYr6FicQ/0?wx_fmt=jpeg" alt=""></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="u5168_u4E66_u7ED3_u6784"><a href="#u5168_u4E66_u7ED3_u6784" class="headerlink" title="全书结构"></a>全书结构</h1><p><strong>写在前面</strong></p>
+<p>作为一个技术小白，在我读到此书之前对于网站架构几乎一无所知。以前以为产品经理做好功能、界面就是本职所在，然而缺乏对产品性能思考的产品经理绝做不成现象级的产品。</p>
+<p>技术的短板必须要弥补，宁可一思进，莫在一思停。</p>
+<p><strong>框架结构</strong></p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwoEiasDUibBwQt9ibrP89tLffQEgSia2hJhdc90yPRdfyPHe20otf0FQLfQ/0?wx_fmt=png" alt=""></p>
+<p><em>《大型网站技术架构：核心原理与案例分析》行文结构</em></p>
+<h1 id="u5927_u578B_u7F51_u7AD9_u67B6_u6784_u6F14_u5316"><a href="#u5927_u578B_u7F51_u7AD9_u67B6_u6784_u6F14_u5316" class="headerlink" title="大型网站架构演化"></a>大型网站架构演化</h1><p><strong>1.大型网站软件系统的特点</strong></p>
+<blockquote>
+<p>高并发，大流量</p>
+<p>高可用：7*24小时不间断服务</p>
+<p>海量数据：储存、管理大量数据，需要大量服务器。</p>
+<p>用户分布广泛，网络环境复杂</p>
+<p>安全环境恶劣</p>
+<p>需求快速变更，发布频繁</p>
+<p>渐进式发展：不断运营、演化</p>
+</blockquote>]]>
+    
+    </summary>
+    
+      <category term="技术" scheme="http://zongxiaomiao.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="架构" scheme="http://zongxiaomiao.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+      <category term="读书有疑" scheme="http://zongxiaomiao.com/categories/%E8%AF%BB%E4%B9%A6%E6%9C%89%E7%96%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[计算广告：互联网广告产品逻辑]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/12/%E8%AE%A1%E7%AE%97%E5%B9%BF%E5%91%8A%EF%BC%9A%E4%BA%92%E8%81%94%E7%BD%91%E5%B9%BF%E5%91%8A%E4%BA%A7%E5%93%81%E9%80%BB%E8%BE%91/"/>
+    <id>http://zongxiaomiao.com/2016/01/12/计算广告：互联网广告产品逻辑/</id>
+    <published>2016-01-12T13:43:58.000Z</published>
+    <updated>2016-01-12T14:16:59.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>全文结构</strong></p>
+<p>主线：商业逻辑驱动的在线广告产品和技术的升级。</p>
+<p>辅线：数据的加工、利用与交易。</p>
+<h1 id="u4E00_u3001_u5728_u7EBF_u5E7F_u544A_u7EFC_u8FF0"><a href="#u4E00_u3001_u5728_u7EBF_u5E7F_u544A_u7EFC_u8FF0" class="headerlink" title="一、在线广告综述"></a>一、在线广告综述</h1><h4 id="1-__u5E7F_u544A_u7684_u672C_u8D28_u548C_u529F_u80FD"><a href="#1-__u5E7F_u544A_u7684_u672C_u8D28_u548C_u529F_u80FD" class="headerlink" title="1. 广告的本质和功能"></a>1. 广告的本质和功能</h4><p>广告的根本目的是广告主通过媒体达到低成本的用户接触。</p>
+<p>广告的功能：brand awareness + direct response（目前互联网广告着重靠效果广告盈利）</p>
+<h4 id="2-__u5728_u7EBF_u5E7F_u544A_u7684_u7C7B_u578B_uFF1A"><a href="#2-__u5728_u7EBF_u5E7F_u544A_u7684_u7C7B_u578B_uFF1A" class="headerlink" title="2. 在线广告的类型："></a>2. 在线广告的类型：</h4><p>1）横幅广告：占据固定版面，动态素材。</p>
+<p>2）文字链广告：一段链接到广告主落地页的文字，用于展示广告和搜索广告。</p>
+<p>3）富媒体广告：向用户侵入式地投送广告素材，如弹窗。</p>
+<p>4）视频广告：前插片、后插片、暂停等形式。</p>
+<p>5）社交广告：利用社交环境植入广告（原生广告），社交广告希望达到的效果是通过用户的扩散式传播获得更大的影响力和口碑。<strong>内容展现与触发逻辑有高度一致性</strong>。</p>
+<p>6）移动广告：横幅、开屏、插屏、积分墙、推荐墙。</p>
+<p>7）邮件定向营销广告（EDM）。</p>
+<a id="more"></a>
+<p>其他泛广告类型：</p>
+<p>1）团购：本质是一种按效果付费的泛广告类型（广告主付出推广费+用户让利）。</p>
+<p>2）游戏联运：推广渠道和游戏开发商分成的发行模式。</p>
+<p>3）固定位导航：按时间付费。</p>
+<p>4）返利购买：</p>
+<h4 id="3-_u5728_u7EBF_u5E7F_u544A_u7684_u53D1_u5C55_u5386_u7A0B"><a href="#3-_u5728_u7EBF_u5E7F_u544A_u7684_u53D1_u5C55_u5386_u7A0B" class="headerlink" title="3.在线广告的发展历程"></a>3.在线广告的发展历程</h4><p>在线广告的发展，定向技术和交易形式的进化是一条主线。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5I0HRcxAbLQeNctnI52U4cLPUn3PYCz9tlt2sh8NaoBkjqkJ1icRxVOEg/0?wx_fmt=png" alt=""></p>
+<p>在线广告交易形式发展历史</p>
+<h1 id="u4E8C_u3001_u8BA1_u7B97_u5E7F_u544A_u57FA_u7840"><a href="#u4E8C_u3001_u8BA1_u7B97_u5E7F_u544A_u57FA_u7840" class="headerlink" title="二、计算广告基础"></a>二、计算广告基础</h1><p>在线广告中计算到底是为了解决什么问题？解决这些问题需要什么样的业务描述框架？</p>
+<h4 id="1-__u5E7F_u544A_u6548_u679C_u4EA7_u751F_u8FC7_u7A0B"><a href="#1-__u5E7F_u544A_u6548_u679C_u4EA7_u751F_u8FC7_u7A0B" class="headerlink" title="1. 广告效果产生过程"></a>1. 广告效果产生过程</h4><p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5I1vmmD0lciaJJ71DJnvL1IBstlRIgSwbbqiarIqvUb6HiatnBibocw8SOLA/0?wx_fmt=png" alt=""></p>
+<p>广告效果产生过程示意：从点击率到转化率</p>
+<h4 id="2-__u4E92_u8054_u7F51_u5E7F_u544A_u7684_u6280_u672F_u7279_u70B9"><a href="#2-__u4E92_u8054_u7F51_u5E7F_u544A_u7684_u6280_u672F_u7279_u70B9" class="headerlink" title="2. 互联网广告的技术特点"></a>2. 互联网广告的技术特点</h4><p>1）计算和技术导向；</p>
+<p>2）效果的可衡量性；</p>
+<p>3）创意和投放方式的标准化；</p>
+<p>4）媒体概念的多样化；</p>
+<p>5）数据驱动的投放决策。</p>
+<h4 id="3-__u8BA1_u7B97_u5E7F_u544A_u7684_u6838_u5FC3_u95EE_u9898"><a href="#3-__u8BA1_u7B97_u5E7F_u544A_u7684_u6838_u5FC3_u95EE_u9898" class="headerlink" title="3. 计算广告的核心问题"></a>3. 计算广告的核心问题</h4><p>核心问题：为一系列<strong>用户（u）</strong>与<strong>环境（c）</strong>的组合找到最合适的<strong>广告投放策略（a）</strong>以优化整体广告活动的利润。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5IqXewCE512pdEGuwxmeVEICZWC7cFwrfp62bS3zmT129icDFicd9Albicg/0?wx_fmt=png" alt=""></p>
+<p>在线广告结算方式比较</p>
+<h1 id="u4E09_u3001_u5728_u7EBF_u5E7F_u544A_u4EA7_u54C1_u6982_u89C8"><a href="#u4E09_u3001_u5728_u7EBF_u5E7F_u544A_u4EA7_u54C1_u6982_u89C8" class="headerlink" title="三、在线广告产品概览"></a>三、在线广告产品概览</h1><p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5I06pqt6JUFiaTEhj41eHO3GRQv7xT7iaPve410m394Tz4O8LhbyHSjkOg/0?wx_fmt=png" alt=""></p>
+<p>在线广告产品进化示意图</p>
+<h4 id="1-__u5546_u4E1A_u4EA7_u54C1_u7684_u8BBE_u8BA1_u539F_u5219"><a href="#1-__u5546_u4E1A_u4EA7_u54C1_u7684_u8BBE_u8BA1_u539F_u5219" class="headerlink" title="1. 商业产品的设计原则"></a>1. 商业产品的设计原则</h4><p>1）相对于产品功能，要特别关注产品中的策略部分。</p>
+<p>2）要特别关注数据，让运营和产品优化形成闭环（以数据分析开始，以数据结束）。</p>
+<p>3）便捷性、可用性至上。</p>
+<h4 id="2-__u9700_u6C42_u65B9_u5C42_u7EA7_u7EC4_u7EC7_u4E0E_u63A5_u53E3"><a href="#2-__u9700_u6C42_u65B9_u5C42_u7EA7_u7EC4_u7EC7_u4E0E_u63A5_u53E3" class="headerlink" title="2. 需求方层级组织与接口"></a>2. 需求方层级组织与接口</h4><p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5Ivm9edrDryAjC54b5MB4jAGs15sKfSFdSgiae8kEzCn7LP77WNtsfLBw/0?wx_fmt=png" alt=""></p>
+<p>广告层级关系示意</p>
+<p>1）广告计划：预算、时间范围等基本信息。</p>
+<p>2）广告组：设定受众定向条件和出价。</p>
+<p>3）广告创意</p>
+<p>一般而言，广告平台会提供与界面功能相对应的API接口，以便大的需求方可以通过编程的方式进行批量投放和优化（带宽或操作次数有限制）。</p>
+<h4 id="3-__u4F9B_u7ED9_u65B9_u7BA1_u7406_u63A5_u53E3"><a href="#3-__u4F9B_u7ED9_u65B9_u7BA1_u7406_u63A5_u53E3" class="headerlink" title="3. 供给方管理接口"></a>3. 供给方管理接口</h4><p>分媒体、广告位两个层次。</p>
+<h1 id="u56DB_u3001_u5408_u7EA6_u5E7F_u544A"><a href="#u56DB_u3001_u5408_u7EA6_u5E7F_u544A" class="headerlink" title="四、合约广告"></a>四、合约广告</h1><p>cpt结算：线下广告的商业逻辑照搬到线上，售卖对象为广告位。</p>
+<p>cpm结算：售卖对象为“广告位+人群”</p>
+<p>受众定向方法：</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5IsfAngiaXKM96qzia8LoNv4XNRokiaKd8kibzjMq583NcgDUSyKs4SCKdNw/0?wx_fmt=png" alt=""></p>
+<p>常见受众定向方法一览</p>
+<p>1）地域定向；</p>
+<p>2）人口属性定向：年龄、性别、教育、收入等；</p>
+<p>3）频道定向：适合垂直类媒体，如汽车、母婴等；</p>
+<p>4）上下文定向：通过单次当前页面浏览推断即时兴趣；</p>
+<p>5）行为定向：多次上下文定向融合的结果；</p>
+<p>6）精确位置定向：移动广告；</p>
+<p>7）重定向：某广告主对过去一段时间的访客投放广告以提升效果；</p>
+<p>8）新客推荐定向；</p>
+<p>9）团购：利用价格工具，降低决策门槛；</p>
+<h1 id="u4E94_u3001_u539F_u751F_u5E7F_u544A"><a href="#u4E94_u3001_u539F_u751F_u5E7F_u544A" class="headerlink" title="五、原生广告"></a>五、原生广告</h1><ol>
+<li>原生广告相关产品：</li>
+</ol>
+<p>1）信息流广告：微博、QQ空间等；</p>
+<p>2）搜索广告：内容即广告；</p>
+<ol>
+<li>移动广告的特点：</li>
+</ol>
+<p>1）情景广告的可能性；</p>
+<p>2）大量潜在的本地化广告主。</p>
+<p><span style="font-size: 17px; font-weight: bold; line-height: 1.6;"></span></p>
+<blockquote>
+<p>书目：《计算广告 互联网商业变现的市场与技术》</p>
+<p>作者：刘鹏 王超</p>
+<p>出版社：人民邮电出版社</p>
+</blockquote>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5IDsFiczGkCE5YS4lIM1UdI44OMAoLtTMSpjbsV79bay6bvgribZYzTsBg/0?wx_fmt=png" alt=""></p>
+<p>计算广告 互联网商业变现的市场与技术（来源：亚马逊）</p>
+<h1 id="u9898_u5916_u8BDD_uFF1A"><a href="#u9898_u5916_u8BDD_uFF1A" class="headerlink" title="题外话："></a>题外话：</h1><p>我们来看看最近被黑得风生水起的百度的广告体系，不得不感慨，贵公司非常会赚钱：</p>
+<p>百度的在线广告分六个部分：凤巢，网盟，问答知心，教育知心，医疗知心，闪投。</p>
+<blockquote>
+<p>凤巢，也就是大搜，就是打开百度首页开始进行搜索的业务，这个是百度营收的最大一部分，从我那里统计得出的数据来看，仅仅凤巢每天从广告主那里获得的利润就有1.2～1.5个亿。非常可怕的赚钱机器。在我去的时候，正在准备做微型凤巢，就是希望做出一个能快速反应出投放广告的效果的实验性质的系统。<br>网盟，就是中小商家投广告的平台，中国网民每天打开小网站弹出的格式各样的小广告，大多数是网盟来提供服务的。</p>
+<p>问答知心，教育知心和医疗知心最开始是希望对主要广告来源进行细分，但是在我走的时候，问答和教育基本上已经不怎么维护了，但是医疗还在进行，我看过一次他们医疗推广的文案和图片，恶心的我晚上都没吃饭。</p>
+<p>闪投是快速投放广告的一个渠道，只要你掏钱，百度会帮你把创意，投放区域，投放时间什么的都搞定。</p>
+<p>——摘自一位曾在百度就职的员工公开发表的文章</p>
+</blockquote>
+<p><span style="font-size: 17px; font-weight: bold; line-height: 1.6;"><br></span></p>
+<p><span style="font-size: 17px; font-weight: bold; line-height: 1.6;"><br></span></p>
+<p><span style="font-size: 17px; font-weight: bold; line-height: 1.6;"><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Rh2wpYzr0Ps67raurD9PyPcTQvsq5TX3sGKf1iaX7rogBAqbHrqpnlEdU9gCPvVCYib3ic43PDYr6FicQ/0?wx_fmt=jpeg" alt=""><br></span></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><strong>全文结构</strong></p>
+<p>主线：商业逻辑驱动的在线广告产品和技术的升级。</p>
+<p>辅线：数据的加工、利用与交易。</p>
+<h1 id="u4E00_u3001_u5728_u7EBF_u5E7F_u544A_u7EFC_u8FF0"><a href="#u4E00_u3001_u5728_u7EBF_u5E7F_u544A_u7EFC_u8FF0" class="headerlink" title="一、在线广告综述"></a>一、在线广告综述</h1><h4 id="1-__u5E7F_u544A_u7684_u672C_u8D28_u548C_u529F_u80FD"><a href="#1-__u5E7F_u544A_u7684_u672C_u8D28_u548C_u529F_u80FD" class="headerlink" title="1. 广告的本质和功能"></a>1. 广告的本质和功能</h4><p>广告的根本目的是广告主通过媒体达到低成本的用户接触。</p>
+<p>广告的功能：brand awareness + direct response（目前互联网广告着重靠效果广告盈利）</p>
+<h4 id="2-__u5728_u7EBF_u5E7F_u544A_u7684_u7C7B_u578B_uFF1A"><a href="#2-__u5728_u7EBF_u5E7F_u544A_u7684_u7C7B_u578B_uFF1A" class="headerlink" title="2. 在线广告的类型："></a>2. 在线广告的类型：</h4><p>1）横幅广告：占据固定版面，动态素材。</p>
+<p>2）文字链广告：一段链接到广告主落地页的文字，用于展示广告和搜索广告。</p>
+<p>3）富媒体广告：向用户侵入式地投送广告素材，如弹窗。</p>
+<p>4）视频广告：前插片、后插片、暂停等形式。</p>
+<p>5）社交广告：利用社交环境植入广告（原生广告），社交广告希望达到的效果是通过用户的扩散式传播获得更大的影响力和口碑。<strong>内容展现与触发逻辑有高度一致性</strong>。</p>
+<p>6）移动广告：横幅、开屏、插屏、积分墙、推荐墙。</p>
+<p>7）邮件定向营销广告（EDM）。</p>]]>
+    
+    </summary>
+    
+      <category term="商业" scheme="http://zongxiaomiao.com/tags/%E5%95%86%E4%B8%9A/"/>
+    
+      <category term="广告" scheme="http://zongxiaomiao.com/tags/%E5%B9%BF%E5%91%8A/"/>
+    
+      <category term="读书有疑" scheme="http://zongxiaomiao.com/categories/%E8%AF%BB%E4%B9%A6%E6%9C%89%E7%96%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[结网：成为伟大的产品经理前先成为最挑剔的用户]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/11/%E7%BB%93%E7%BD%91%EF%BC%9A%E6%88%90%E4%B8%BA%E4%BC%9F%E5%A4%A7%E7%9A%84%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E5%89%8D%E5%85%88%E6%88%90%E4%B8%BA%E6%9C%80%E6%8C%91%E5%89%94%E7%9A%84%E7%94%A8%E6%88%B7/"/>
+    <id>http://zongxiaomiao.com/2016/01/11/结网：成为伟大的产品经理前先成为最挑剔的用户/</id>
+    <published>2016-01-11T11:09:08.000Z</published>
+    <updated>2016-01-11T11:15:34.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="u5168_u4E66_u7ED3_u6784"><a href="#u5168_u4E66_u7ED3_u6784" class="headerlink" title="全书结构"></a><strong>全书结构</strong></h2><p>Prototype - Alpha - Beta </p>
+<p>职业选择 － 创建产品 － 个人修炼</p>
+<h2 id="u4EA7_u54C1_u7ECF_u7406_u7684_u81EA_u6211_u5B9A_u4F4D"><a href="#u4EA7_u54C1_u7ECF_u7406_u7684_u81EA_u6211_u5B9A_u4F4D" class="headerlink" title="产品经理的自我定位"></a><strong>产品经理的自我定位</strong></h2><p>产品经理应该是团队的润滑剂，要做好做“万金油”的准备，什么都要懂一点，用户、同事、老板都需要你去主动沟通。</p>
+<a id="more"></a>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwmbgCFZOZbKteWwIDCeldMpKzicSY6gqZf5zmSNrRe98k4icGtnblVNLA/0?wx_fmt=png" alt=""></p>
+<p><em>理想的产品经理的角色——补集</em></p>
+<p><strong>
+</strong></p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwqp2hhYFOU7ft4eWr93V3FXHuqPYoMicml8ic99P7UaNwO4uIaGhiaIYibw/0?wx_fmt=png" alt=""></p>
+<p><em>现实的产品团队中：产品经理——产品策划</em></p>
+<p><strong>创建互联网产品</strong></p>
+<blockquote>
+<p><strong>流程：</strong></p>
+<p>   概念   ——    形式   ——  风格   ——       结构      ——        工艺    ——      外观</p>
+<p>（需求）——（形态）——（调性）——（人机交互）——（研发管理）——（图形界面）</p>
+</blockquote>
+<p>＊需求是指某一个方面的需求，不是大而化之的需求。</p>
+<p>eg. twitter＝低成本＋差异化 (低成本是指产品周期内，而不是单个研发成本)</p>
+<p><strong>一. 过滤</strong></p>
+<p>一个概念是否可行，需要经过以下的过滤：</p>
+<p>1）这个概念的原始出处是哪里？全球的最佳实践是什么？</p>
+<p>——找到概念的源头，看清其本质。</p>
+<p>2）哪些用户会从中受益？这些用户有什么特征？规模如何？</p>
+<p>——产品一定是某个具体的人在用。产品的细分度和集中度（马太效应）。</p>
+<p>3）这个概念为它的目标用户带来什么？</p>
+<p>——如果一句话说不清，那这个概念就有大问题。真实世界投射法。</p>
+<p>4）进入壁垒是否过高或过低？</p>
+<p>——技术、成本、对特定资源的占有。</p>
+<p>eg. iphone的竞争壁垒是海量应用，活跃的应用开发生态圈。</p>
+<p>5）有无商业模式？</p>
+<p>向用户收费 vs. 向公司收费</p>
+<p>（体验经济）    （广告）</p>
+<p>6）能否成为平台或现金牛？在公司战略布局中处于什么位置？</p>
+<p>是否满足了用户的强需求和频发需求：</p>
+<p>即时通讯、社交网络、娱乐、邮件、游戏、搜索、零售、资讯、社区等。</p>
+<p>平台产品：拉动其他产品的能力。</p>
+<p>现金牛产品：提供利润。</p>
+<p><strong>二. 把概念变成图纸</strong></p>
+<p>分类：<strong>MECE原则</strong>——相互独立，完全穷尽。（功能模块划分法、用户角色分类法）</p>
+<p>沟通：“会员”到底是什么意思？——建构内部通用的语言</p>
+<p><strong>PDCA框架</strong></p>
+<p>宏观计划，微观颗粒（一个用例）均可运用</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwjnura56ibtRbBvaTayOvx0jx6OOvl1GjYe09Niaq541f038Wv1IN4gibA/0?wx_fmt=png" alt=""></p>
+<p>PDCA框架</p>
+<p><strong>产品功能点成本效益分析（优先级）</strong></p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwz2iawoxiaHgQczwp66v6nq3AZIQbiaJqdpXOkwiaWw4moC7J5icttm8O0ug/0?wx_fmt=png" alt=""></p>
+<p><strong>
+</strong></p>
+<p><strong>
+</strong></p>
+<p><strong>产品功能点成本效益分析</strong></p>
+<p><strong>
+</strong></p>
+<ol>
+<li><p>提供反馈入口；</p>
+</li>
+<li><p>订阅产品关键字进行监控；</p>
+</li>
+<li><p>建立核心用户群，第一时间获取他们的想法；</p>
+</li>
+<li><p>用户行为录像／跟用户回家，发现用户使用的障碍；</p>
+</li>
+<li><p>对流失用户进行回访，分析流失原因。</p>
+</li>
+</ol>
+<p>适应千奇百怪的使用场景，甚至有新的发现。——twitter的“@”</p>
+<p>Check Lists（产品经理一线参与的测试环节）:</p>
+<ol>
+<li><p>用户对产品的核心概念是否了解，是否接受？</p>
+</li>
+<li><p>图纸是否覆盖了核心概念？是否在核心概念之外设计了太多东西？</p>
+</li>
+<li><p>用户对图纸（虚拟功能、虚拟体验）怎么看？</p>
+</li>
+<li><p>项目结果与图纸是否相符？是否进行了全面的测试？</p>
+</li>
+<li><p>用户对项目阶段性结果（功能、体验）怎么看？</p>
+</li>
+<li><p>是否形成了用户任务的闭环？</p>
+</li>
+<li><p>是否存在流失率超高的任务节点？（例如：注册）</p>
+</li>
+</ol>
+<p><strong>三、网站分析</strong></p>
+<p>网站分析两大原则：可行动（为改进而分析）；以用户为中心</p>
+<p>网站分析方法：页面标记法（在网页中嵌入google analytics脚本）、日志分析法（用软件直接分析网站）。</p>
+<p>用户操作记录：clicktale.com; clixpy.com</p>
+<p>网站分析步骤：</p>
+<ol>
+<li><p>建立并维护业务数据模型: 日常数据和活动数据（染色追踪）</p>
+</li>
+<li><p>监护产品的健康状况，确保完成KPI: 对产品的关键指标进行预测</p>
+</li>
+</ol>
+<p><strong>四、拉动</strong></p>
+<ol>
+<li>平台拉动</li>
+</ol>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwgyvq3Yt1ZOHG51KpY81RNPZwYc9ZRiaxoyj8UWBgMUcJuJEqoicbCpdg/0?wx_fmt=png" alt=""></p>
+<p><em>平台拉动公式</em></p>
+<p>影响转化率的因素：展示面积、目标用户与平台用户的重合度、封闭体验（组合系统、融合体验）</p>
+<ol>
+<li>口碑拉动</li>
+</ol>
+<p>印象关－体验关－无聊关</p>
+<p><strong>五、优雅降级</strong></p>
+<p>通过产品的有损运行（在客户端、网络环节、服务器端），提供更好的用户体验。——别让我等、别让我想、别让我烦</p>
+<p>本质：取舍</p>
+<p>如何降级：1. 列举出可能出现的运行环境 2. 评估问题的优先级 3. 确定解决方案</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwjtJlsO3qaqRWicsCRM5lvibORaoiaXscMBDDhHfoADoY1kg8pVZZ3yyicQ/0?wx_fmt=png" alt=""></p>
+<p><em>用户规模越大，优雅降级的优先级越高</em></p>
+<p><strong>
+</strong></p>
+<p><strong>六、竞争情报</strong></p>
+<p>搜集竞争情报是为了解决自身产品的问题。</p>
+<h2 id="u4EA7_u54C1_u7ECF_u7406_u4E2A_u4EBA_u4FEE_u70BC"><a href="#u4EA7_u54C1_u7ECF_u7406_u4E2A_u4EBA_u4FEE_u70BC" class="headerlink" title="产品经理个人修炼"></a>产品经理个人修炼</h2><p><strong>一、面对逆境</strong></p>
+<ol>
+<li>保持团队兴奋度</li>
+</ol>
+<p>正反馈：先说好消息，再说坏消息（以及怎么改进）。</p>
+<ol>
+<li>争取话语权</li>
+</ol>
+<p>给老板出谋划策不要从框架上着手，而要从细节着手，展示自己的方法论和判断能力。</p>
+<ol>
+<li>压力管理</li>
+</ol>
+<p>1）识别自己的压力状况，找到压力源头；</p>
+<p>2）改变可以改变的，接受无法改变的；</p>
+<p><strong>二、沟通</strong></p>
+<ol>
+<li><p>沟通前做好准备，但记住沟通是双向的；</p>
+</li>
+<li><p>为沟通（谈判）预留弹性；</p>
+</li>
+<li><p>先私下个个击破，然后开会进行宣讲；</p>
+</li>
+<li><p>信息：图表比文字更好；故事比要点更好；邀请第三方来呈现信息；</p>
+</li>
+<li><p>协议：smart原则（具体，可衡量，可实现，相关性——部分与整体，时限性），沟通后邮件备案。</p>
+</li>
+<li><p>渠道：异步讨论，如论坛（避免占用集体时间）</p>
+</li>
+</ol>
+<p><strong>三、创新</strong></p>
+<ol>
+<li><p>把事情做到极致可能就会成为颠覆性创新；</p>
+</li>
+<li><p>踏实努力是获得灵感的有效途径。</p>
+</li>
+</ol>
+<p><strong>四、自省</strong></p>
+<ol>
+<li><p>定期</p>
+</li>
+<li><p>系统：建立自省表格</p>
+</li>
+</ol>
+<p>1）个人版：时间去哪儿了；投入产出比如何；榜样在哪里；错误有哪些；做得好的有哪些）2）团队版：资源去哪儿了；投入产出比如何；标杆在哪里，方法论如何；错误有哪些；真话有多少；好的有哪些</p>
+<ol>
+<li>分析解决问题</li>
+</ol>
+<p><strong>五、刻意练习</strong></p>
+<ol>
+<li><p>关注技能改进，而不是结果；</p>
+</li>
+<li><p>通过反复练习达到明确目标；</p>
+</li>
+<li><p>获得及时有效反馈，并善用他们。</p>
+</li>
+<li><p>分解练习的动作，就像学乐器或者练车一样。</p>
+</li>
+</ol>
+<p>带着很大的期望读完这本由pony作序的书，发现很多道理都是在实践中总结出来的。贵在坚持和不断改进实践。不然“听了很多道理，还是做不好一个产品经理”。</p>
+<p>知易行难。</p>
+<p>与君共勉。</p>
+<blockquote>
+<p>书籍名称：结网——改变世界的互联网产品经理</p>
+<p>作者：王坚</p>
+<p>出版社：人民邮电出版社（2013年 ，修订版）</p>
+</blockquote>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwK5FWXMdOQtVh5XXiba5WA9X1Hbe6u7JvDbtSR081np9KQcicZgJlo65A/0?wx_fmt=png" alt=""></p>
+<p><span style="color: rgb(178, 178, 178);"><em>结网：改变世界的互联网产品经理</em></span></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="u5168_u4E66_u7ED3_u6784"><a href="#u5168_u4E66_u7ED3_u6784" class="headerlink" title="全书结构"></a><strong>全书结构</strong></h2><p>Prototype - Alpha - Beta </p>
+<p>职业选择 － 创建产品 － 个人修炼</p>
+<h2 id="u4EA7_u54C1_u7ECF_u7406_u7684_u81EA_u6211_u5B9A_u4F4D"><a href="#u4EA7_u54C1_u7ECF_u7406_u7684_u81EA_u6211_u5B9A_u4F4D" class="headerlink" title="产品经理的自我定位"></a><strong>产品经理的自我定位</strong></h2><p>产品经理应该是团队的润滑剂，要做好做“万金油”的准备，什么都要懂一点，用户、同事、老板都需要你去主动沟通。</p>]]>
+    
+    </summary>
+    
+      <category term="PM" scheme="http://zongxiaomiao.com/tags/PM/"/>
+    
+      <category term="产品" scheme="http://zongxiaomiao.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="读书有疑" scheme="http://zongxiaomiao.com/categories/%E8%AF%BB%E4%B9%A6%E6%9C%89%E7%96%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[从零开始学Axure（入门篇）]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/10/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6Axure%EF%BC%88%E5%85%A5%E9%97%A8%E7%AF%87%EF%BC%89/"/>
+    <id>http://zongxiaomiao.com/2016/01/10/从零开始学Axure（入门篇）/</id>
+    <published>2016-01-10T10:55:41.000Z</published>
+    <updated>2016-01-10T10:55:41.000Z</updated>
+    <content type="html"><![CDATA[<p>如果说Sketch是最美、最简洁的设计软件，那么Axure就是最强大的原型制作软件。Axure不仅能制作静态的视觉稿、页面，还能添加交互动作，是进行原型设计的最佳软件之一。虽然Axure的学习曲线比较陡峭，但是掌握之后可以很快实现我们脑海中的用户体验效果。</p>
+<p><img class="aligncenter size-full wp-image-262283" src="http://image.woshipm.com/wp-files/2016/01/1209576-33c43d3e35a41ad4.png" alt="1209576-33c43d3e35a41ad4" width="410" height="242"></p>
+<a id="more"></a>
+<p>笔者自学Axure有半年多的时间了。刚开始接触Axure的时候，逛过无数论坛、Axure的网站，也浏览了许多大牛录制的Axure视频课程。这些教程和资料非常完整地介绍了这款软件能够做什么，这款软件的界面如何，怎么样使用部件，如何创建交互等。但是在自学过程中，如何掌握学习的先后次序从而达到最佳的学习效果这方面我走了很多弯路。</p>
+<p>写这篇文章就是想总结一路走来的经验教训，并且跟大家分享如何快速掌握Axure这款软件的使用，以及如何将自己的想法通过这款软件来实现，从而构建起自己使用这款软件的方法。希望对大家有帮助。</p>
+<p>在入门篇中，主要讲解Axure的界面布局和部件库的使用。</p>
+<h2 id="u5FEB_u901F_u5165_u95E8Axure_u754C_u9762"><a href="#u5FEB_u901F_u5165_u95E8Axure_u754C_u9762" class="headerlink" title="快速入门Axure界面"></a>快速入门Axure界面</h2><p><img src="http://ww1.sinaimg.cn/large/5a20cc77gw1ezqy5gd9mwj20yg0jcgo8.jpg" alt="Axure界面一览" title="Axure界面"></p>
+<ul>
+<li>工具栏：类似office软件，可以对字体大小、背景填充、图形宽高以及位于工作区的位置（X\Y轴）进行修改；</li>
+<li>工作区：绘制产品原型的操作区域，所有的用到的元件都直接拖拽到里面就好了。</li>
+<li>页面导航：可以通过鼠标拖动调整页面顺序以及页面之间的关系，双击可以重命名。</li>
+<li>部件库：也叫组件库或元件库，所有软件自带的元件和加载的元件库都在这里，这里可以执行创建、加载、删除axure元件库的操作，也可以根据需求显示全部元件或某一元件库的元件。大家可以点击放大镜图标，搜索自己需要的部件。</li>
+<li>母版：这里可以创建重复出现在每一个页面的元素，这样在制作时就不用再重复这些操作。通常用于页面头部、菜单栏等的制作。</li>
+<li>页面交互：这里可以设置当前页面的样式，添加与该页面有关的注释，以及设置页面加载时触发的事件onpageload。</li>
+<li>部件交互：这里可以设置选中元件的标签、样式，添加与该元件有关的注释，以及设置页面加载时触发的事件。闪电样式的小图标代表交互事件。</li>
+</ul>
+<h2 id="u90E8_u4EF6_u5E93_u7684_u6784_u6210"><a href="#u90E8_u4EF6_u5E93_u7684_u6784_u6210" class="headerlink" title="部件库的构成"></a>部件库的构成</h2><p>了解部件库的使用是Axure的基础，下面我们就来梳理一下Axure中的常用部件：</p>
+<p><img src="http://ww2.sinaimg.cn/large/5a20cc77gw1ezqy4anvlpj20yg17bqd4.jpg" alt="Axure部件库分类一览" title="Axure部件库"></p>
+<h2 id="u90E8_u4EF6_u4F7F_u7528_u6613_u9519_u70B9"><a href="#u90E8_u4EF6_u4F7F_u7528_u6613_u9519_u70B9" class="headerlink" title="部件使用易错点"></a>部件使用易错点</h2><p>关于部件库的使用，新手特别容易出错的有以下几点：</p>
+<ul>
+<li>图片：图片拖拽进画布时如果选择“压缩图片大小”，gif文件会变成静态的图片形式。</li>
+<li>图片热区：图片热区可以用来创建自定义按钮上的点击区域。例如在一个区域中，既有图片部件又有文字部件，我们只需在这些部件上面覆盖一个图片热区并添加一次事件即可，无需在每个部件上都添加事件。反之，如果你想给一张图片上添加多个交互，也可以给图片的部分区域覆盖一块热区来实现。</li>
+<li>动态面板滚动栏：使用滚动栏给你的动态面板添加可滚动内容，在动态面板属性面板中选择，滚动栏下拉菜单并选择滚动栏的显示方式，为了让滚动栏正常显示，动态面板状态内中的内容必须比动态面板的边界轮廓大，并且不能勾选调整大小以适合内容。</li>
+<li>内部框架：你可以给内部框架的属性选项框中添加Axure内置的预览图片，如视频、地图，也可以自定义预览图片。注意：预览图片会在设计区域中显示，但不会在生成的原型中显示。</li>
+<li>列表选择框：在一个交互事件中同时读取或设置多个选项时，列表选择框部件只允许你读取或设置一个选项，即便你勾选了多选功能。</li>
+<li>提交按钮：提交按钮无法设置交互样式，如：选中/鼠标悬停/鼠标按下。提交按钮的填充颜色、边框颜色和其他大多数样式格式都被禁用了。取而代之的是生成原型后在浏览器中它会使用内建的样式。如果你想自定义你的按钮样式，请使用形状按钮“Shape button”。</li>
+<li>菜单部件：无法点击展开子菜单。菜单部件默认是鼠标悬停展示子菜单的。</li>
+</ul>
+<p>特别提醒大家，在创建部件时，一定要养成给部件<strong>命名</strong>的习惯，因为无论是创建交互事件还是进行变量调用，都需要明确部件的名称。目前我使用的命名方法是“页面名称+部件功能”。</p>
+<p>现在就去下载Axure，自己玩一遍这些萌萌的部件吧！在认识了部件库和界面之后，我们就可以自己用Axure画静态的线框图了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>如果说Sketch是最美、最简洁的设计软件，那么Axure就是最强大的原型制作软件。Axure不仅能制作静态的视觉稿、页面，还能添加交互动作，是进行原型设计的最佳软件之一。虽然Axure的学习曲线比较陡峭，但是掌握之后可以很快实现我们脑海中的用户体验效果。</p>
+<p><img class="aligncenter size-full wp-image-262283" src="http://image.woshipm.com/wp-files/2016/01/1209576-33c43d3e35a41ad4.png" alt="1209576-33c43d3e35a41ad4" width="410" height="242" /></p>]]>
+    
+    </summary>
+    
+      <category term="Axure" scheme="http://zongxiaomiao.com/tags/Axure/"/>
+    
+      <category term="原型" scheme="http://zongxiaomiao.com/tags/%E5%8E%9F%E5%9E%8B/"/>
+    
+      <category term="工具" scheme="http://zongxiaomiao.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="交互设计" scheme="http://zongxiaomiao.com/categories/%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[从零开始学Axure原型设计（进阶篇）]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/10/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6Axure%E5%8E%9F%E5%9E%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E8%BF%9B%E9%98%B6%E7%AF%87%EF%BC%89/"/>
+    <id>http://zongxiaomiao.com/2016/01/10/从零开始学Axure原型设计（进阶篇）/</id>
+    <published>2016-01-10T10:53:02.000Z</published>
+    <updated>2016-01-10T10:57:36.000Z</updated>
+    <content type="html"><![CDATA[<p>Axure不仅能制作静态的视觉稿、页面，还能添加交互动作，是进行原型设计的最佳软件之一。在认识了Axure的界面和部件库之后，我们可以用它来画线框图了，但是静态的线框图在表达上不如有交互的原型图来得直观。</p>
+<p>Axure进阶篇中将会介绍什么是交互，如何玩转Axure中最频繁使用的动态面板部件，做出狂拽炫酷的交互效果。另外，还会介绍母版（主要是触发事件）的使用。</p>
+<a id="more"></a>
+<h2 id="u4EA4_u4E92_u57FA_u7840_u77E5_u8BC6"><a href="#u4EA4_u4E92_u57FA_u7840_u77E5_u8BC6" class="headerlink" title="交互基础知识"></a>交互基础知识</h2><p>开始使用Axure做交互之前，我们先来看看Axure的安身立命之本，即交互这个概念。<br>创建交互包括四个模块：</p>
+<ul>
+<li><p>交互（interaction）：3W= When + Where + What<br>例如：当鼠标在菜单栏悬停时，菜单栏颜色变深。</p>
+</li>
+<li><p>事件（events）：主要有两类，页面事件和部件事件。交互是由事件触发的，事件用于执行某个动作。</p>
+</li>
+<li><p>用例(cases)：给同一个任务创建不同的路径。用例由一系列动作组成，</p>
+</li>
+<li><p>动作(actions)：由用例定义的对事件的响应。例如弹出窗口，打开链接等等。</p>
+</li>
+</ul>
+<p><strong>小贴士</strong>：<br>用例是可以复用的，当你想要把一个用例上的动作迁移到其他部件上时，只需要右键点击该用例，然后点击复制，再点击响应事件选择粘贴即可。</p>
+<p>Axure实现交互的方式非常多，只要你明白了其中的原理，随着对这款软件的熟悉，你就能驾驭它的使用。</p>
+<h2 id="u6DF1_u5165_u7406_u89E3_u52A8_u6001_u9762_u677F"><a href="#u6DF1_u5165_u7406_u89E3_u52A8_u6001_u9762_u677F" class="headerlink" title="深入理解动态面板"></a>深入理解动态面板</h2><p>在实际工作中，动态面板是我们使用得最多的部件，通过它我们可以实现<strong>图片轮播、手风琴菜单、灯箱效果、标签控制和拖拽</strong>等效果。与函数变量结合后还可以做出用户登陆提示、进度条效果等。</p>
+<h4 id="u52A8_u6001_u9762_u677F_u4E8B_u4EF6"><a href="#u52A8_u6001_u9762_u677F_u4E8B_u4EF6" class="headerlink" title="动态面板事件"></a>动态面板事件</h4><ul>
+<li><p>状态改变时：<br>这个事件经常用来触发面板状态的一系列交互，例如：状态1的情况下展示图片1，状态2的情况下展示图片2（制作图片轮播）。</p>
+</li>
+<li><p>拖动时：<br>这个事件是由面板的点击、拖拽、释放而触发的。例如：APP原型中的向右滑动某个图片则进入到下一张图片的预览。</p>
+</li>
+<li><p>滚动时：<br>这个事件是由动态面板滚动栏的滚动所触发的。要触发一个特定滚动位置交互，可以添加条件如：[[this.ScrollX]] 和 [[this.ScrollY]]，X\Y表示X轴和Y轴，通过设置距离来控制动态面板的状态。</p>
+</li>
+<li><p>大小改变时：<br>这个事件由面板大小的改变来触发的。</p>
+</li>
+<li><p>载入时事件：<br>这个事件是由页面初始加载动态面板时触发的。原理跟页面载入时事件一样。</p>
+</li>
+<li><p>拖拽事件：</p>
+</li>
+<li><p>开始拖拽时</p>
+</li>
+<li><p>正在拖拽时</p>
+</li>
+<li><p>结束拖拽时<br>拖拽事件的每个阶段都可以添加交互。*   拖拽时移动面板：<br>这个事件是拖拽一个部件的同时移动面板这个动作。</p>
+<p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160110%2F569237927886a.jpg" alt=""></p>
+<p>拖拽事件的选项</p>
+</li>
+<li><p>拖拽时使用条件：</p>
+</li>
+</ul>
+<h4 id="u8BBE_u7F6E_u52A8_u6001_u9762_u677F"><a href="#u8BBE_u7F6E_u52A8_u6001_u9762_u677F" class="headerlink" title="设置动态面板"></a>设置动态面板</h4><p>动态面板可用的动作包括：设置动态面板状态和设置动态面板尺寸。</p>
+<ul>
+<li><p>动态面板大小：</p>
+</li>
+<li><p>在编辑动态面板时，你会注意到一个蓝色虚线轮廓，这表示你在动态面板中只能看到蓝色虚线轮廓范围内的内容。</p>
+</li>
+<li><p>如果你添加的部件大小超过了动态面板轮廓范围，那么你可能需要使用添加滚动栏或调整动态面板大小以适合内容。*   动态面板状态：</p>
+</li>
+</ul>
+<p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160110%2F5692379300601.jpg" alt=""></p>
+<p>动态面板状态管理器</p>
+<h4 id="u52A8_u6001_u9762_u677F_u5B9E_u6218_u6848_u4F8B_uFF1A_u5236_u4F5C_u9996_u9875_u5E7F_u544A_u8F6E_u64AD"><a href="#u52A8_u6001_u9762_u677F_u5B9E_u6218_u6848_u4F8B_uFF1A_u5236_u4F5C_u9996_u9875_u5E7F_u544A_u8F6E_u64AD" class="headerlink" title="动态面板实战案例：制作首页广告轮播"></a>动态面板实战案例：制作首页广告轮播</h4><p>主要的思路是通过创建包含多个图片层的动态面板，并通过按钮（上一张，下一张）控制显示的图片，同时可以通过设置用例条件使得图片轮播能够自动循环播放。</p>
+<ul>
+<li><p>Step 1：<br>拖拽动态面板到设计区域，或拖拽图片部件到设计区域并右键转化为动态面板。并添加左侧（上一张）和右侧（下一张）的按钮。<br>你还可以设置轮播圆点来控制图片的播放，每一个小圆点对应一张图片即可。</p>
+</li>
+<li><p>Step 2：<br>添加点击按钮改变面板状态事件。<br>选中右侧按钮，添加『鼠标点击时』事件，在弹出的对话框中，选择『设置面板状态』动作，并在右侧按钮的配置动作中，将动态面板状态下拉列表选择为 NEXT。同时设置动态面板状态的循环和动画以及过渡效果。</p>
+</li>
+</ul>
+<p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160110%2F56923793a44d0.jpg" alt=""></p>
+<p>制作图片轮播</p>
+<p>案例的下载和演示链接见文末。</p>
+<h2 id="u6BCD_u7248_u7684_u4F7F_u7528"><a href="#u6BCD_u7248_u7684_u4F7F_u7528" class="headerlink" title="母版的使用"></a>母版的使用</h2><p>什么是母版？可以把母版形象地比喻为PPT中的模板，即你创建一次，就能重复使用，你改变模板后，所有使用该模板的页面都会同时发生相应的变化。</p>
+<ul>
+<li><p>新建母版：有两种方法，一是在母版面板中点击『新增面板』；二是在设计区选中需要转换为母版的部件（可以批量选中），右键点击『转换为母版』。</p>
+</li>
+<li><p>母版的拖放行为：</p>
+</li>
+<li><p>任何位置：可以拖动母版到任何位置；</p>
+</li>
+<li><p>锁定母版位置：固定母版在创建时的位置；</p>
+</li>
+<li><p>从母版脱离：当拖动母版到设计区域时，其中包含的部件变成可以编辑的个体，不再归属于母版。*   触发事件：</p>
+</li>
+<li><p>触发事件（又称自定义事件）是Axure母版的专用，只有它可以触发事件。</p>
+</li>
+<li><p>使用场景：一个母版上的触发事件出现在该母版的每一个实例的交互行为上，如果一个母版的一个实例和另一个实例的交互行为有很大不同，那么可以创建触发事件来实现。*   触发事件的名称必须是字母数字且不包含空格，如：OnMyButtonClick(鼠标单击时)。</p>
+</li>
+<li><p>为母版添加事件可以直接新增用例，在用例编辑器中新增『触发事件』动作，然后将母版拖动到其他页面时即可看到已创建的动作。在页面中可以对已创建的动作添加新的用例。</p>
+</li>
+</ul>
+<p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160110%2F56923794e4da3.jpg" alt="为母版创建触发事件"></p>
+<p>为母版创建触发事件。</p>
+<p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160110%2F56923795edb84.jpg" alt="创建后拖动到任意页面可看到创建的事件"></p>
+<p>创建后拖动到任意页面可看到创建的事件。</p>
+<hr>
+<p>下载动态面板案例：<br><a href="http://pan.baidu.com/s/1eQP1kbS" target="_blank" rel="external">百度云下载链接</a><br>密码: zmpk<br><a href="http://xublyx.axshare.com/" target="_blank" rel="external">案例展示</a></p>
+<p></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Axure不仅能制作静态的视觉稿、页面，还能添加交互动作，是进行原型设计的最佳软件之一。在认识了Axure的界面和部件库之后，我们可以用它来画线框图了，但是静态的线框图在表达上不如有交互的原型图来得直观。</p>
+<p>Axure进阶篇中将会介绍什么是交互，如何玩转Axure中最频繁使用的动态面板部件，做出狂拽炫酷的交互效果。另外，还会介绍母版（主要是触发事件）的使用。</p>]]>
+    
+    </summary>
+    
+      <category term="Axure" scheme="http://zongxiaomiao.com/tags/Axure/"/>
+    
+      <category term="原型" scheme="http://zongxiaomiao.com/tags/%E5%8E%9F%E5%9E%8B/"/>
+    
+      <category term="工具" scheme="http://zongxiaomiao.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="交互设计" scheme="http://zongxiaomiao.com/categories/%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[社交红利带给我们什么？]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/09/%E7%A4%BE%E4%BA%A4%E7%BA%A2%E5%88%A9%E5%B8%A6%E7%BB%99%E6%88%91%E4%BB%AC%E4%BB%80%E4%B9%88%EF%BC%9F/"/>
+    <id>http://zongxiaomiao.com/2016/01/09/社交红利带给我们什么？/</id>
+    <published>2016-01-09T12:27:12.000Z</published>
+    <updated>2016-01-11T11:26:58.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>写在前面：</strong></p>
+<p>社交app一直被认为难以寻求商业模式，特别是在行业寡头几乎把用户都瓜分殆尽的时候。从微信朋友圈广告、广点通的兴起可以看出，社交网络给商业变现带来了一个新的途径。这种变化建立在对个体和社群的分析、归类之上，建立在多方面了解用户的基础之上。</p>
+<p>当然，社交网络能够带来的变现机会远远不止如此。</p>
+<p>我的很多观点都是对作者观点的批判性思考，如有不当，还请海涵。</p>
+<a id="more"></a>
+<blockquote>
+<p>书名：社交红利——从微信、微博等社交网络中带走用户与收入（修订升级版）</p>
+<p>作者：徐志斌</p>
+<p>出版社：北京联合出版公司（2014年）</p>
+</blockquote>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotw9nMiboQKibTa9oAdTPxyOs67phaRpmzXic2hMkHTFnykeCwdicaAFictvibw/0?wx_fmt=png" alt=""></p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwmQuBicicx21SEMD5s2WRicXIRRSicibibDu5oibV2Uz34QFXOaPr15K2pRloQ/0?wx_fmt=png" alt=""></p>
+<p>《社交红利》行文结构</p>
+<p>先来看一张有趣的图：</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwhKbu61vKTcicPhgUaf9AqAIKqeEm4DUiaI9wz4exwCoictyBNGs0VpUcA/0?wx_fmt=png" alt=""></p>
+<p>社交红利是什么</p>
+<p>这个信息的传播链条主要用于描述的是微博平台上的路径，也使用于facebook，twitter和微信公众号。但是，批判地来看，分享不一定是单次转化的前提；分享是持续转化的前提。</p>
+<p>可以简单地讲作者在第一章中的主要观点归纳如下：</p>
+<blockquote>
+<ol>
+<li><p>信任：你的朋友在朋友圈里推荐一款口红比一个陌生人推销你一款口红更可能让你购买——微商的土壤。</p>
+</li>
+<li><p>信任驱除：当企业在信息传播过程中表现不尽如人意的时候，粉丝选择抛弃之。</p>
+</li>
+<li><p>自媒体消解大众传媒，媒介权力从权威移交到个体手中。</p>
+</li>
+<li><p>检验产品成功与否的重要标准是：用户愿不愿意谈论自己。</p>
+</li>
+</ol>
+</blockquote>
+<p>这些观点背后其实是对于传播要素拆分之后做出的判断。下图是经典的传播模式，但下图很明显的一个缺憾是没有把信宿之间的社群关系呈现出来，也就没有呈现信息在信宿之间的传播路径如何，当然你也可以把信源理解为多层级的，报纸是一级信源，你是二级信源，你告诉你的朋友，你的朋友是三级信源。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotwib6cbv3QVAzNhla8pzUKzHMtibZyEzlOzF7JYgwobcdyTr9CJeWCwJOQ/0?wx_fmt=jpeg" alt=""></p>
+<p>但是，批判地来看，什么是“自媒体”？作者并没有做出明确的定义。其实我们看到的所谓自媒体如“罗辑思维”等，背后也是机构化的运作，是名副其实的机构媒体。作者所指的去中心化，更准确地应该说是去传统化。因为在社交网络中，中心和鸿沟仍旧存在。</p>
+<p>作者的另一个假设是，媒介赋权之后，使用它们的个体都拥有了理性和判断力。然而事实上，这二者并没有任何联系，个体的专业素养并没有通过使用社交app就被建立起来。</p>
+<p>另一个问题是，建立在好友（熟人）关系上的信任机制又能经得起试错吗？很简单的一个栗子，你在某个朋友那里买了一个名包，结果是假包包，你也会跟ta友尽，并且从此对朋友圈上的所谓好友推荐保持警惕。</p>
+<p>作者的核心观点体现宰他对社交红利获取公式的界定。变量有三：</p>
+<blockquote>
+<p>信息——由用户发出（注意是用户，不是企业主）</p>
+<p>关系链——好友圈</p>
+<p>互动——转发、评论</p>
+</blockquote>
+<p>作者尤其强调让用户自发谈论企业品牌，转发、评论企业的产品，基于信任的观点，用户作为传播源效度更大。</p>
+<p>接着作者对信息的要求做出了解释。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Riauqu6ia1AQFra9gUYv5xotw8n8mPEGgkZYibXmlXxlaVGkVpQ65eOziat6Tuic5zR6ppmdXh6cd4lsIA/0?wx_fmt=png" alt=""></p>
+<p>信息的重量</p>
+<p>上图为企业做微博、微信营销提供了较为有效的途径。</p>
+<p>作者进一步对受欢迎的信息进行了归纳，并解释了背后的用户心理：即爱心，侠义心，炫耀心和八卦心这<strong>“四心”</strong>。</p>
+<p>在这里主要细讲一下作者对广点通系统的分析。</p>
+<p>广点通的本质其实是在“对的时间，对的地点，推送给对的人”。</p>
+<p>技术实现的是找到那些“对的人”，并利用LBS，将地点也精确化。这里作者强调的更多是从企业主角度如何根据用户反馈来调整信息（素材）：</p>
+<blockquote>
+<ol>
+<li><p>针对不同人群制作不同的素材；</p>
+</li>
+<li><p>简洁的文字，不超过5个关键信息；</p>
+</li>
+<li><p>贴近热点；</p>
+</li>
+<li><p>拟人化，比如利用真人而非卡通；</p>
+</li>
+<li><p>广告与应用要有联系，不要图文不符，注意落地页要抓住用户；</p>
+</li>
+<li><p>迅速更新素材，根据用户反馈（uv, 转化率）调整素材。</p>
+</li>
+</ol>
+</blockquote>
+<p>这对于类似广点通的广告分发平台来说，可以有一点启示：如何通过后台设计，引导广告主按照信息传播规律进行传播？比如在其选定了人群特征之后推荐其使用某类素材，结合某个热点？</p>
+<p>日后可以再勤加思考。</p>
+<p>暂搁笔。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><strong>写在前面：</strong></p>
+<p>社交app一直被认为难以寻求商业模式，特别是在行业寡头几乎把用户都瓜分殆尽的时候。从微信朋友圈广告、广点通的兴起可以看出，社交网络给商业变现带来了一个新的途径。这种变化建立在对个体和社群的分析、归类之上，建立在多方面了解用户的基础之上。</p>
+<p>当然，社交网络能够带来的变现机会远远不止如此。</p>
+<p>我的很多观点都是对作者观点的批判性思考，如有不当，还请海涵。</p>]]>
+    
+    </summary>
+    
+      <category term="产品" scheme="http://zongxiaomiao.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="社交" scheme="http://zongxiaomiao.com/tags/%E7%A4%BE%E4%BA%A4/"/>
+    
+      <category term="读书有疑" scheme="http://zongxiaomiao.com/categories/%E8%AF%BB%E4%B9%A6%E6%9C%89%E7%96%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[运用UML进行产品需求表达]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/09/%E8%BF%90%E7%94%A8UML%E8%BF%9B%E8%A1%8C%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E8%A1%A8%E8%BE%BE/"/>
+    <id>http://zongxiaomiao.com/2016/01/09/运用UML进行产品需求表达/</id>
+    <published>2016-01-09T06:56:28.000Z</published>
+    <updated>2016-01-09T06:57:19.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="UML_u662F_u4EC0_u4E48"><a href="#UML_u662F_u4EC0_u4E48" class="headerlink" title="UML是什么"></a>UML是什么</h1><p><strong>统一建模语言（UML）</strong>是一种可视化的建模语言，便于不同的人有效地交流设计结果。这篇文章中囊括了UML的入门知识。</p>
+<h5 id="u8C01_u5E94_u8BE5_u4E86_u89E3UML"><a href="#u8C01_u5E94_u8BE5_u4E86_u89E3UML" class="headerlink" title="谁应该了解UML"></a>谁应该了解UML</h5><p>作为一枚产品喵，在写需求文档的时候用UML，尤其是用例图，能更好地逼迫自己去考虑更多的用户场景，更清晰地表达需求，从而便于后期的设计和开发工作。<br>作为一只程序猿，UML 建模是进行 OOAD，学习运用设计模式，精读源代码，敏捷地思考和沟通软件设计方案的一把利剑，也是成为软件架构师的必要条件和技能。<br>总之，可以把UML看成一种有效的<strong>交流沟通的手段</strong>，在大型项目中发挥非常大的作用。当然，也有很多项目团队不怎么用UML，因为他们找到了其他的共同的沟通语言，这也是OK的，工具不重要，达到沟通的目的就行。</p>
+<a id="more"></a>
+<h5 id="UML_u56FE_u7684_u7EC4_u6210"><a href="#UML_u56FE_u7684_u7EC4_u6210" class="headerlink" title="UML图的组成"></a>UML图的组成</h5><ul>
+<li><p>类图：类框包含类名、属性名、操作名。类图由类框（三个矩形）和表明类之间如何关联的连线所组成。</p>
+<p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160103%2F568902b36c670.jpg" alt=""></p>
+</li>
+<li><p>对象图：对象是具有具体属性值的一个具体事物。对象的图标也是一个矩形，对象名下面要带下划线。</p>
+</li>
+<li><p>用例图（use case）：从用户的观点对系统行为的一个描述。</p>
+</li>
+<li><p>状态图：该图能描述一个状态转移到另一个状态，但并不总是线性的。起始状态和终止状态用实心圆和实点圆表示。</p>
+</li>
+<li><p>顺序图：基于时间的动态交互。（类图和对象图表达的是系统的静态结构）</p>
+</li>
+<li><p>活动图：用例和对象的行为中的各个活动之间通常具有时间顺序。</p>
+</li>
+<li><p>协作图：顺序图和协作图都能表示对象之间的交互，它们被合成为<strong>交互图</strong>。</p>
+</li>
+<li><p>构件图：现代软件开发是基于构件的。</p>
+</li>
+<li><p>部署图：基于计算机系统的物理体系结构，描述计算机，展示它们之间的链接，表现通信关系。</p>
+</li>
+</ul>
+<p>各种UML图能让你从多个视角考察同一个系统，从而使其更加清晰。</p>
+<h5 id="UML_u7684_u5176_u4ED6_u7279_u5F81"><a href="#UML_u7684_u5176_u4ED6_u7279_u5F81" class="headerlink" title="UML的其他特征"></a>UML的其他特征</h5><ul>
+<li><p>注释（note）：带折角的矩形，矩形框里为解释文字，注释和被注释的图元素之间用一条虚线相连。</p>
+</li>
+<li><p>关键字和构造型：构造型是在现有的元素上添加一个带<em>双尖括号</em>的关键字，该关键字表明了该元素的用法与原来的意图多少有些不同。</p>
+</li>
+</ul>
+<h1 id="u9762_u5411_u5BF9_u8C61"><a href="#u9762_u5411_u5BF9_u8C61" class="headerlink" title="面向对象"></a>面向对象</h1><p>面向对象的<strong>目标</strong>是开发出能够反映现实世界某个特定片段的软件，考虑到得属性和行为阅读，建立的模型越符合实际。</p>
+<h5 id="u4EC0_u4E48_u662F_u5BF9_u8C61"><a href="#u4EC0_u4E48_u662F_u5BF9_u8C61" class="headerlink" title="什么是对象"></a>什么是对象</h5><ol>
+<li><p>对象是一个类的实例；</p>
+</li>
+<li><p>对象具有自身的结构，它具有属性和行为；</p>
+</li>
+<li><p>对象的行为包括它所能执行的操作，属性和操作合起来。</p>
+</li>
+</ol>
+<h5 id="u7C7B_u56FE_u548C_u5BF9_u8C61_u56FE"><a href="#u7C7B_u56FE_u548C_u5BF9_u8C61_u56FE" class="headerlink" title="类图和对象图"></a>类图和对象图</h5><p>类图给出了一般性的、定义性的信息：一个类的特性以及它的属性，以及和这个类关联的其他的类；对象图则在某个特定的<strong>时刻</strong>及时给出了一个类的多个具体<strong>实例</strong>，以及它们如何联系起来的相关信息。</p>
+<h5 id="u4E00_u4E9B_u9762_u5411_u5BF9_u8C61_u7684_u6982_u5FF5"><a href="#u4E00_u4E9B_u9762_u5411_u5BF9_u8C61_u7684_u6982_u5FF5" class="headerlink" title="一些面向对象的概念"></a>一些面向对象的概念</h5><ul>
+<li><p>抽象：什么应该纳入模型，什么应该舍去；</p>
+</li>
+<li><p>继承：子类——父类——超类；</p>
+</li>
+<li><p>多态性：在多态的情况下，不同的类中可以有同名的操作，每个类中发生的操作各不相同；</p>
+</li>
+<li><p>封装：当一个对象执行自己的操作时，它对外界隐藏了操作的细节，从而便于单独修改。同时，一个对象需要<strong>接口</strong>（类似按钮），以便被用户初始化；</p>
+</li>
+<li><p>消息传递：对象之间的协作是通过相互发送消息；</p>
+</li>
+<li><p>关联：对象之间通常以某种方式发生联系；</p>
+</li>
+<li><p>多重性是对象之间关联的一个重要方面，例如一个老师教多个学生。*   聚集：聚集是对象之间的另一种关联，例如一个典型的计算机系统就是由许多不同类型的对象组合而成。</p>
+</li>
+</ul>
+<h5 id="u7C7B_u7684_u53EF_u89C6_u5316_u8868_u793A"><a href="#u7C7B_u7684_u53EF_u89C6_u5316_u8868_u793A" class="headerlink" title="类的可视化表示"></a>类的可视化表示</h5><p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160103%2F568902b3d7f41.jpg" alt=""></p>
+<p>带路径名的类</p>
+<p>微信是社交软件的一部分，那么这个类的包名在左，类名在右，中间用双冒号隔开，这种类型的类名叫做路径名。</p>
+<h5 id="u5C5E_u6027"><a href="#u5C5E_u6027" class="headerlink" title="属性"></a>属性</h5><p>属性是类的一个特性，它描述了类的对象（也是类的实例）所具有的一系列特性值。</p>
+<p>在类的图标里，可以指定每个属性值的类型，要指明类型，则在属性值后面加上类型名（包括字符串、浮点数、整数和布尔型，以及其他枚举类型），中间用冒号隔开。</p>
+<h5 id="u64CD_u4F5C"><a href="#u64CD_u4F5C" class="headerlink" title="操作"></a>操作</h5><p>操作是类能够做的事情，或者你（或者另一个类）能对类做的事情。</p>
+<ul>
+<li><p>函数（function）：有一种操作叫函数，它在完成后要返回一个返回值。</p>
+</li>
+<li><p>型构（signature）:在操作名后面的括号中可以说明操作所需要的参数和参数的类型。有一种操作叫函数，它在完成操作后要返回一个返回值。上述全部的操作信息被称为操作的型构。</p>
+</li>
+</ul>
+<h1 id="u5BF9_u8C61_u95F4_u3001_u7C7B_u95F4_u5173_u7CFB"><a href="#u5BF9_u8C61_u95F4_u3001_u7C7B_u95F4_u5173_u7CFB" class="headerlink" title="对象间、类间关系"></a>对象间、类间关系</h1><h5 id="u5173_u8054"><a href="#u5173_u8054" class="headerlink" title="关联"></a>关联</h5><p>类之间的连接叫做关联，用一条直线来表示，三角箭头表示关联的方向。</p>
+<p>-关联上的约束<br>类之间的连接可以添加约束。</p>
+<p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160103%2F568902b4938e7.jpg" alt=""></p>
+<p>{按顺序} 即是关联的一种约束</p>
+<p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160103%2F568902b4efde7.jpg" alt=""></p>
+<p>表示两个关联之间 {或} 约束</p>
+<ul>
+<li><p>关联类<br>和类一样，关联也可以有自己的属性和操作。</p>
+</li>
+<li><p>链<br>正如对象是类的实例一样，关联也有自己的实例，链是关联的实例。链（link）下面也要加下划线。</p>
+</li>
+</ul>
+<h5 id="u9650_u5B9A_u5173_u8054"><a href="#u9650_u5B9A_u5173_u8054" class="headerlink" title="限定关联"></a>限定关联</h5><p>当关联的多重性是一对多时，就产生了一个特殊问题：<strong>查找问题</strong>。需要匹配一个ID，才能准确查找。<br>UML中，ID信息叫做<strong>限定符</strong>，它的符号是一个小矩形框，把作为一对多多重性的一部分的类连在一起。</p>
+<p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160103%2F568902b560d86.jpg" alt=""></p>
+<p>UML限定符图标，当你使用它时，你限定了一种关联</p>
+<h5 id="u81EA_u8EAB_u5173_u8054"><a href="#u81EA_u8EAB_u5173_u8054" class="headerlink" title="自身关联"></a>自身关联</h5><p>有时，一个类可能与它自己发生关联，这样的关联就叫做自身关联。</p>
+<h5 id="u7EE7_u627F_u548C_u6CDB_u5316"><a href="#u7EE7_u627F_u548C_u6CDB_u5316" class="headerlink" title="继承和泛化"></a>继承和泛化</h5><p>继承也叫泛化。</p>
+<ul>
+<li><p>基类/根类：没有父类的类。</p>
+</li>
+<li><p>叶类：没有子类的类。</p>
+</li>
+<li><p>单继承：只有一个父类。</p>
+</li>
+<li><p>多继承：有多个父类。<br>继承的表示法是从子类画一条带空心三角形箭头的连线指向父类。</p>
+<p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160103%2F568902b5b8100.jpg" alt=""></p>
+</li>
+</ul>
+<p><em>抽象类</em>：<br>不提供实例对象的类即是抽象类，表明一个类是抽象类的方法是类名用<em>斜体</em>书写。</p>
+<h5 id="u4F9D_u8D56"><a href="#u4F9D_u8D56" class="headerlink" title="依赖"></a>依赖</h5><p>一个类使用了另一个类，比如一个类操作的型构中用到了另一个类的定义。<br>依赖关系用带箭头的虚线表示。</p>
+<h5 id="u805A_u96C6"><a href="#u805A_u96C6" class="headerlink" title="聚集"></a>聚集</h5><p>聚集关系有两种，一种是每一个部分体都属于一个整体；另一种是两个整体共用一个部分体。<br>关联线上又一个空心菱形箭头，箭头的方向是从部分指向整体。</p>
+<p>有时一个聚集体由多种部分体组成，这些部分体之间是或然关系。用虚线连接两个关系线。</p>
+<h5 id="u7EC4_u6210"><a href="#u7EC4_u6210" class="headerlink" title="组成"></a>组成</h5><p>组成是强类型的聚集，每个部分体智能属于一个整体。由实心菱形箭头表示。</p>
+<h5 id="u7EC4_u6210_u7ED3_u6784_u56FE_uFF08_u8BED_u5883_u56FE_uFF09"><a href="#u7EC4_u6210_u7ED3_u6784_u56FE_uFF08_u8BED_u5883_u56FE_uFF09" class="headerlink" title="组成结构图（语境图）"></a>组成结构图（语境图）</h5><p>用于展示类的内部结构。<br>组成结构图用嵌套在一个大的类框中的一个类图来说明一个类的组成类。</p>
+<h5 id="u63A5_u53E3_u548C_u5B9E_u73B0"><a href="#u63A5_u53E3_u548C_u5B9E_u73B0" class="headerlink" title="接口和实现"></a>接口和实现</h5><p>实现：一个类和它的接口之间的关系叫做实现。<br>接口：接口是一个类的<strong>操作</strong>（不care它的属性）集合，是描述类的部分行为的一组操作，也是一个类提供给另一个类的一组操作。<br>类和接口之间可以通过实现关系连接，实现关系用带空心三角形箭头的虚线表示，箭头指向接口一端。</p>
+<h5 id="u63A5_u53E3_u548C_u7AEF_u53E3"><a href="#u63A5_u53E3_u548C_u7AEF_u53E3" class="headerlink" title="接口和端口"></a>接口和端口</h5><p>用来表示端口的符号是一个小矩形，它展示了类和环境交互的点。</p>
+<ul>
+<li><p>可见性：它说明在给定类的属性和操作（或接口的操作）的情况下，其他类可以方位到属性和操作的范围</p>
+</li>
+<li><p>公有的层次（+）：其他类可以直接方位这个层次中的属性和操作。</p>
+</li>
+<li><p>受保护的层次（#）：只有继承了这些属性和操作的子类可以访问最初类的属性和操作。</p>
+</li>
+<li><p>私有的层次（-）：只有最初的类才能访问这些属性和操作。*   作用域：</p>
+</li>
+</ul>
+<h1 id="u5173_u4E8E_u7528_u4F8B_u548C_u7528_u4F8B_u56FE"><a href="#u5173_u4E8E_u7528_u4F8B_u548C_u7528_u4F8B_u56FE" class="headerlink" title="关于用例和用例图"></a>关于用例和用例图</h1><h5 id="u4EC0_u4E48_u662F_u7528_u4F8B"><a href="#u4EC0_u4E48_u662F_u7528_u4F8B" class="headerlink" title="什么是用例"></a>什么是用例</h5><p>如果说类图是一种能够帮助<strong>客户</strong>以自己的观点考察系统的好方法，那么一组用例就是从潜在<strong>用户</strong>的角度出发对如何使用系统的描述。用例说明了对外部参与者有意义的任务的执行<strong>场景</strong>。<br>当导出一个用例时，注意发起用例的前置条件和产生影响的后置条件很重要。</p>
+<h5 id="u9644_u52A0_u7528_u4F8B_u3001_u5305_u542B_u7528_u4F8B_u3001_u6269_u5C55_u7528_u4F8B"><a href="#u9644_u52A0_u7528_u4F8B_u3001_u5305_u542B_u7528_u4F8B_u3001_u6269_u5C55_u7528_u4F8B" class="headerlink" title="附加用例、包含用例、扩展用例"></a>附加用例、包含用例、扩展用例</h5><p>用例可以被复用，复用有两种方式，一种是包含，一种是扩展。<br>从各个步骤序列中抽取出公共步骤形成一个每个用例都要使用的<strong>附加用例</strong>，这种用例的复用技术被称为<strong>包含用例</strong>。<br>对原用例的扩展技术叫做<strong>扩展用例</strong>。</p>
+<h5 id="u7528_u4F8B_u56FE"><a href="#u7528_u4F8B_u56FE" class="headerlink" title="用例图"></a>用例图</h5><ul>
+<li><p>用例模型的表示法<br>在用例模型中，人形图标代表参与者，椭圆形代表用例，参与者和用例之间的关联线代表两者之间的通信关系。</p>
+</li>
+<li><p>用例中的场景描述<br>每个用例图都由自身的文档页，通常文档要包括以下要素：</p>
+</li>
+<li><p>发起用例的参与者</p>
+</li>
+<li><p>用例的假设条件</p>
+</li>
+<li><p>用例的前置条件</p>
+</li>
+<li><p>场景中的步骤</p>
+</li>
+<li><p>场景完成后的后置条件</p>
+</li>
+<li><p>从用例中获益的参与者*   用例之间关系的表示</p>
+</li>
+<li><p>包含关系<br>要表达用例的包含关系，可以使用类之间依赖关系的表示符号，也就是虚线+箭头。在线上要就爱一个关键字：用双尖括号括起来的&quot;include&quot;。</p>
+</li>
+<li><p>扩展关系<br>扩展只能发生在具体的某个点上，这个点叫做<strong>扩展点</strong>。</p>
+</li>
+<li><p>泛化关系<br>类可以继承一个类，用例和参与者也是如此，建模方法相同，都是一条带空心三角形箭头的实线，从子用例（子参与者）指向父用例（父参与者）。</p>
+</li>
+<li><p>分组关系<br>最直接的方法就是把相关的用例放在一个包中组织起来，一组用例可以出现在一个文件夹框中。*   运用用例模型</p>
+</li>
+</ul>
+<h1 id="u72B6_u6001_u56FE_uFF08_u5355_u5BF9_u8C61_u7684_u65F6_u95F4_u53D8_u5316_uFF09"><a href="#u72B6_u6001_u56FE_uFF08_u5355_u5BF9_u8C61_u7684_u65F6_u95F4_u53D8_u5316_uFF09" class="headerlink" title="状态图（单对象的时间变化）"></a>状态图（单对象的时间变化）</h1><p>状态图描述了一个对象所处的可能状态以及状态之间的转换，并给出了状态变化序列的起点和终点。</p>
+<h5 id="u72B6_u6001_u56FE_u6807"><a href="#u72B6_u6001_u56FE_u6807" class="headerlink" title="状态图标"></a>状态图标</h5><p>状态图标可以分成上下两个区域，为圆角矩形，上部分显示状态名，下部分显示活动列表。<br>状态的转移可能作为对触发事件的响应而发生，并且需要一个活动；转移也可能因为状态中的活动的完成而引起：这种方式发生的转移叫做无触发器转移；最后，转移还可能因为一个特定条件（保护条件）的满足而引起。</p>
+<p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160103%2F568902b629fc3.jpg" alt=""></p>
+<p>图形用户界面的状态图，加上了屏幕保护状态和一个保护条件</p>
+<h5 id="u5B50_u72B6_u6001"><a href="#u5B50_u72B6_u6001" class="headerlink" title="子状态"></a>子状态</h5><p>状态的变化叫子状态，有<strong>顺序子状态</strong>和<strong>并发子状态</strong>。</p>
+<p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160103%2F568902b69cba3.jpg" alt=""></p>
+<p>上图working的子状态</p>
+<p><em>注：H符号用来表示当对象转移出该组成状态后，该组成状态能够记住它的活动子状态。</em></p>
+<h1 id="u987A_u5E8F_u56FE"><a href="#u987A_u5E8F_u56FE" class="headerlink" title="顺序图"></a>顺序图</h1><p>顺序图是表示按照时间<strong>顺序</strong>发生的<strong>对象</strong>之间的交互序列。<br>画顺序图之前可以先画出对象涉及的类图。</p>
+<p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160103%2F568902b725811.jpg" alt=""></p>
+<p>某产品新用户登陆</p>
+<p>上图是一个<strong>实例顺序图</strong>，只包含了一个新用户登陆这一个用例下的场景。<br>还有一种顺序图是<strong>一般顺序图</strong>，包含一般用户登陆某产品的流程。</p>
+<h1 id="u534F_u4F5C_u56FE"><a href="#u534F_u4F5C_u56FE" class="headerlink" title="协作图"></a>协作图</h1><p>与顺序图类似，也是展示对象之间的交互。协作图是对象图的拓展，表现对象之间的消息传递。在这里就不做介绍了。</p>
+<h1 id="u6D3B_u52A8_u56FE"><a href="#u6D3B_u52A8_u56FE" class="headerlink" title="活动图"></a>活动图</h1><p>类似状态图，用于简化描述一个过程。<br>用比状态图椭的圆角矩形表示。</p>
+<p><img src="http://pic3.mojiax.com/upload%2Fattachment%2Fzhishi%2Fupload%2F20160103%2F568902b7d0c53.jpg" alt=""></p>
+<p>某论坛用户发帖的活动图，菱形表示“判定”</p>
+<h5 id="u6CF3_u9053"><a href="#u6CF3_u9053" class="headerlink" title="泳道"></a>泳道</h5><p>活动图的一个缺点是它的扩展能力不强，而且不能表达图中各个活动分别由谁负责。<br>活动图中增加角色的可视化维数，将图分割成多个平行的段，这些段被成为泳道。</p>
+<h1 id="u5728_u5F00_u53D1_u8FC7_u7A0B_u8FD0_u7528UML"><a href="#u5728_u5F00_u53D1_u8FC7_u7A0B_u8FD0_u7528UML" class="headerlink" title="在开发过程运用UML"></a>在开发过程运用UML</h1><p>开发主要有下列几个阶段：</p>
+<ol>
+<li><p>需求收集；</p>
+</li>
+<li><p>分析；</p>
+</li>
+<li><p>设计；</p>
+</li>
+<li><p>开发；</p>
+</li>
+<li><p>部署</p>
+</li>
+</ol>
+<p>其中：</p>
+<ol>
+<li><p>理解业务步骤是第一步；</p>
+</li>
+<li><p>开发初步类图，先筛选名词，并按名词绘制出初步的类图；</p>
+</li>
+<li><p>对类分组，处理超类（没有实例的类），用抽象类将类图划分成为有意义的组；</p>
+</li>
+<li><p>形成关联；</p>
+</li>
+<li><p>形成聚集和组成；</p>
+</li>
+<li><p>填充重要的类的信息，将类的属性、操作罗列出来；</p>
+</li>
+<li><p>形成业务过程图（有关联、组成、聚集关系的类图；泳道图）、包图（分类了的用例包）和具体的用例；</p>
+</li>
+<li><p>细化用例要素，列出系统所包括的构件（屏幕界面）；</p>
+</li>
+<li><p>表示出用例中的构件交互（顺序图），即将单个用例的步骤用顺序图；</p>
+</li>
+<li><p>设计图形用户界面（GUI），进入开发过程。</p>
+</li>
+</ol>
+<p>11.</p>
+<p>如果有什么理解不到位或表述不清楚的地方，还请各位指出，以便完善。</p>
+<h2 id="u53C2_u8003_u6587_u732E"><a href="#u53C2_u8003_u6587_u732E" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p>关于易混淆的类间关系可以参考：<br><a href="http://blog.csdn.net/sfdev/article/details/3906243" target="_blank" rel="external">UML中几种类间关系：继承、实现、依赖、关联、聚合、组合的联系与区别</a>一文。</p>
+</li>
+<li><p>本书部分图片（英文）及部分概念解释引于<a href="http://book.douban.com/subject/1099222/" target="_blank" rel="external">《UML基础、案例与应用》</a>一书。</p>
+</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="UML_u662F_u4EC0_u4E48"><a href="#UML_u662F_u4EC0_u4E48" class="headerlink" title="UML是什么"></a>UML是什么</h1><p><strong>统一建模语言（UML）</strong>是一种可视化的建模语言，便于不同的人有效地交流设计结果。这篇文章中囊括了UML的入门知识。</p>
+<h5 id="u8C01_u5E94_u8BE5_u4E86_u89E3UML"><a href="#u8C01_u5E94_u8BE5_u4E86_u89E3UML" class="headerlink" title="谁应该了解UML"></a>谁应该了解UML</h5><p>作为一枚产品喵，在写需求文档的时候用UML，尤其是用例图，能更好地逼迫自己去考虑更多的用户场景，更清晰地表达需求，从而便于后期的设计和开发工作。<br>作为一只程序猿，UML 建模是进行 OOAD，学习运用设计模式，精读源代码，敏捷地思考和沟通软件设计方案的一把利剑，也是成为软件架构师的必要条件和技能。<br>总之，可以把UML看成一种有效的<strong>交流沟通的手段</strong>，在大型项目中发挥非常大的作用。当然，也有很多项目团队不怎么用UML，因为他们找到了其他的共同的沟通语言，这也是OK的，工具不重要，达到沟通的目的就行。</p>]]>
+    
+    </summary>
+    
+      <category term="UML" scheme="http://zongxiaomiao.com/tags/UML/"/>
+    
+      <category term="原型" scheme="http://zongxiaomiao.com/tags/%E5%8E%9F%E5%9E%8B/"/>
+    
+      <category term="大话产品" scheme="http://zongxiaomiao.com/categories/%E5%A4%A7%E8%AF%9D%E4%BA%A7%E5%93%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[推荐系统：网站如何发现用户所爱]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/09/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%EF%BC%9A%E7%BD%91%E7%AB%99%E5%A6%82%E4%BD%95%E5%8F%91%E7%8E%B0%E7%94%A8%E6%88%B7%E6%89%80%E7%88%B1/"/>
+    <id>http://zongxiaomiao.com/2016/01/09/推荐系统：网站如何发现用户所爱/</id>
+    <published>2016-01-09T05:17:32.000Z</published>
+    <updated>2016-01-09T05:19:50.000Z</updated>
+    <content type="html"><![CDATA[<p>在推荐系统诞生之前，解决信息过载的方案主要是分类目录（雅虎）和搜索引擎（谷歌）。<br>但用户在面对大量的选择，却并没有明确的需求时，他们需要的是一个自动化的工具，通过分析<strong>历史兴趣、社交关系、注册信息、位置信息</strong>等方式，减少选择负担，甚至可以帮助用户发现那些他们感兴趣但是很难发现的东西。</p>
+<a id="more"></a>
+<h2 id="u63A8_u8350_u7CFB_u7EDF_u662F_u4EC0_u4E48"><a href="#u63A8_u8350_u7CFB_u7EDF_u662F_u4EC0_u4E48" class="headerlink" title="推荐系统是什么"></a>推荐系统是什么</h2><h4 id="u4E2A_u6027_u5316_u63A8_u8350_u7CFB_u7EDF_u7684_u5E94_u7528"><a href="#u4E2A_u6027_u5316_u63A8_u8350_u7CFB_u7EDF_u7684_u5E94_u7528" class="headerlink" title="个性化推荐系统的应用"></a>个性化推荐系统的应用</h4><p>几乎所有的推荐系统应用都是由前台的展示页面、后台的日志系统和推荐算法系统三部分构成的。<br>推荐系统主要的应用有电商、音乐、电台、电影、个性化邮件、社交、个性化广告等。</p>
+<p>这里主要看个性化广告。</p>
+<ul>
+<li>上下文广告：通过分析用户正在浏览的网页内容，投放与网页内容相关的广告，例如谷歌Adsense。</li>
+<li>搜索广告：通过当前会话中的搜索记录，判断用户的搜索目的，投放和用户目的相关的广告。</li>
+<li>个性化展示广告：根据用户兴趣，展示广告。</li>
+</ul>
+<h4 id="u4EC0_u4E48_u662F_u597D_u7684_u63A8_u8350_u7CFB_u7EDF"><a href="#u4EC0_u4E48_u662F_u597D_u7684_u63A8_u8350_u7CFB_u7EDF" class="headerlink" title="什么是好的推荐系统"></a>什么是好的推荐系统</h4><h5 id="u9700_u8981_u8003_u8651_u4E09_u65B9_u5229_u76CA_uFF1A"><a href="#u9700_u8981_u8003_u8651_u4E09_u65B9_u5229_u76CA_uFF1A" class="headerlink" title="需要考虑三方利益："></a>需要考虑三方利益：</h5><p>用户——内容提供方——网站</p>
+<h5 id="u8BC4_u6D4B_u6307_u6807_uFF1A"><a href="#u8BC4_u6D4B_u6307_u6807_uFF1A" class="headerlink" title="评测指标："></a>评测指标：</h5><ul>
+<li>用户满意度：<ul>
+<li>通过<strong>调查问卷</strong>，从不同的侧面询问用户对结果的不同感受；</li>
+<li>电子商务网站通过购买率衡量；</li>
+<li>直接对推荐结构满意或不满意的反馈按钮，例如视频、音乐网站；</li>
+<li>更一般的情况下，可以用点击率、用户停留时间、转化率等指标度量用户的满意度。</li>
+</ul>
+</li>
+<li>预测准确度</li>
+<li>多样性</li>
+<li>新颖性</li>
+<li>惊喜度：与用户历史不相似但满意的推荐</li>
+<li>信任度：只能通过问卷调查的方式获取。</li>
+<li>实时性</li>
+<li>健壮性</li>
+<li>商业目标是否达成</li>
+</ul>
+<h1 id="u5982_u4F55_u505A_u597D_u63A8_u8350_u7CFB_u7EDF"><a href="#u5982_u4F55_u505A_u597D_u63A8_u8350_u7CFB_u7EDF" class="headerlink" title="如何做好推荐系统"></a>如何做好推荐系统</h1><h4 id="u5229_u7528_u7528_u6237_u884C_u4E3A_u6570_u636E"><a href="#u5229_u7528_u7528_u6237_u884C_u4E3A_u6570_u636E" class="headerlink" title="利用用户行为数据"></a>利用用户行为数据</h4><p><strong>什么是用户行为数据</strong></p>
+<p>用户行为数据在网站上最简单的存在形式就是日志（raw log），原始日志经过汇总成为会话日志（session log），其中每个会话表示一次用户行为和对应的服务。</p>
+<p><strong>用户行为分析</strong></p>
+<ul>
+<li>用户活跃度和物品流行度的分布<br>二者都近似于长尾分布，用户越新，越趋向于喜欢流行度高的物品；用户越老，越趋向于喜欢流行度低的物品。</li>
+</ul>
+<h4 id="u57FA_u4E8E_u7528_u6237_u534F_u540C_u8FC7_u6EE4_u7B97_u6CD5"><a href="#u57FA_u4E8E_u7528_u6237_u534F_u540C_u8FC7_u6EE4_u7B97_u6CD5" class="headerlink" title="基于用户协同过滤算法"></a>基于用户协同过滤算法</h4><blockquote>
+<p>步骤一：找到和目标用户兴趣相似的用户集合。<br>步骤二：找到这个集合中得用户喜欢得，且目标用户没有听说过的物品推荐给目标用户。</p>
+</blockquote>
+<h4 id="u57FA_u4E8E_u7269_u54C1_u7684_u534F_u540C_u8FC7_u6EE4_u7B97_u6CD5"><a href="#u57FA_u4E8E_u7269_u54C1_u7684_u534F_u540C_u8FC7_u6EE4_u7B97_u6CD5" class="headerlink" title="基于物品的协同过滤算法"></a>基于物品的协同过滤算法</h4><blockquote>
+<p>步骤一：计算物品之间的相似度。<br>步骤二：根据物品的相似度和用户历史行为给用户生成推荐列表。</p>
+</blockquote>
+<p>#推荐系统冷启动问题<br><strong>冷启动问题简介</strong><br>冷启动主要分三类：</p>
+<blockquote>
+<p>用户冷启动：如何给新用户（无行为数据）做个性化推荐。<br>物品冷启动：将新的物品推荐给可能对它感兴趣的用户。<br>系统冷启动：如何在一个新开发的网站上设计个性化推荐系统，从而在网站刚发布时就让用户体验到个性化推荐服务。</p>
+</blockquote>
+<p><strong>解决冷启动的方案</strong></p>
+<ul>
+<li>提供非个性化的推荐：例如，排行榜。</li>
+<li>利用用户注册时提供的数据做粗粒度的个性化。<ul>
+<li>人口统计学信息：年龄、性别、职业、民族、学历、居住地</li>
+<li>用户兴趣描述：</li>
+<li>从其他网站导入用户站外行为数据</li>
+</ul>
+</li>
+<li>利用用户社交网络账号授权登陆，导入好友信息，给用户推荐其好友喜欢的物品。</li>
+<li>要求用户登陆时对一些物品进行反馈，收集兴趣信息。<ul>
+<li>物品应该是比较热门的</li>
+<li>物品应该具有代表性和区分性</li>
+<li>启动物品集合需要有多样性</li>
+</ul>
+</li>
+<li>引入专家知识，通过高效方式建立物品的相关度表。</li>
+</ul>
+<h1 id="u5229_u7528_u4E0A_u4E0B_u6587_u4FE1_u606F"><a href="#u5229_u7528_u4E0A_u4E0B_u6587_u4FE1_u606F" class="headerlink" title="利用上下文信息"></a>利用上下文信息</h1><p>除了联系用户兴趣和物品之外，用户所处的上下文（context），包括时间、地点、心情等也需要纳入考虑。</p>
+<h4 id="u65F6_u95F4_u6548_u5E94"><a href="#u65F6_u95F4_u6548_u5E94" class="headerlink" title="时间效应"></a>时间效应</h4><ul>
+<li>用户兴趣是变化的</li>
+<li>物品也有生命周期</li>
+<li>季节效应<h4 id="u5730_u70B9_u4E0A_u4E0B_u6587_u4FE1_u606F"><a href="#u5730_u70B9_u4E0A_u4E0B_u6587_u4FE1_u606F" class="headerlink" title="地点上下文信息"></a>地点上下文信息</h4></li>
+<li>兴趣本地化</li>
+<li>活动本地化</li>
+</ul>
+<h1 id="u5229_u7528_u793E_u4EA4_u7F51_u7EDC_u6570_u636E"><a href="#u5229_u7528_u793E_u4EA4_u7F51_u7EDC_u6570_u636E" class="headerlink" title="利用社交网络数据"></a>利用社交网络数据</h1><h4 id="u83B7_u53D6_u793E_u4EA4_u7F51_u7EDC_u6570_u636E_u7684_u9014_u5F84"><a href="#u83B7_u53D6_u793E_u4EA4_u7F51_u7EDC_u6570_u636E_u7684_u9014_u5F84" class="headerlink" title="获取社交网络数据的途径"></a>获取社交网络数据的途径</h4><ul>
+<li>电子邮件：导入好友关系功能，解决冷启动问题。</li>
+<li>用户注册信息</li>
+<li>用户位置数据</li>
+<li>论坛和讨论组</li>
+<li>即时聊天工具</li>
+<li>社交网站：社会图谱和兴趣图谱</li>
+</ul>
+<h4 id="u793E_u4EA4_u7F51_u7EDC_u6570_u636E_u7B80_u4ECB"><a href="#u793E_u4EA4_u7F51_u7EDC_u6570_u636E_u7B80_u4ECB" class="headerlink" title="社交网络数据简介"></a>社交网络数据简介</h4><ul>
+<li>双向确认的社交网络数据</li>
+<li>单向关注的社交网络数据</li>
+<li>基于社区的社交网络数据</li>
+</ul>
+<h4 id="u793E_u4F1A_u5316_u63A8_u8350_u7684_u4F18_u70B9"><a href="#u793E_u4F1A_u5316_u63A8_u8350_u7684_u4F18_u70B9" class="headerlink" title="社会化推荐的优点"></a>社会化推荐的优点</h4><ul>
+<li>好友推荐可以增加推荐的信任度</li>
+<li>社交网络可以解决冷启动问题</li>
+</ul>
+<h2 id="u5341_u6761_u8BBE_u8BA1_u63A8_u8350_u7CFB_u7EDF_u65F6_u7684_u539F_u5219"><a href="#u5341_u6761_u8BBE_u8BA1_u63A8_u8350_u7CFB_u7EDF_u65F6_u7684_u539F_u5219" class="headerlink" title="十条设计推荐系统时的原则"></a>十条设计推荐系统时的原则</h2><ol>
+<li>确定你真的需要它。信息过载时才需要推进系统。</li>
+<li>确定商业目标和用户满意度之间的关系。</li>
+<li>选择合适的开发人员。</li>
+<li>忘记冷启动问题。不断创新，互联网上有任何你要的数据，只要用户喜欢你的产品就会不断贡献新的数据。</li>
+<li>平衡数据和算法之间的关系。</li>
+<li>找到相关的物品很容易，何时何地以何种方式呈现给用户很困难。</li>
+<li>不要浪费时间计算相似兴趣的用户，可以直接利用社会网络数据。</li>
+<li>需要不断提升算法的扩展性。</li>
+<li>选择合适的用户反馈方式。</li>
+<li>设计合理的评测系统，关注推荐系统各方面的性能。</li>
+</ol>
+<h2 id="u53C2_u8003_u8D44_u6599_uFF1A"><a href="#u53C2_u8003_u8D44_u6599_uFF1A" class="headerlink" title="参考资料："></a>参考资料：</h2><p><a href="http://lukefan.com/?p=531" target="_blank" rel="external">图灵读书会——推荐系统实践</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在推荐系统诞生之前，解决信息过载的方案主要是分类目录（雅虎）和搜索引擎（谷歌）。<br>但用户在面对大量的选择，却并没有明确的需求时，他们需要的是一个自动化的工具，通过分析<strong>历史兴趣、社交关系、注册信息、位置信息</strong>等方式，减少选择负担，甚至可以帮助用户发现那些他们感兴趣但是很难发现的东西。</p>]]>
+    
+    </summary>
+    
+      <category term="技术" scheme="http://zongxiaomiao.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="推荐系统" scheme="http://zongxiaomiao.com/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/"/>
+    
+      <category term="技术之光" scheme="http://zongxiaomiao.com/categories/%E6%8A%80%E6%9C%AF%E4%B9%8B%E5%85%89/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[六个步骤做好产品需求]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/09/%E5%85%AD%E4%B8%AA%E6%AD%A5%E9%AA%A4%E5%81%9A%E5%A5%BD%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82/"/>
+    <id>http://zongxiaomiao.com/2016/01/09/六个步骤做好产品需求/</id>
+    <published>2016-01-09T05:13:18.000Z</published>
+    <updated>2016-01-09T05:14:45.000Z</updated>
+    <content type="html"><![CDATA[<p>只有当自己知道需要什么的时候，才有可能会获得它，这也是探索需求的必要性。</p>
+<p>探索需求主要有六个步骤：<br><strong>建立语言体系——提出产品问题——找到相关人员——明确期望（功能、属性、约束、偏好）——测试需求——学习竞品</strong></p>
+<a id="more"></a>
+<h2 id="u4E00_u3001_u5EFA_u7ACB_u8BED_u8A00_u4F53_u7CFB_uFF0C_u907F_u514D_u542B_u6DF7_u6027"><a href="#u4E00_u3001_u5EFA_u7ACB_u8BED_u8A00_u4F53_u7CFB_uFF0C_u907F_u514D_u542B_u6DF7_u6027" class="headerlink" title="一、建立语言体系，避免含混性"></a>一、建立语言体系，避免含混性</h2><ul>
+<li>产品的需求描述用不同的语言、工具进行交流的成本是非常高的，应该尽可能统一一套“映射”，意识到产品的“映射”不等于产品。</li>
+<li>人类交流的无奈，会因为对同一事物的不同见解而产生，这说到底是语义的多样性造成的。</li>
+<li>含混性是无法完全避免的，因为人的表达带有主观性，又因成长背景的不同对于同一事物有不同看法，但是我们能做的是尽可能地降低含混性。</li>
+<li>要降低含混性，可以尝试以下几种方法：<ul>
+<li>含混性投票：创建一个度量来评估；</li>
+<li>记忆启发：让不同的人试图精确地根据记忆进行回忆，回忆不起来的地方很可能是含混的；</li>
+<li>注意多义词，发现尽可能多的可能。</li>
+</ul>
+</li>
+</ul>
+<h2 id="u4E8C_u3001_u63D0_u51FA_u4EA7_u54C1_u95EE_u9898"><a href="#u4E8C_u3001_u63D0_u51FA_u4EA7_u54C1_u95EE_u9898" class="headerlink" title="二、提出产品问题"></a>二、提出产品问题</h2><ol>
+<li>这个系统解决什么问题？</li>
+<li>这个系统会带来什么问题？</li>
+<li>这个系统最有可能遇到的环境是什么？</li>
+<li>我们需要或期望这个产品有什么样的精确程度？</li>
+</ol>
+<h2 id="u4E09_u3001_u627E_u5230_u76F8_u5173_u7684_u4EBA"><a href="#u4E09_u3001_u627E_u5230_u76F8_u5173_u7684_u4EBA" class="headerlink" title="三、找到相关的人"></a>三、找到相关的人</h2><ol>
+<li>客户<br>对需求买单的人。</li>
+<li>使用者<br>列出可能的用户群，把他们分为友好的、不友好的和可忽略的三类来简化列表。</li>
+</ol>
+<h2 id="u56DB_u3001_u660E_u786E_u671F_u671B"><a href="#u56DB_u3001_u660E_u786E_u671F_u671B" class="headerlink" title="四、明确期望"></a>四、明确期望</h2><ul>
+<li>功能<ul>
+<li>明显的功能</li>
+<li>隐藏的功能（用户不易察觉到的）</li>
+<li>装饰性功能</li>
+</ul>
+</li>
+</ul>
+<p>努力揭示隐藏功能，而装饰性功能是“如果能实现那么就做”的功能列表。</p>
+<ul>
+<li><p>属性</p>
+<blockquote>
+<p>两种产品可能有相同的功能，但是它们的属性可以让它们成为完全不同的产品。</p>
+</blockquote>
+<ul>
+<li>区分属性与属性细节：<br>将属性细节归于某种属性，将属性下的细节收集完全；</li>
+<li>将属性分类为：<br>必须（M）、需要（W）、忽略（I）</li>
+</ul>
+</li>
+<li><p>约束条件：</p>
+<ul>
+<li>一个约束就是置于一个M类型属性之上的强制性条件。</li>
+<li>必须定义约束才能让参与者客观地判定，在完成的产品中它是否已经得到满足。</li>
+<li>约束线代表了边界线，定义了一个<strong>解决方案空间</strong>的闭合区域。</li>
+</ul>
+</li>
+<li>偏好<br>偏好是附加在属性上的一种愿望。</li>
+</ul>
+<h2 id="u4E94_u3001_u6D4B_u8BD5_u9700_u6C42"><a href="#u4E94_u3001_u6D4B_u8BD5_u9700_u6C42" class="headerlink" title="五、测试需求"></a>五、测试需求</h2><ul>
+<li>将期望分类</li>
+<li>用户满意度测试</li>
+<li><p>测试用例</p>
+<ul>
+<li><p>黑箱测试（刺激-响应）</p>
+<blockquote>
+<p>设计本身就是将黑箱转变为白箱的过程——一个我们能够清楚地看到所有怎么样的细节的过程。</p>
+</blockquote>
+</li>
+<li><p>测试需求的完备性、准确性、简明性。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="u516D_u3001_u5B66_u4E60_u5DF2_u5B58_u5728_u7684_u4EA7_u54C1"><a href="#u516D_u3001_u5B66_u4E60_u5DF2_u5B58_u5728_u7684_u4EA7_u54C1" class="headerlink" title="六、学习已存在的产品"></a>六、学习已存在的产品</h2><ol>
+<li>比较产品，提出一份在新需求中可能<strong>遗漏</strong>的功能列表；</li>
+<li>访谈一些旧产品的使用者，提出一份当前系统中<strong>不见了</strong>的功能列表；</li>
+<li>准备一份新产品在开发中的<strong>潜在的</strong>问题列表。</li>
+</ol>
+<h2 id="u4E03_u3001_u7ED3_u675F_u9700_u6C42_u8FC7_u7A0B"><a href="#u4E03_u3001_u7ED3_u675F_u9700_u6C42_u8FC7_u7A0B" class="headerlink" title="七、结束需求过程"></a>七、结束需求过程</h2><blockquote>
+<p>不要因为对不完美的害怕，让你进入无止境的循环。</p>
+</blockquote>
+<p>这个时候就<strong>不要再变更需求</strong>了。</p>
+<p>（此处应有掌声）</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>只有当自己知道需要什么的时候，才有可能会获得它，这也是探索需求的必要性。</p>
+<p>探索需求主要有六个步骤：<br><strong>建立语言体系——提出产品问题——找到相关人员——明确期望（功能、属性、约束、偏好）——测试需求——学习竞品</strong></p>]]>
+    
+    </summary>
+    
+      <category term="产品" scheme="http://zongxiaomiao.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="需求" scheme="http://zongxiaomiao.com/tags/%E9%9C%80%E6%B1%82/"/>
+    
+      <category term="大话产品" scheme="http://zongxiaomiao.com/categories/%E5%A4%A7%E8%AF%9D%E4%BA%A7%E5%93%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[2015,我的转型年]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/09/2015-%E6%88%91%E7%9A%84%E8%BD%AC%E5%9E%8B%E5%B9%B4/"/>
+    <id>http://zongxiaomiao.com/2016/01/09/2015-我的转型年/</id>
+    <published>2016-01-09T05:08:30.000Z</published>
+    <updated>2016-01-09T05:10:52.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>回顾2015年，是我从媒体转型到互联网的一年。<br>现在回头细看，其实转型是由很多细小甚微的变化而来，水到渠成的结果。</p>
+</blockquote>
+<h2 id="u524D_u594F"><a href="#u524D_u594F" class="headerlink" title="前奏"></a>前奏</h2><p>从2013年1月起，我开始在某杂志担任兼职主笔，每月为该杂志社提交万字人物对话稿，访谈的对象多为媒介大佬。<br>直到2015年1月，我先后采访了20位著名的主编或记者，他们在与我的交谈中，无一例外地表现出对纸媒的悲观和自身转型的迫切需求。<br><a id="more"></a><br>纸媒的式微伴随着中国互联网的崛起。因此媒体转型这个命题很大程度上指的是媒体与互联网的融合并进。而具体到记者个人，多是从在报纸或杂志上写稿转变为在微信公众号上写文章。<br>我的采访对象中不乏转型成功的案例，从主编到产品经理就是一例。其实一份报纸或者杂志的主编就像一个产品的PM一样，需要照顾全局。这二者本来就有共通之处。<br>昔日传媒大腕的再出发，带给尚未完全入行的我巨大的冲击，让我再次审视起自己的职业规划。</p>
+<h2 id="u8BD5_u9A8C"><a href="#u8BD5_u9A8C" class="headerlink" title="试验"></a>试验</h2><p>新闻专业出身的我没有技术背景，想要进入互联网公司实习实属不易，没有拿得出手的作品，也很难有说服力。<br>于是乎，2015年2月，我开始用业余时间创建了一个聚集美剧《老友记》粉丝的微信公众号，结合同名微店，尝试新媒体运营和商业化变现。通过运用在专业领域所学的编辑、写作、整合传播的知识，微信号上线3个月，便获得了3000粉丝，微店也有了近百单的成交量。<br>虽然这个成绩不算突出，但这次新媒体营销的试验为我接下来打入互联网“正规军”埋下了重要的伏笔。</p>
+<h2 id="u7A81_u51FB"><a href="#u7A81_u51FB" class="headerlink" title="突击"></a>突击</h2><p>2015年2月，听闻互联网大佬A公司在广州招收实习生，要求会SEO、熟练在线活动策划、懂内容运营。<br>我抱着试一试的心态投了简历。<br>很快收到公司面试通知，在等待面试的3天里，我熟读了张亮的《从零开始做运营》、《SEO实战秘籍》等。俗话说，临阵磨枪，不快也光。<br>这3天的突击加上平时的积累，让我在笔试和面试过程中得到了青睐。<br>加入A公司后，系统地学习了SEO、内容运营、社会化运营，3个月的实战互联网经历，让我对这个行业多了一份自信。</p>
+<h2 id="u542F_u7A0B"><a href="#u542F_u7A0B" class="headerlink" title="启程"></a>启程</h2><p>真正走上互联网之路还是在2015年4月，当时的我有了之前短暂的积累，有了一个大胆的想法：参加互联网大佬T公司的暑期实习生招聘。<br>在填写意向时，我一度犹豫：是选网站编辑呢，还是选产品运营呢？<br>如果选编辑，那是我的专业所长，录取的几率会大大增加；如果选运营，那么虽然录取的几率会降低，但是那更符合我走上这条路的初衷。<br>于是我就这样“过于自信”地报了产品运营这一职位。<br>没想到竟然通过了简历关、笔试和群面，进入了专业面。<br>然而人生就是充满了不确定性。狗血的剧情让人措手不及。<br>专业面时，我被告知调剂到了游戏运营岗位，对游戏研究不深的我心想这下应该没戏了。<br>但是，因为之前互联网实习的经历和微信公众号运营的经验，让面试官很满意，所以仍旧成功地进入了T公司开始了暑期实习。好在是有惊无险。</p>
+<h2 id="u5B9A_u5411"><a href="#u5B9A_u5411" class="headerlink" title="定向"></a>定向</h2><p>有句话是这么说的，是你的就是你的，不是你的，你强求也没用。<br>一开始我不信，我这个人有一股一条道走到黑的执念。面对自己并不熟悉的游戏行业，我想，既然来了，那么就一直走下去吧。<br>结局不难猜到，2015年9月，大公司的校招季就快结束时，我被告知没能留在T公司的游戏部门。<br>于是，我踏上了赴港读研的漫漫征程，一度煮酒烹茶，怀疑人生。<br>连看似最后一根救命稻草——T公司的大规模校招，也因为在香港繁重的学业而选择放弃。<br>原本以为和互联网的缘分尽了。<br>没想到2015年10月，我又收到了T公司校招补录的邀请函，这次我没有再犹豫。<br>2015年10月27日，清晨6点，我从香港起身，从东铁线到罗宝线，一路上我什么都没想，只是告诉自己，反正我没有什么再可以失去的了。<br>2015年11月9日，我收到了offer，也许我和互联网的故事才刚刚开始。</p>
+<h2 id="u540E_u8BB0"><a href="#u540E_u8BB0" class="headerlink" title="后记"></a>后记</h2><p>2015年的转型经历让我感触最深的一点就是，想到了就要去做，从最微小之处开始，变化就是在你不经意的坚持中慢慢累积起来的。<br>2016年再出发，我们都会遇见更好的自己！</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p>回顾2015年，是我从媒体转型到互联网的一年。<br>现在回头细看，其实转型是由很多细小甚微的变化而来，水到渠成的结果。</p>
+</blockquote>
+<h2 id="u524D_u594F"><a href="#u524D_u594F" class="headerlink" title="前奏"></a>前奏</h2><p>从2013年1月起，我开始在某杂志担任兼职主笔，每月为该杂志社提交万字人物对话稿，访谈的对象多为媒介大佬。<br>直到2015年1月，我先后采访了20位著名的主编或记者，他们在与我的交谈中，无一例外地表现出对纸媒的悲观和自身转型的迫切需求。<br>]]>
+    
+    </summary>
+    
+      <category term="转型" scheme="http://zongxiaomiao.com/tags/%E8%BD%AC%E5%9E%8B/"/>
+    
+      <category term="白驹过隙" scheme="http://zongxiaomiao.com/categories/%E7%99%BD%E9%A9%B9%E8%BF%87%E9%9A%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[腾讯产品offer－从暑期实习生到产培生再到校招的坎坷之路]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/09/%E8%85%BE%E8%AE%AF%E4%BA%A7%E5%93%81offer%EF%BC%8D%E4%BB%8E%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E7%94%9F%E5%88%B0%E4%BA%A7%E5%9F%B9%E7%94%9F%E5%86%8D%E5%88%B0%E6%A0%A1%E6%8B%9B%E7%9A%84%E5%9D%8E%E5%9D%B7%E4%B9%8B%E8%B7%AF/"/>
+    <id>http://zongxiaomiao.com/2016/01/09/腾讯产品offer－从暑期实习生到产培生再到校招的坎坷之路/</id>
+    <published>2016-01-09T04:48:40.000Z</published>
+    <updated>2016-01-09T04:56:36.000Z</updated>
+    <content type="html"><![CDATA[<p>简单跟大家分享一下三次经历腾讯产品岗面试的故事，希望对未来有志于加入企鹅的同学有帮助。</p>
+<p>第一次遇见腾讯是在2014年夏天的暑期实习生招聘，幸运地走到了最后，但是没有能够留下；一度怀疑人生，后来重振旗鼓，参加了一次产培生面试（群面挂掉）和一次校招（拿到offer）。下面依次说一下笔试和面试的技巧：</p>
+<a id="more"></a>
+<h2 id="u7B14_u8BD5"><a href="#u7B14_u8BD5" class="headerlink" title="笔试"></a>笔试</h2><p>基本上笔试的题目跟所有大型外企招聘时做的都一样，主要分为逻辑数理、文字理解、性格测试，你要做完第一部分才能做第二部分，确定了一个题目的答案之后不能返回修改。全程会有远程监控，所以各位请务必保持你在电脑前的形象，不用光彩照人但至少不要邋邋遢遢。</p>
+<p>笔试的准备大家可以从下面两方面着手：</p>
+<ol>
+<li><p>行测题：公务员考试会做的，找规律、逻辑推理、内容理解等，提高手感和对题目的认知度；</p>
+</li>
+<li><p>应届生论坛：大家可以在这个论坛的笔试区找到许多过往的题目，当然，这些题目只能帮助你判断大致的体量和难度，并不能压中题目，大家要理性对待。</p>
+</li>
+</ol>
+<p>总之，笔试是对一个人基础素质的测验。腾讯在笔试环节主要考察你的逻辑思维、快速反应以及基本的文字理解能力。</p>
+<p>千万谨记，不要在做题的时候跳转到其他页面查找答案，跳转页面的动作会被记录，达到一定次数会被取消资格，并且不能参加来年腾讯的招聘，得不偿失。</p>
+<h2 id="u7FA4_u9762"><a href="#u7FA4_u9762" class="headerlink" title="群面"></a>群面</h2><p>群面主要考察的是你对于题目的分析，并且结合你自身对于产品的理解进行有效表达的过程。群面是8-12人同时面试，由以下三个环节组成：</p>
+<p><strong>自我介绍——无领导讨论——1人总结发言＋1人补充</strong></p>
+<p>对于群面，大家把握下面三个点：</p>
+<ol>
+<li><p>知己知彼，才能百战百胜——自我介绍；</p>
+</li>
+<li><p>话不在多，够用就好——自由讨论；</p>
+</li>
+<li><p>情商和智商一样重要——全程细节；</p>
+</li>
+</ol>
+<h4 id="u77E5_u5DF1_u77E5_u5F7C_uFF0C_u624D_u80FD_u767E_u6218_u767E_u80DC"><a href="#u77E5_u5DF1_u77E5_u5F7C_uFF0C_u624D_u80FD_u767E_u6218_u767E_u80DC" class="headerlink" title="知己知彼，才能百战百胜"></a>知己知彼，才能百战百胜</h4><p>自我介绍在群面中的重要程度相当于你相亲时候给对方的第一印象，合适还是不合适，有可能在这个环节就定下来了。群面的自我介绍时长为1分钟。要脱颖而出主要靠你对于自身特点的剖析＋与你面试岗位的匹配度＋与同组成员的差异度。</p>
+<p>比如我面的是产品岗，但我的专业并不是计算机或者互联网相关的，我的自我介绍就应突出我之前在互联网公司的实习经历或者是自己做公众号的经历，而非在自己本专业取得的成绩。</p>
+<p>建议大家在群面开始前1个小时达到面试现场，在这1个小时里，请你找到自己的组员，加他们的微信，询问他们的专业、学校、实习经历。为什么要这样做？因为这能让你接下来的自我介绍具有更大的差异度和可辨识度。</p>
+<p>举个栗子。</p>
+<p>我第三次面腾讯校招产品经理时，同组的都是港硕计算机大牛，plus在BAT公司实习的经历，虽然我也跟他们一样有在互联网实习的经历，但技术能力上不及他们，所以我在自我介绍时特别提到了自己本专业的科研项目，以及这个科研项目如何能够让我在产品上有所体会。这样做，一是体现了自己的学习能力，二是提升了自己与同组同学的差异性。</p>
+<p>大家可以把自己想象成一款产品，想想要推广自己这款产品最切合的广告语是什么，然后以它作为你自我介绍的开头。</p>
+<h4 id="u8BDD_u4E0D_u518D_u591A_uFF0C_u591F_u7528_u5C31_u597D"><a href="#u8BDD_u4E0D_u518D_u591A_uFF0C_u591F_u7528_u5C31_u597D" class="headerlink" title="话不再多，够用就好"></a>话不再多，够用就好</h4><p>自由讨论过程中，有很多角色可以扮演：leader，计时员，总结者，想法贡献者。</p>
+<p>选择一个合适自己的角色，是成功的第一步。如何选择呢？</p>
+<p>先分析一下自己，是很有想法的（贡献者）还是善于规划的（leader，计时员），是有气场的（leader）还是善于打圆场的（总结者、贡献者）。再分析一下形势，如果大家走偏了，这个时候你要勇敢的站出来，提出自己的想法；当大家路线很对时，你要善于从考虑问题的全面性、问题本身的延展性上，拔高这个题目的立意。</p>
+<p>在表达自己观点的时候，要言简意赅，不要重复别人的观点，可以直接说“我赞同…但是想补充…”，每个人的注意力都是有限的，有效、有逻辑的表达比抢话更有效。</p>
+<p>最后，大家不要轻易放过在总结发言之后的机会。这个时候，面试官通常会问：“有一个补充发言的机会，有什么要补充的？”此时是一个亮瞎全场的良机！这考验你观察全场发言之后，对于题目有没有更深刻的认知。</p>
+<p>举个栗子。</p>
+<p>我在面试腾讯校招的时候，题目是针对一个寺庙设计一款app的主要功能和推广方案。在自由讨论环节，同组的大牛把功能设计得十分完整且优先性上也很合理，我在群面环节发言次数也不多，贡献的想法也很少。所以当面试官问：“大家有什么要补充的？”时，我提出应该从这个寺庙的特点出发，试着从这个寺庙中找到一个“有影响力的人物”，塑造这个寺庙在大众中的认知度。</p>
+<p>所以虽然整个群面我只说了3句话，但依旧进入了初面。</p>
+<h4 id="u60C5_u5546_u548C_u667A_u5546_u540C_u6837_u91CD_u8981"><a href="#u60C5_u5546_u548C_u667A_u5546_u540C_u6837_u91CD_u8981" class="headerlink" title="情商和智商同样重要"></a>情商和智商同样重要</h4><p>这里主要讲一讲群面过程中要注意的细节。</p>
+<p>1）群面的面试官有两位，所以务必携带两份简历入场，这看似是小事，但大部分面试者没做到。</p>
+<p>2）尽量坐在可以跟面试官有眼神交流的位置上，这样能够在自己发言时观察面试官的反应。</p>
+<p>3）面试官在讲解规则时，拿笔记录，虽然你已经知道了规则，也要表示尊重。</p>
+<p>4）通常面试官会让你在一张A4纸上写你的名字，做成姓名牌，请没有制作经验的童鞋提前试一下，同时最好用马克笔书写，否则容易看不清楚。</p>
+<p>5）离开时，把椅子归位，别起身就走。</p>
+<h2 id="u521D_u9762"><a href="#u521D_u9762" class="headerlink" title="初面"></a>初面</h2><p>初面的成功主要靠以下几点：</p>
+<ol>
+<li><p>提供有效的个人信息——2－3分钟的自我介绍；</p>
+</li>
+<li><p>提供简历之外的能力证明——带上你的产品体验文档、产品原型图等能证明你专业能力的材料；</p>
+</li>
+<li><p>“你还有什么要问我的吗？”——最后一问问对方负责的产品和你能回答上来的专业问题；</p>
+</li>
+</ol>
+<p>初面的面试官就是你未来产品的组长，初面是你能否拿到offer的关键。</p>
+<h4 id="u63D0_u4F9B_u6709_u6548_u7684_u4E2A_u4EBA_u4FE1_u606F_u2014_u20142_uFF0D3_u5206_u949F_u7684_u81EA_u6211_u4ECB_u7ECD"><a href="#u63D0_u4F9B_u6709_u6548_u7684_u4E2A_u4EBA_u4FE1_u606F_u2014_u20142_uFF0D3_u5206_u949F_u7684_u81EA_u6211_u4ECB_u7ECD" class="headerlink" title="提供有效的个人信息——2－3分钟的自我介绍"></a>提供有效的个人信息——2－3分钟的自我介绍</h4><p>初面的面试官也会要求你做自我介绍，这个时候群面时的自我介绍已经不够用了。建议大家准备一个3分钟版本的，包括：学习能力＋实习经历＋社团经历＋获奖经历。自我介绍时你说的每一句话都必须是有效信息，所以一些自我评价类的话不要说。</p>
+<h4 id="u63D0_u4F9B_u7B80_u5386_u4E4B_u5916_u7684_u80FD_u529B_u8BC1_u660E"><a href="#u63D0_u4F9B_u7B80_u5386_u4E4B_u5916_u7684_u80FD_u529B_u8BC1_u660E" class="headerlink" title="提供简历之外的能力证明"></a>提供简历之外的能力证明</h4><p>初面和总监面最大的区别在于，初面面试官看的是你的专业能力（可用性），能不能招进去之后立刻接手工作，承担一部分KPI；总监看的是你的综合素质和潜力（可塑性）。因为初面主要考察专业能力，建议童鞋们除了带一张简历之外，务必提供你的产品体验报告或者是写过的产品需求文档。</p>
+<p>这样做有两个好处，一是你能主导面试，而不是被动应对提问；二是能直观让面试官感觉你有这方面的实战经验。</p>
+<p>当然，一定要在面试之前熟悉你的材料，思考清楚以下几个问题：</p>
+<ol>
+<li><p>你在项目／产品中的负责了什么，负责的部分如何提升了你的能力（包括工具应用能力）；</p>
+</li>
+<li><p>你对这个产品的竞品做了哪些调研（你的方法论是什么，分析模型是什么，学习到了什么）；</p>
+</li>
+<li><p>你对于这个产品的优化方案（包括功能设计、交互设计、运营推广方案等）；</p>
+</li>
+<li><p>你是否想过产品（未来）的商业模式和赢利点（行业认知、商业嗅觉）；</p>
+</li>
+<li>“你还有什么要问我的吗？”</li>
+</ol>
+<h4 id="u4F60_u8FD8_u6709_u4EC0_u4E48_u60F3_u95EE_u6211_u7684_u5417_uFF1F"><a href="#u4F60_u8FD8_u6709_u4EC0_u4E48_u60F3_u95EE_u6211_u7684_u5417_uFF1F" class="headerlink" title="你还有什么想问我的吗？"></a>你还有什么想问我的吗？</h4><p>这个时候请一定不要表现得“双商”感人，在发问之前，现弄清楚对方负责的是什么产品。否则你可能会杯具，就像之前一个天真的孩子对一个手机QQ的产品经理说：“现在微信已经取代了QQ，霸占了移动端，手机QQ还要存在呢？”其实问出这样的问题，戳到了面试官的痛点，如果你能圆满地回答手机QQ如何在这样的竞争环境中找到方向，那么可能会幸存。</p>
+<p>另外也不要问一些只有小马哥才能回答的问题，如：“腾讯未来10年的发展重点是？”</p>
+<p>弄清你对面坐的人的位置，提恰当的问题。</p>
+<p>总之，最后一问也很关键，不要问你答不上来的问题，你要对你问的问题有过一定的思考。</p>
+<p>一定要问对方负责的产品，因为这对于你接下来的总监面非常重要。</p>
+<p>##总监面</p>
+<p>现在你已经知道了你面的是某某产品了，回家之后就立刻熟悉这款产品吧，最好写下这款产品存在的问题以及改善方案，这能让你在总监面脱颖而出。</p>
+<p>当然总监面考察的不仅仅是你对产品本身的了解，它更重要的是对你这个人整体的判断：你对产品的认知到了什么程度？你的学习能力、逻辑能力、沟通能力、性格特点hold得住产品经理这个职位吗？你的综合素质和发展潜力如何？</p>
+<p>简单列举几个总监面被问到的问题，大家可以随意感受一下总监面的画风：</p>
+<ol>
+<li><p>你是哪里人啊？介绍一下你们家乡的风土人情吧 （其实就是想看看你这个人会不会聊天，表达能力如何）。</p>
+</li>
+<li><p>请你估算北京市需要多少个加油站（案例分析，多看看咨询公司的case study）？</p>
+</li>
+<li><p>说两个你的优点和两个你的缺点（大家可以提前了解一下优秀的产品经理的性格特点）。</p>
+</li>
+<li><p>为什么想做产品经理？为什么你能胜任这个工作？</p>
+</li>
+<li><p>说说一个网站从最初设计到最终上线需要涉及到哪些工种？</p>
+</li>
+<li><p>说说前端和后台的区别，两者常用的coding语言是什么？</p>
+</li>
+<li><p>你高考数学考了多少分？（不要不信，其实你的高考成绩很重要，问数学成绩是为了了解逻辑能力）</p>
+</li>
+<li><p>说服我做一个需求。</p>
+</li>
+</ol>
+<p>总监面考察的是你的综合素质，包括你的逻辑思维、技术修养、沟通能力、学习能力等等。那么KO总监面需要怎么做呢？</p>
+<p>首先，你要做一个会聊天的人。培养自己的倾听能力和表达能力。</p>
+<p>其次，你必须认真了解过一款产品诞生时所要涉及到的技术、设计、商业知识，这里可以通过广泛阅读和自己尝试做一款简单的产品（哪怕是公众号）来锻炼自己。</p>
+<p>最后，还是那句话，充分了解自己的特点和长处，看看它们如何能够与产品经理的这个职位匹配。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>简单跟大家分享一下三次经历腾讯产品岗面试的故事，希望对未来有志于加入企鹅的同学有帮助。</p>
+<p>第一次遇见腾讯是在2014年夏天的暑期实习生招聘，幸运地走到了最后，但是没有能够留下；一度怀疑人生，后来重振旗鼓，参加了一次产培生面试（群面挂掉）和一次校招（拿到offer）。下面依次说一下笔试和面试的技巧：</p>]]>
+    
+    </summary>
+    
+      <category term="产品" scheme="http://zongxiaomiao.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="面经" scheme="http://zongxiaomiao.com/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+      <category term="白驹过隙" scheme="http://zongxiaomiao.com/categories/%E7%99%BD%E9%A9%B9%E8%BF%87%E9%9A%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[什么是原型设计（简而言之版）]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/08/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8E%9F%E5%9E%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AE%80%E8%80%8C%E8%A8%80%E4%B9%8B%E7%89%88%EF%BC%89/"/>
+    <id>http://zongxiaomiao.com/2016/01/08/什么是原型设计（简而言之版）/</id>
+    <published>2016-01-08T13:37:41.000Z</published>
+    <updated>2016-01-08T13:47:28.000Z</updated>
+    <content type="html"><![CDATA[<p> 做互联网产品的小伙伴一定不会对“原型”这个词感到陌生。它就像“用户体验”一样经常被各类人挂在嘴边。它有许多近义词，如线框图、故事板等。那么究竟什么是原型设计，我们为什么需要原型设计，如何进行原型设计呢？<br><img src="http://image.woshipm.com/wp-files/2016/01/yuanxinsehi.jpg" alt="yuanxinsehi"></p>
+<p>本文将梳理关于原型的前世今生，弄清楚它到底是个啥，我们如何使用它。</p>
+<a id="more"></a>
+<h3 id="u539F_u578B_u8BBE_u8BA1_u662F_u4EC0_u4E48"><a href="#u539F_u578B_u8BBE_u8BA1_u662F_u4EC0_u4E48" class="headerlink" title="原型设计是什么"></a>原型设计是什么</h3><p>原型是一种让用户提前体验产品、交流设计构想、展示复杂系统的方式。就本质而言，原型是一种沟通工具。</p>
+<p>线框图描绘的是页面功能结构，它不是设计稿，也不代表最终布局，线框图所展示的布局，最主要的作用是描述功能与内容的逻辑关系。</p>
+<p>原型图是最终系统的代表模型或者模拟，比线框图更加真实、细致。</p>
+<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-3b1ad68f08ebb2a9.png" alt="1209576-3b1ad68f08ebb2a9"><br>原型设计在产品设计中所处的位置</p>
+<h3 id="u539F_u578B_u8BBE_u8BA1_u7684_u76EE_u7684"><a href="#u539F_u578B_u8BBE_u8BA1_u7684_u76EE_u7684" class="headerlink" title="原型设计的目的"></a>原型设计的目的</h3><p>很难想象一个没有原型的产品是如何诞生的。</p>
+<p>原型设计的核心目的在于测试产品，没有哪一家互联网公司可以不经过测试，就直接上产品和服务。</p>
+<p>原型在识别问题、减少风险、节省成本等方面有着不可替代的价值。</p>
+<p>虽然需求文档也是可以满足沟通需求的，通过用例将交互写到设计描述文档中，但是原型可以更详细地解释交互。</p>
+<p>你可以用屏幕录制软件或者用一只手机对着屏幕拍摄下你操作原型的过程，边录制可以边评论，比如：“我现在有点晕了，不知道该怎么操作，或许点击这里看看……哎呀，好像点错了。”</p>
+<h3 id="u539F_u578B_u8BBE_u8BA1_u7684_u6D41_u7A0B"><a href="#u539F_u578B_u8BBE_u8BA1_u7684_u6D41_u7A0B" class="headerlink" title="原型设计的流程"></a>原型设计的流程</h3><p>开始做原型之前，请先考虑清楚以下几个要素：</p>
+<ul>
+<li>做这个原型的目的是什么？</li>
+<li>这个原型的受众是谁？</li>
+<li>这个原型有多大效率帮助我传达设计或测试设计？</li>
+<li>有多少时间做原型？需要什么级别的保真程度？<br><img src="http://image.woshipm.com/wp-files/2016/01/1209576-8c140275f321ef991.png" alt="1209576-8c140275f321ef99"></li>
+</ul>
+<h3 id="u539F_u578B_u8BBE_u8BA1_u6D41_u7A0B"><a href="#u539F_u578B_u8BBE_u8BA1_u6D41_u7A0B" class="headerlink" title="原型设计流程"></a>原型设计流程</h3><p><strong>步骤一：画草图</strong></p>
+<p>画草图的目标是提炼想法，并且最好给画草图加上一个时间限制，那就是15分钟。如果你绘画能力很差，那么恭喜你，可能你能更好地用好草图，因为你的注意力没有放在美化你正在画什么上面。</p>
+<p>画草图要避免陷入审美细节，尽可能快速的导出想法才是关键。</p>
+<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-b421c821f69c8bdc.jpg" alt="1209576-b421c821f69c8bdc"><br>用纸笔画的用户个人账户的草图示例</p>
+<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-e89e8f9d4a128e40.png" alt="1209576-e89e8f9d4a128e40"></p>
+<p>用HTML代码制作的相亲网站个人收集页面草图</p>
+<p><strong>步骤二：演示及评论</strong></p>
+<p>演示和评论的目标是把一些想法拿出来跟大家分享，然后进一步完善想法。在演示过程中，要做好记录，演示和评论的时间可以对半分。</p>
+<p>** 步骤三：做原型**</p>
+<p>在明确了想法之后，就可以开始进行原型设计了。这个阶段需要考虑很多细节，找出切实可行的方案，运用合适的原型来表达。</p>
+<p>** 步骤四：测试**</p>
+<p>原型的目标之一是让受众来检验产品是否达到了预期，因此可以请5-6位测试者，通过音视频捕捉等方式，看看产品原型是否被顺畅地使用了。</p>
+<h3 id="u539F_u578B_u8BBE_u8BA1_u5DE5_u5177"><a href="#u539F_u578B_u8BBE_u8BA1_u5DE5_u5177" class="headerlink" title="原型设计工具"></a>原型设计工具</h3><p>选择什么工具来制作原型？主要考虑以下几个因素（排名分先后）：</p>
+<ul>
+<li>熟悉程度和获得工具的便利度；</li>
+<li>所需的时间和精力；</li>
+<li>可复用的代码/框架；</li>
+<li>为测试创建可用的原型；</li>
+<li>价格和学习曲线。<br><img src="http://image.woshipm.com/wp-files/2016/01/1209576-344fedd7d7daaea5.png" alt="1209576-344fedd7d7daaea5"></li>
+</ul>
+<p>常用原型设计工具调查结果（2013年），出处：toddwarfel.com</p>
+<p>不得不说，这个结果很让人吃惊，没想到有那么多人用Dreamweaver做原型，在这里我介绍两种我经常用到的原型设计工具。</p>
+<h3 id="PPT_u548CKeynote"><a href="#PPT_u548CKeynote" class="headerlink" title="PPT和Keynote"></a>PPT和Keynote</h3><p><strong>优点：</strong></p>
+<ul>
+<li>技术门槛低，学习曲线不陡峭；</li>
+<li>可用幻灯片母版，复用性高；</li>
+<li>模拟移动端产品，修改画板适应手机端尺寸即可；</li>
+<li><p>可导出为HTML或PDF文件；<br><strong>缺点：</strong></p>
+</li>
+<li><p>绘画工具有限；</p>
+</li>
+<li>交互动作有限；<br>现在非常流行把Sketch与Keynote放在一起用，简单说就是把Sketch里的图层、部件拖拽到Keynote中，然后添加Action动作，按照剧本完成一套交互。</li>
+</ul>
+<p>Axure RP</p>
+<p>Axure的优点不用多说，但使用它一个工具就能满足设计和文档需求（通过注解，生成规格文档）。</p>
+<p>Axure自带的部件库也给制作过程带来了便捷，类似Omnigraffle的stencil一样，避免了重新发明轮子。</p>
+<p>要掌握Axure，主要应该弄懂四大核心功能：</p>
+<ul>
+<li>母版：主要用于制作网页的页头、页尾，可复用性高；</li>
+<li>动态面板：核心中的核心，“层”的概念很重要；</li>
+<li>图片热区：在一张完整的图片上通过热区，建立交互动作；</li>
+<li>函数和变量：局部变量和全局变量的概念以及应用（比如用户登陆效果）。<br>Axure 7.0还有中继器这个功能，但是个人觉得比较鸡肋，学习成本也比较高，主要可以用来做搜索框的搜索结果联想的原型。</li>
+</ul>
+<h3 id="u539F_u578B_u6D4B_u8BD5_u6D41_u7A0B"><a href="#u539F_u578B_u6D4B_u8BD5_u6D41_u7A0B" class="headerlink" title="原型测试流程"></a>原型测试流程</h3><p>原型测试是原型设计过程中的关键步骤，是整体流程中主要的里程碑之一。</p>
+<p>可用性测试是一个庞大的话题，测试方法有一对一或者远程测试，难点是从测试中得到有质量的成功。</p>
+<p>测试结果取决于测试者，务必招募到合适的人。要找到合适的人，需要对测试者制定一系列的筛选标准，比如一个社交产品绝对不可能找一个连电子邮件都没有的人来测试。</p>
+<p>测试时长可以是一个小时左右，足以测试5个到6个左右的关键场景，并列出一些观察结果和关键问题，例如：</p>
+<ul>
+<li>用户如何开始任务的？（是搜索还是浏览？）</li>
+<li>他先做了什么，再做了什么？</li>
+<li>他如何做出最终决定的？</li>
+<li>他们是否领会了设计意图？有什么操作困难？<br>关于记录测试结果，可以结合定性和定量两种方式，做一张计分表，用1-5的程度来表示；同时定性地记录用户的一些表达，尽可能地原话记录。</li>
+</ul>
+<p>最后分析这些记录，改善设计。</p>
+<p>产品原型设计或者说产品开发是没有尽头的，它是一个不断发展，循环上升，整合知识和经验，不断迭代和完善过程。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p> 做互联网产品的小伙伴一定不会对“原型”这个词感到陌生。它就像“用户体验”一样经常被各类人挂在嘴边。它有许多近义词，如线框图、故事板等。那么究竟什么是原型设计，我们为什么需要原型设计，如何进行原型设计呢？<br><img src="http://image.woshipm.com/wp-files/2016/01/yuanxinsehi.jpg" alt="yuanxinsehi"></p>
+<p>本文将梳理关于原型的前世今生，弄清楚它到底是个啥，我们如何使用它。</p>]]>
+    
+    </summary>
+    
+      <category term="产品" scheme="http://zongxiaomiao.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="原型" scheme="http://zongxiaomiao.com/tags/%E5%8E%9F%E5%9E%8B/"/>
+    
+      <category term="大话产品" scheme="http://zongxiaomiao.com/categories/%E5%A4%A7%E8%AF%9D%E4%BA%A7%E5%93%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[从零开始学Sketch——进阶篇]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/08/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6Sketch%E2%80%94%E2%80%94%E8%BF%9B%E9%98%B6%E7%AF%87/"/>
+    <id>http://zongxiaomiao.com/2016/01/08/从零开始学Sketch——进阶篇/</id>
+    <published>2016-01-08T13:33:22.000Z</published>
+    <updated>2016-01-09T06:17:42.000Z</updated>
+    <content type="html"><![CDATA[<p>Sketch是一款矢量绘图应用，而矢量绘图无疑是目前进行网页、图标以及界面设计的最好方式。</p>
+<p>在初识了Sketch的界面布局和基础工具之后，我们就可以开始进入高阶的Sketch工具篇学习了。这篇文章主要会涉及Sketch模板、插件的使用，以及Sketch在具体使用过程中的一些技巧分享。</p>
+<p>如果你曾接触过PS、AI、Axure等软件，那么接下来的内容你应该不会陌生，因为所有的设计软件学习的路径都是相似的，都是从认识基本功能框架到外部资源整合运用，最终形成个人风格的一个过程。</p>
+<a id="more"></a>
+<h2 id="Sketch_u6A21_u677F"><a href="#Sketch_u6A21_u677F" class="headerlink" title="Sketch模板"></a>Sketch模板</h2><h3 id="Sketch_u81EA_u5E26_u6A21_u677F"><a href="#Sketch_u81EA_u5E26_u6A21_u677F" class="headerlink" title="Sketch自带模板"></a>Sketch自带模板</h3><p>Sketch自带模板也就是Sketch在file菜单栏下的template。</p>
+<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-1f47b58bb3fb2cbf.png" alt="1209576-1f47b58bb3fb2cbf"></p>
+<p>进入Template</p>
+<p>在使用的过程中，我们只需要将所需的模板<strong>复制</strong>到我们的Artboard中就好了。需要注意的是，在调整大小时需要固定长款比例。</p>
+<h3 id="Sketch_u81EA_u5B9A_u4E49_u6A21_u677F"><a href="#Sketch_u81EA_u5B9A_u4E49_u6A21_u677F" class="headerlink" title="Sketch自定义模板"></a>Sketch自定义模板</h3><p>在Sketchappsources网站中，有许多Sketch的模板可以下载，我们可以将这些控件导入到Sketch中。</p>
+<p>亦或是在工作中，团队经常用到一些固定的组件，为避免重复劳动，我们可以把它们转存为模板。这个复用的思维跟Axure中的自定义母版是一样的。</p>
+<p>具体的步骤如下：</p>
+<p>Step 1：下载或自建一个Sketch文档，内含需要导入的模板；</p>
+<p>Step 2：点击File下的“Save as template”；</p>
+<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-5fd96b100396d2d5.png" alt="1209576-5fd96b100396d2d5"></p>
+<p>所有的Sketch文件都可以直接Save as template</p>
+<p>Step 3：给你的自定义模板命名；</p>
+<p>Step 4：点击模板菜单栏目录时就会出现你所自定义的模板了。</p>
+<p>要运用好模板，除了平时多加积累素材之外，还需要注意模板与模板之间的独立不重复和规格的统一，比如iPhone手机顶端信号栏的宽度这样的细节。</p>
+<h2 id="Sketch_u63D2_u4EF6"><a href="#Sketch_u63D2_u4EF6" class="headerlink" title="Sketch插件"></a>Sketch插件</h2><p>插件是设计软件必备的神器，无论是PS还是AI都有强大的插件库，当然Sketch也是如此。</p>
+<h3 id="u5B89_u88C5_u63D2_u4EF6_u7684_u65B9_u6CD5"><a href="#u5B89_u88C5_u63D2_u4EF6_u7684_u65B9_u6CD5" class="headerlink" title="安装插件的方法"></a>安装插件的方法</h3><p>Sketch的插件多是技术大牛写的，获取的方法有三个：</p>
+<p>方法一：下载Sketch Toolbox这个工具，在里面之间下载你所需要的插件库，然后在Sketch工具栏中点击Plugins就可以看到你下载的插件库了；</p>
+<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-f10894f2ac4a2f5b.png" alt="1209576-f10894f2ac4a2f5b"></p>
+<p>Sketch Toolbox</p>
+<p>方法二：在Github上搜索自己需要的插件名，然后直接打包下载就好了。</p>
+<p>方法三：在Sketch的Plugin菜单下点击manage plugins，在弹出的对话框中点击“get plugins”。</p>
+<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-fe6547134a19f17c.png" alt="1209576-fe6547134a19f17c"></p>
+<p>点击Get plugins，会跳转到sketch的官网插件库</p>
+<h3 id="u63A8_u8350_u51E0_u4E2A_u8D85_u70AB_u63D2_u4EF6"><a href="#u63A8_u8350_u51E0_u4E2A_u8D85_u70AB_u63D2_u4EF6" class="headerlink" title="推荐几个超炫插件"></a>推荐几个超炫插件</h3><p>关于插件，建议一开始的时候不要安装太多。推荐以下几个插件库，可以满足日常工作需求：</p>
+<p><strong>Content Generator：</strong>可以自动填充类型图片、姓名、联系方式等信息，避免手动输入带来的不便；</p>
+<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-23421d9b0b977a15.gif" alt="1209576-23421d9b0b977a15"></p>
+<p>自动填充用户头像.gif</p>
+<p><strong>Rename it：</strong></p>
+<p>这个插件的用途是批量修改图形名称。</p>
+<p>比如上面那个动图，我们可以全选所有的矩形，然后点击rename it插件，将其命名为“%N”，即可得到一串倒序排列的矩形命名。<br>主要的规则有：</p>
+<ul>
+<li>输入 “%N” 将对象编号；</li>
+<li>输入“+”和“button”可以将所有选中的对象名变为以button结尾的命名；</li>
+<li>输入新的图层名时，使用 “_” 号代替原图层名。如：big _button，表示的是保留原命名，并在一头一尾加入big和button；</li>
+<li>输入 “%w” 或者 “%h” 来添加图层的长和宽。<br><strong>Sketch Measure插件：</strong></li>
+</ul>
+<p>这个插件可以添加图形尺寸、距离、颜色和文本属性的标注，并会自动把附注编组，方便你自己修改和管理。</p>
+<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-1430738a8c2d982a.png" alt="1209576-1430738a8c2d982a"></p>
+<p>图形的长宽标注</p>
+<p>运用Sketch Measure插件可以在团队合作的时候，可以更方便的把设计稿交付给相关同事。</p>
+<p><strong>Sketch Notebook：</strong></p>
+<p>给一个对象添加注释、评论，可以更加自由地对设计稿进行标注和说明。</p>
+<p><strong>Sketch Color Swatches：</strong></p>
+<p>这个插件便于我们在设计初期参考一些别的网站基础配色。</p>
+<p>配合Sip这款取色工具，我们可以直接获得我们想要的网站配色。以简书为例：</p>
+<ul>
+<li><p>首先，吸取5个简书官网的主色色值；<br><img src="http://image.woshipm.com/wp-files/2016/01/1209576-851c2016319479d5.png" alt="1209576-851c2016319479d5"></p>
+</li>
+<li><p>然后，在Swatch插件中输入色值编号，得到色板。<br><img src="http://image.woshipm.com/wp-files/2016/01/1209576-de6b317368e0133b.png" alt="1209576-de6b317368e0133b"></p>
+</li>
+</ul>
+<p>Color Swatches: 输入色值，得到色板</p>
+<ul>
+<li>Export as Flinto Document: 这个插件可以将我们的设计稿转换为Flinto文件形式，以便在Flinto这个软件中完成动态交互设计，因为Sketch是不提供动态交互功能的。<br>当然，现在也越来越流行Sketch+Keynote的结合了，说白了就是把Sketch里设计好的帧画面和元件拖拽到Keynote里，然后用Keynote构造原型。这也是一个不错的选择哦！</li>
+</ul>
+<h2 id="Sketch_Mirror"><a href="#Sketch_Mirror" class="headerlink" title="Sketch Mirror"></a>Sketch Mirror</h2><p>要说Sketch脱颖而出的理由，很重要的一点就是它满足了实时在手机端查看的功能，这是Axure所不具备的。</p>
+<p>在手机上下载Sketch Mirror这款APP，然后在Mac端工具栏中点击Sketch mirror，只要两台设备在同一wifi环境下，就可以同步查看了。</p>
+<h3 id="u4F7F_u7528Sketch_u7684_u5FEB_u6377_u952E"><a href="#u4F7F_u7528Sketch_u7684_u5FEB_u6377_u952E" class="headerlink" title="使用Sketch的快捷键"></a>使用Sketch的快捷键</h3><p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-a122a31254cc5260-3.png" alt="1209576-a122a31254cc5260-3"></p>
+<p>快捷键一览表，感谢图片作者：康上明学</p>
+<h2 id="u5B9E_u6218_uFF1A_u5236_u4F5C_u56FE_u7247_u5206_u4EABAPP-_u4E2A_u4EBA_u5C55_u793A_u9875"><a href="#u5B9E_u6218_uFF1A_u5236_u4F5C_u56FE_u7247_u5206_u4EABAPP-_u4E2A_u4EBA_u5C55_u793A_u9875" class="headerlink" title="实战：制作图片分享APP-个人展示页"></a>实战：制作图片分享APP-个人展示页</h2><p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-e605cc5124525b5e.png" alt="1209576-e605cc5124525b5e"></p>
+<p>运用模板和插件制作图片分享APP个人展示页</p>
+<p>制作的步骤如下：</p>
+<ul>
+<li>画布设置与布局：选择iPhone 5作为Artboard，将画布分割为上下两部分，用矩形分割，将元素分组；</li>
+<li>打开template，选择iOS design UI模板，负责头部信号栏（白色）置于画布顶端，并调整大小；</li>
+<li>将图片展示部分用20个小正方形分割，并用content generator插件填充自定义为“views”的风景图片，同时设置将头像和封面照；</li>
+<li>输入文字，调整细节。<br>关于Sketch的进阶篇就介绍到这里。大家在平时的生活中可以多思考一下优秀APP的页面如果让你来做，你的思路是怎样的，然后去实践、运用，遇到不懂的地方就上论坛去问；同时，养成复盘每一个作品制作过程的习惯，想一想哪些地方可以优化，哪怕是很小的细节改善，都能带来很大的效率提升。</li>
+</ul>
+<p>一起进步吧！</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Sketch是一款矢量绘图应用，而矢量绘图无疑是目前进行网页、图标以及界面设计的最好方式。</p>
+<p>在初识了Sketch的界面布局和基础工具之后，我们就可以开始进入高阶的Sketch工具篇学习了。这篇文章主要会涉及Sketch模板、插件的使用，以及Sketch在具体使用过程中的一些技巧分享。</p>
+<p>如果你曾接触过PS、AI、Axure等软件，那么接下来的内容你应该不会陌生，因为所有的设计软件学习的路径都是相似的，都是从认识基本功能框架到外部资源整合运用，最终形成个人风格的一个过程。</p>]]>
+    
+    </summary>
+    
+      <category term="Sketch" scheme="http://zongxiaomiao.com/tags/Sketch/"/>
+    
+      <category term="原型" scheme="http://zongxiaomiao.com/tags/%E5%8E%9F%E5%9E%8B/"/>
+    
+      <category term="交互设计" scheme="http://zongxiaomiao.com/categories/%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[从零开始学Sketch——入门篇]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/08/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6Sketch%E2%80%94%E2%80%94%E5%85%A5%E9%97%A8%E7%AF%87/"/>
+    <id>http://zongxiaomiao.com/2016/01/08/从零开始学Sketch——入门篇/</id>
+    <published>2016-01-08T13:11:00.000Z</published>
+    <updated>2016-01-09T06:16:53.000Z</updated>
+    <content type="html"><![CDATA[<p>如果你是一枚交互设计师或者UI设计师，那么你一定知道Sketch这个强大的矢量设计软件；如果你用过Photoshop，那么在你接触了Sketch之后就能了解到这款产品相对于PS的优点，说不定会跟我一样变成一个Sketch的死忠粉。</p>
+<p>扁平化设计的流行和屏幕分辨率的提升推动了Sketch这款软件的流行。</p>
+<h2 id="u4EC0_u4E48_u662FSketch"><a href="#u4EC0_u4E48_u662FSketch" class="headerlink" title="什么是Sketch"></a>什么是Sketch</h2><p>Sketch是一款矢量绘图应用，而矢量绘图无疑是目前进行网页、图标以及界面设计的最好方式。</p>
+<p>Sketch有以下特点：</p>
+<ul>
+<li>矢量文件，不失真；</li>
+<li>Symbol（图形样式）和Style（文本样式）功能，有利于批量修改和复用；</li>
+<li>每个图层都支持多种填充模式（Fills可以添加/隐藏填充效果）；</li>
+<li>多种尺寸导出功能，可导出部件；</li>
+<li>自动保存所有历史记录，便于追溯修改。<br>但是Sketch也不是十全十美的，比如它对于位图的处理能力就远不及PS。但这并不影响它成为一款优秀的设计软件。<a id="more"></a>
+</li>
+</ul>
+<h2 id="Sketch_u754C_u9762"><a href="#Sketch_u754C_u9762" class="headerlink" title="Sketch界面"></a>Sketch界面</h2><p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-22edbd0253f51834.png" alt="1209576-22edbd0253f51834" title="Sketch界面分布"></p>
+<p>图片来源：极客学院ERICYU</p>
+<p>Sketch的界面重要包含五部分的内容：page，layer，画板，检查器和工具栏。</p>
+<ul>
+<li>Page：页面管理；</li>
+<li>Layer：页面下的图层；</li>
+<li>蒙版：图片遮罩效果（右键，选择use as a mask）<br>Step 1 导入图片+画出一个正圆</li>
+</ul>
+<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-955b848d198afcfc.png" alt="1209576-955b848d198afcfc" title="Step 1"></p>
+<p>导入图片+画出一个正圆</p>
+<p>Step 2 将图片置于正圆之上，并右键选中圆形，点击“USE AS A MASK”</p>
+<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-ccd041c660982a85.png" alt="1209576-ccd041c660982a85" title="Step 2"></p>
+<p>将图片置于正圆之上，并右键选中圆形，点击“USE AS A MASK”</p>
+<p>Step 3 完成! 注意把圆形的边框设置为透明。</p>
+<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-dd17bad2af7a242a.png" alt="1209576-dd17bad2af7a242a" title="Step 3"></p>
+<p>完成，注意把圆形的边框设置为透明</p>
+<p>布尔运算——图层之间的关系</p>
+<p>在刚刚的头像下面，制作一个个性标签，运用图层之间的布尔运算。</p>
+<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-dab4e48af1be9bfc.png" alt="1209576-dab4e48af1be9bfc" title="布尔运算"></p>
+<p>画两个一模一样的圆形，其中一个圆形与矩形形成substract的关系。</p>
+<p>（只需要在Layer中拖拽圆形至矩形即可）</p>
+<p>Artboard：画板，快捷键A，内置了多种尺寸的画板；</p>
+<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-0cc4e8e9dd7e6f27.png" alt="1209576-0cc4e8e9dd7e6f27" title="画板"></p>
+<p>Artboard内置画板</p>
+<p>检查器：</p>
+<p>通用属性：可调整大小。</p>
+<p>样式属性：填充（颜色、图片），模糊、渐变、阴影等效果。</p>
+<p>工具栏</p>
+<p>右键工具栏选择customize可以自定义工具栏。</p>
+<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-48154d0ecc0e0673.png" alt="1209576-48154d0ecc0e0673" title="工具栏"></p>
+<p>自定义工具栏</p>
+<h2 id="Sketch_u57FA_u7840_u5DE5_u5177"><a href="#Sketch_u57FA_u7840_u5DE5_u5177" class="headerlink" title="Sketch基础工具"></a>Sketch基础工具</h2><p><strong>添加、选择、移动图层</strong></p>
+<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-932d75515ed57961.png" alt="1209576-932d75515ed57961" title="Sketch基础工具"></p>
+<p>添加图层</p>
+<p>当你按住Shift键添加图层时，创建的是正圆或者正方形或者正多边形。</p>
+<p>按住COMMAND+D可以批量复制图层。</p>
+<p>按住Alt键可以复制一个图形。</p>
+<p>可以将图层归为组。</p>
+<p><strong>图形的编辑</strong></p>
+<p>点的控制手柄</p>
+<p>当创建一个矩形时，双击四个角上的锚点可以选择不同类型的手柄。</p>
+<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-d16c11bb1754e0d2.png" alt="1209576-d16c11bb1754e0d2" title="Sketch图形的编辑"></p>
+<p>图形点的控制手柄</p>
+<p><strong>蒙版</strong></p>
+<p>限制蒙版：不希望文字被蒙版所裁切，可以右键点击“Ignoring underlying mask”。</p>
+<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-560a862cc885edfb.png" alt="1209576-560a862cc885edfb" title="Sketch模板"></p>
+<p>在蒙版上创建文字，避免模板限制文字超出蒙版区域</p>
+<p><strong>ALPHA蒙版</strong></p>
+<p>通过设置ALPHA模板，可以让图片拥有渐变效果。</p>
+<p>Step 1 选择Mask的模式</p>
+<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-5320d11617cb604b.png" alt="1209576-5320d11617cb604b" title="Mask"></p>
+<p>设置ALPHA蒙版</p>
+<p>Step 2 选择渐变方式</p>
+<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-2f42bfeade948699.png" alt="1209576-2f42bfeade948699" title="渐变"></p>
+<p>fills选中渐变样式</p>
+<p>剪刀工具和复制旋转工具</p>
+<p>剪刀工具：可以剪切矩形的一条边，让它变成一个开口的矩形；</p>
+<p>复制旋转工具，可以得到一个图形的360度旋转复制后的效果，如下图：</p>
+<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-749d88d818a448a2.png" alt="1209576-749d88d818a448a2" title="旋转复制"></p>
+<p>旋转复制效果</p>
+<p><strong>文本处理</strong><br>运用TEXT STYLE可以复用文字样式</p>
+<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-896137d8f7255f98.png" alt="1209576-896137d8f7255f98" title="复用文字"></p>
+<p>text style</p>
+<p>将文本转换为轮廓（矢量）</p>
+<p>将文本的一笔一划都变为path。</p>
+<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-63d9a006cb7f9cb7.png" alt="1209576-63d9a006cb7f9cb7" title="path"></p>
+<p>将文本转换为轮廓</p>
+<p>转化后，可以使用渐变作为文字样式。</p>
+<p><strong>图片编辑</strong></p>
+<p>位图编辑</p>
+<p>高斯模糊效果；</p>
+<p>color adjust工具：亮度、对比度、饱和度；</p>
+<p>建立选区、裁剪；</p>
+<p>建立9宫格图片，可以将图片各部分的比例确定下来，进行大小改变。</p>
+<h2 id="u5B9E_u6218_u5E94_u7528"><a href="#u5B9E_u6218_u5E94_u7528" class="headerlink" title="实战应用"></a>实战应用</h2><p>下面这张图片是我制作的简书app登陆页面，大家可以运用上面学到的技巧来进行制作。</p>
+<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-9ac7f8474463effd.jpg" alt="1209576-9ac7f8474463effd" title="登陆界面"></p>
+<p>简书登陆页面（自创版）</p>
+<p>制作步骤如下：</p>
+<ul>
+<li>创建画板：选择artboard的iphone 5大小</li>
+<li>设置背景：设置背景为白色</li>
+<li>基本布局：调用sketch库的template（在菜单栏file下面的第二个选项），选择iOS UI design，选择iphone上方的状态栏为白色（图中看不出来，因为背景色也是白色）；</li>
+<li>画出输入框（利用布尔运算）</li>
+<li>微博登陆按钮：创建矩形。</li>
+<li>注册按钮：橘黄色的箭头。</li>
+<li>文字：选择宋体，转化为轮廓。</li>
+<li>细节完善：小图标制作，线条颜色微调。</li>
+</ul>
+<p>快用Sketch动手做一个属于你的登陆页面吧！</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>如果你是一枚交互设计师或者UI设计师，那么你一定知道Sketch这个强大的矢量设计软件；如果你用过Photoshop，那么在你接触了Sketch之后就能了解到这款产品相对于PS的优点，说不定会跟我一样变成一个Sketch的死忠粉。</p>
+<p>扁平化设计的流行和屏幕分辨率的提升推动了Sketch这款软件的流行。</p>
+<h2 id="u4EC0_u4E48_u662FSketch"><a href="#u4EC0_u4E48_u662FSketch" class="headerlink" title="什么是Sketch"></a>什么是Sketch</h2><p>Sketch是一款矢量绘图应用，而矢量绘图无疑是目前进行网页、图标以及界面设计的最好方式。</p>
+<p>Sketch有以下特点：</p>
+<ul>
+<li>矢量文件，不失真；</li>
+<li>Symbol（图形样式）和Style（文本样式）功能，有利于批量修改和复用；</li>
+<li>每个图层都支持多种填充模式（Fills可以添加/隐藏填充效果）；</li>
+<li>多种尺寸导出功能，可导出部件；</li>
+<li>自动保存所有历史记录，便于追溯修改。<br>但是Sketch也不是十全十美的，比如它对于位图的处理能力就远不及PS。但这并不影响它成为一款优秀的设计软件。]]>
+    
+    </summary>
+    
+      <category term="Sketch" scheme="http://zongxiaomiao.com/tags/Sketch/"/>
+    
+      <category term="原型" scheme="http://zongxiaomiao.com/tags/%E5%8E%9F%E5%9E%8B/"/>
+    
+      <category term="交互设计" scheme="http://zongxiaomiao.com/categories/%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[我在香港的这半年]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/07/%E6%88%91%E5%9C%A8%E9%A6%99%E6%B8%AF%E7%9A%84%E8%BF%99%E5%8D%8A%E5%B9%B4/"/>
+    <id>http://zongxiaomiao.com/2016/01/07/我在香港的这半年/</id>
+    <published>2016-01-07T08:29:17.000Z</published>
+    <updated>2016-01-08T13:30:14.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>什么时候有了香港　<br>香港人又是怎么样<br>香港　那个香港　<br>小时候说应该出去闯一闯<br>香港　香港　<br>怎么这么香<br>—— 艾敬 《我的1997》</p>
+</blockquote>
+<p>一转眼，我也抵达香港快半年了。</p>
+<p>热闹，薄凉，鲜活，死板。</p>
+<p>这些看似矛盾的词语用在香港这个城市上，一点都不会觉得不恰当。确然如是，香港就是这样一片多元化的土地。</p>
+<a id="more"></a>
+<p><img src="http://ww1.sinaimg.cn/large/5a20cc77gw1ezr05xyps3j20sg0lcamp.jpg" alt="我在香港的这半年" title="我在香港的这半年"></p>
+<h2 id="u5403_u5728_u9999_u6E2F"><a href="#u5403_u5728_u9999_u6E2F" class="headerlink" title="吃在香港"></a>吃在香港</h2><p>在香港几乎可以吃到世界各地的美食，当然，前提是如果你荷包够鼓。</p>
+<p>对于香港本地人来说，茶餐厅是最经济实惠的选择。一碗叉烧饭，一个冻奶茶，用餐时间不超过20分钟，特别符合香港这个以快著称的城市的风范。</p>
+<p>在偌大的中环，有一家叫九记牛腩的小店，一碗牛腩卖40港币，鲜而不腻，分量很足。傍晚7点左右总是门庭若市，甚至有内地的游客，专门为它而来。</p>
+<p>而我个人最爱的，还要数尖沙咀的十二味。这是一家内地人开的冒菜馆，兼有麻辣香锅和麻辣小面。</p>
+<p>想家的时候，我就来尝尝这家店的花椒和辣油，会很满足。</p>
+<h2 id="u5B66_u5728_u9999_u6E2F"><a href="#u5B66_u5728_u9999_u6E2F" class="headerlink" title="学在香港"></a>学在香港</h2><p>如果说香港哪一片土地是与这个城市的急功近利不相称的，那么一定是新界的大学了。</p>
+<p>每天去上学，要坐15分钟的小巴才能从山脚到达山顶的教室，颇有一分朝圣的意味。</p>
+<p>我所读的专业是全英文授课的，这在香港非常常见。我的老师有中国人，有美国人，还有德国人，西班牙人。每天听不同口音的英文，也算是训练了自己的听力。</p>
+<p>在香港第一堂课是每个学生都必修的，且不能挂掉的学术伦理课。因为Plagiarism（学术剽窃）在香港是非常非常严重的一件事。大到一篇论文，小到一个essay，都需要用标准的APA style来加以规范。如果不加以遵守，对学生最轻的处罚即是该门课为0分且不能顺利毕业。</p>
+<p>来香港之前，有人提醒我，香港本地的学生喜欢奚落内地学生，让我敬而远之。但真正来到这里，跟他们一起上课、做研究的时候，我发现其实他们对于内地并没有恶意，很多言语，如果带上群体标签，多半是谬论。</p>
+<p>我修的课中有一门是电影文化课，完整的课程名称是Understanding Culture through Films。</p>
+<p>在这门课上，我们剖析《桃姐》《无间道》《狂舞派》《激战》是如何折射出香港人的身份焦虑，又是如何沉淀了香港社会回归以来的变化；我们探讨《山楂树之恋》和《Endless Love》如何反映了中西文化对待“性”的差异，以及人性本身如何被曲解和诠释；我们对王家卫精致而做作的“Me me me”电影（意指关注自我的，略带自恋气质的电影风格）又爱又恨，我们喜欢谈论他的《一代宗师》是如何褪掉了自己在《重庆森林》中所表现出来的灵性。</p>
+<p>当年过五旬的教授打开YouTube，搜索happy ending sex scene，然后直接和我们18个学生一起欣赏、点评、研究时，我真正感受到了香港这个城市的自由。</p>
+<p>另外一门让我印象深刻的课是传播方法理论课。这门课其实一点都不理论，而是非常接地气，因为我们被要求去观察、体验香港反映传播现象的一个方面，也就是去一个地方做田野调查。</p>
+<p>我的同学有的做了赛马会的研究，有的做了大选研究，而我去了犹如黑暗料理一般的重庆大厦，去看那里的Low-end Globalization是否在转变。我遇到了不太友好的非洲朋友，非常热情就差给你现场跳舞的印度小哥，有些排外的香港生意人，他们丰富了我对香港这个城市的印象，让香港在我心里越发灵动。</p>
+<p><img src="http://ww3.sinaimg.cn/large/5a20cc77gw1ezr07tgva6j20yg0n1tky.jpg" alt="犹如黑暗料理一般的重庆大厦" title="犹如黑暗料理一般的重庆大厦"></p>
+<h2 id="u6D3B_u5728_u9999_u6E2F"><a href="#u6D3B_u5728_u9999_u6E2F" class="headerlink" title="活在香港"></a>活在香港</h2><p>如果说香港人离开什么就不能活，我猜那样东西一定是便利店。</p>
+<p>说便利店是香港的灵魂一点也不为过。香港人对便利店的依赖既是生理上的，又是心理上的。</p>
+<p>看过王家卫导演的《重庆森林》的人一定记得那些被运用得犹如天才一般的便利店场景。便利店被用来衬托爱情的片刻即逝，同时也是对香港日常生活的暗示。</p>
+<p><img src="http://ww4.sinaimg.cn/large/5a20cc77gw1ezr09gh9bbj20yg0jeaht.jpg" alt="重庆森林中被恰如其分地刻画的便利店" title="重庆森林中被恰如其分地刻画的便利店"></p>
+<p>有一部电影很好地诠释了香港年轻人的生活理想，这部电影叫《狂舞派》。电影上映时，很多香港年轻人去看了，然后在自己的Facebook上写下：舞吧，香港人！</p>
+<p>也许是的，香港这些年都活在巨大的失落、静止，甚至是倒退之中。“舞吧，香港人”，其实是他们自己给自己的一针鸡血。</p>
+<p>在板结化的社会里，香港年轻人能做的也只有舞出自我。对得起自己的理想，就是生活的全部。他们得不到更多，也不会在乎那些得不到的部分。这也是为什么《激战》中那句“怕，你就会输一辈子”会引起港人如此强烈共鸣的原因。</p>
+<p><img src="http://ww4.sinaimg.cn/large/5a20cc77gw1ezr0gx1e8jj20qo0hsqaa.jpg" alt="狂舞派，一部属于香港年轻人的励志片" title="狂舞派，一部属于香港年轻人的励志片"></p>
+<p>如果你碰巧很富有，那香港简直是天堂；如果你跟我一样平凡，那香港不会是地狱。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p>什么时候有了香港　<br>香港人又是怎么样<br>香港　那个香港　<br>小时候说应该出去闯一闯<br>香港　香港　<br>怎么这么香<br>—— 艾敬 《我的1997》</p>
+</blockquote>
+<p>一转眼，我也抵达香港快半年了。</p>
+<p>热闹，薄凉，鲜活，死板。</p>
+<p>这些看似矛盾的词语用在香港这个城市上，一点都不会觉得不恰当。确然如是，香港就是这样一片多元化的土地。</p>]]>
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://zongxiaomiao.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="香港" scheme="http://zongxiaomiao.com/tags/%E9%A6%99%E6%B8%AF/"/>
+    
+      <category term="白驹过隙" scheme="http://zongxiaomiao.com/categories/%E7%99%BD%E9%A9%B9%E8%BF%87%E9%9A%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[用户体验作为一种方法论]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/07/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E4%BD%9C%E4%B8%BA%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    <id>http://zongxiaomiao.com/2016/01/07/用户体验作为一种方法论/</id>
+    <published>2016-01-07T05:54:24.000Z</published>
+    <updated>2016-01-07T05:54:24.000Z</updated>
+    <content type="html"><![CDATA[<p>你每天在看各种产品的干货分享时，是不是经常看到一个词叫“用户体验”？是不是经常听到一些人吐槽“某某APP用户体验太不好了”？用户体验，一个听上去好高大上的词。那么，究竟什么是<strong>用户体验</strong>呢？</p>
+
+<p>如果你想系统了解用户体验所指为何，如何将用户体验要素作为一种方法论指导产品设计和开发，不妨看看此拙文。</p>
+
+<a id="more"></a>
+<h1>什么是用户体验</h1>
+
+<blockquote><p>用户体验（User Experience，简称UE/UX）是用户使用产品过程中建立起来的纯主观感受。<br>——国际标准化组织的定义</p></blockquote>
+
+<p>用户体验，用一个字概括，那就是“爽”。</p>
+
+<p>既然是主观感受，那么就受限于使用者本身的特性（目标群体）、使用场景等因素。</p>
+
+<p>并且，“主观感受”一词暗示着，很多时候用户并不知道自己真实的、客观的需求是什么，这个时候就需要挖掘他们的需求。</p>
+
+<h1>为什么用户体验如此重要</h1>
+
+<p>用户体验对于传统的工业产品来说，不是特别被强调的东西，因为传统的工业产品需要先付钱再使用，而用户体验往往需要一段时间才能产生，那个时候已经太晚了。</p>
+
+<p>互联网经济很大程度上是一种<strong>体验经济</strong>，它所销售的东西是便捷、实惠、新奇等<strong>主观感受</strong>。用户体验可以说是互联网产品的安身立命之本。</p>
+
+<p>因为互联网产品边际成本趋于零，很多时候需要“求着别人”来用，大多数产品是“免费模式+增值服务”或“流量平台+广告营收”的商业模式。如果用户体验不好，用户可以随时另觅新欢，产品盈利也就无从谈起。</p>
+
+<p>举个简单的例子，为什么在可以选择的情况下你会用某宝给房东转账而不是去银行汇款，就是因为某宝为你提供了<strong>更爽的用户体验</strong>，让你足不出户就能完成交房租这件事情。</p>
+
+<h1>用户体验的要素</h1>
+
+<p><img src="http://ww3.sinaimg.cn/large/5a20cc77gw1ezq7kent2ej20n30e9gm9.jpg" alt=""></p>
+
+<p>如上图所示，图的上半部分是按照分工来划分用户体验的要素；下半部分按照网站架构来划分用户体验的要素。</p>
+
+<p>用户体验是<strong>由抽象到具体</strong>的一个完整的过程，前者决定后者。如果一个团队在没有确定产品定位的情况下就贸然定下了产品视觉，这种视觉先行的做法对于产品设计来说是非常冒险的。</p>
+
+<p>用户体验是一个整体感觉，也就是说，用户使用产品过程中的任何一个环节，如果做得不好，其结论都是「用户体验不好」。用户体验绝对不仅仅是界面或者表现层的事情。</p>
+
+<h1>运用用户体验要素指导产品开发</h1>
+
+<h4>战略层</h4>
+
+<p>按照用户体验方法论，在战略层，应完成对产品的定位，应注意的是，产品的定位是双向的，它需要考虑到公司和用户两方面。</p>
+
+<p><strong>战略层=用户需求+产品目标</strong>。</p>
+
+<p>其中，产品目标可以分解为：<br>- 商业目标：如何盈利、预期盈利多少等。<br>- 运营指标：PV、UV、注册用户数、活跃用户数、转化率等等。<br>- 品牌目标：建构产品的品牌身份。</p>
+
+<p>其中，用户需求需要考虑如下因素：<br>- 用户细分：人口统计学、媒介素养（使用互联网的频率、时长、知识）、垂直领域等。<br>- 可用性：用户需要可用、易用的产品。设计可用性强的产品需要进行用户调研。<br>- 用户研究：问卷调查、焦点小组、现场调查、任务分析、用户测试（不一定必须严格局限于分析用户如何成功完成某项特定的任务之中）等。</p>
+
+<h4>范围层</h4>
+
+<p>当把用户需求和产品目标转化为产品应该给用户提供什么样的内容和功能时，就来到了范围层。</p>
+
+<p>比如，你想设计一款日程规划软件，这个定位是产品的战略层，而你这款软件中包含的“创建任务、邮件提醒、社区分享”等功能即为这款软件的范围层。</p>
+
+<p><strong>范围层=确定需求范围（做什么、不做什么）</strong></p>
+
+<p>如何确定具体做什么其实是一个收集需求、筛选需求、确定需求优先级、测试需求的过程。这方面有专门的书籍探讨需求，也可以参考笔者之前归纳的《探索需求：六个步骤做好需求》和《关于需求的11个真相》两篇文章。</p>
+
+<h4>结构层</h4>
+
+<p>在结构层关注的问题从抽象的决策转移到更具体的因素上，即交互设计（影响用户执行任务）/信息架构（如何将信息表达给用户）层面，确定各个将要呈现给用户的选项的模式和顺序。</p>
+
+<p><strong>结构层=交互设计+信息架构</strong><br>- <strong>交互设计</strong><br>关注描述可能的用户行为并定义系统如何配合与相应这些用户行为。</p>
+
+<p>好的交互设计能够防止用户犯错，有效的错误信息提示和设计完善的界面可以</p>
+
+<ul><br><li><strong>信息架构</strong><br>信息架构的基本单位是“节点”，节点可以对应任意的信息片段或组合，节点的类型如下：</li><br><li>树状结构/中心辐射结构：节点与其他相关节点之间存在父级/子级的关系。</li><br><li>矩阵结构：允许用户在节点与节点之间沿着两个或更多的“维度”移动，帮助带着不同需求而来的用户。但是超过3个维度的矩阵可能会出现问题，因为人脑的容量是有限的。</li><br><li>自然结构：没有太强的分类概念</li><br><li>线性结构：单向度限制内容顺序的信息结构。</li><br></ul>
+
+
+<p>信息架构可以通过UML状态图、泳道图进行表达。</p>
+
+<h4>框架层</h4>
+
+<p>用户体验的框架层需要解决更精准的细节问题，包括了界面设计、导航设计和信息设计。</p>
+
+<p><strong>框架层=界面设计+导航设计+信息设计</strong>（导出成果为线框图）</p>
+
+<ul><br><li><strong>界面设计</strong></li><br></ul>
+
+
+<p>界面的意思是，通过它，用户能够真正接触到那些在结构层的交互设计中确定的具体功能。</p>
+
+<p>小白用户是不会理解交互设计规范的，他们不一定知道某个图标代表着返回。因此设计“别让我烦、别让我想、别让我等”的界面设计是非常重要的。这里大家可以借鉴《点石成金》这本书中对web设计的思考。</p>
+
+<p>成功的界面设计是那些让用户一眼就看到“最重要的东西”的界面设计。</p>
+
+<p><img src="http://ww4.sinaimg.cn/large/5a20cc77gw1ezq7l8jrg6j20jg0bm41z.jpg" alt="用户眼动热区，图片来源：腾讯设计导航"></p>
+
+<ul><br><li><strong>导航设计</strong><br>导航设计是为了让用户明确身在何处，如何找到想要的东西；设计好导航对于网站的SEO优化也很有帮助，有利于提高网站流量、排名。导航设计应该：</li><br><li>提供用户在网站间跳转的方法。</li><br><li>导航元素必须选择那些能促进用户行为的。</li><br><li>导航设计必须传达出元素和内容之间的关系，链接之间的相互关系、差异性、有效性非常重要。</li><br><li>导航必须传达出它的内容和当前浏览页面之间的关系，传达出的信息要有利于用户的任务或目标。</li><br><li>导航的分类有：<br><br><ul><br><li>全局导航：不管你想去哪里，都能从全局导航中（最终）到达。</li><br><li>局部导航：提供“附近”的通路，只提供一个页面的父级、兄弟级、子级通路。</li><br><li>辅助导航：允许用户转移他们浏览时的方向（通常时引起他们兴趣的东西），不需要从头开始。</li><br><li>上下文导航：嵌入页面自身内容的导航，类似超链接。</li><br><li>友好导航：提供用户他们通常不会需要的链接。</li><br><li>网站地图：远程导航工具，单页的整体结构快捷浏览方式。</li><br><li>索引表：字母顺序排列。</li><br></ul><br></li><br></ul>
+
+
+<p>值得注意的是，在设计导航的时候也要回到<strong>战略层</strong>去看一看，因为需求理解得越透彻、目标越清晰，导航设计越成功。</p>
+
+<ul><br><li><strong>信息设计</strong><br>按照支持用户任务和目标的方式来分类和排列信息元素，运用指示标志（例如颜色编码等）、图标、标签系统、排版等方式突出信息元素。</li><br></ul>
+
+
+<p>线框图是整合在结构层的三种用户体验要素的方法，指明视觉设计师的方向。</p>
+
+<h1>表现层</h1>
+
+<p>最后我们把注意力转移到产品的颜值上来，即视觉设计。</p>
+
+<p>这个时候应该关注的不是什么好看，什么难看，而是什么能<strong>运行良好</strong>。换句话说，视觉设计如何能够实现前面四层用户体验要素的<strong>目标</strong>。</p>
+
+<p>因此，颜色、字体、板式等的使用是否突出了原本的结构设计，强化了用户选项就变成了一个<strong>可量化</strong>的选择。</p>
+
+<p>同时，在设计中应保持<strong>一致性</strong>，从而提升产品在用户中的品牌认知度和同类产品中的辨识度。</p>
+
+<p>视觉设计绝不仅仅是美学问题，而是定位问题，是服务战略的问题。</p>
+
+<h1>小结</h1>
+
+<p>把用户体验当成是一种方法论的魅力就在于：用户体验可以作为开发<strong>流程的指南</strong>或者你自身<strong>学习的框架</strong>。深入探究每一个用户体验要素之后，离成长为一名高阶的PM就不远了。</p>
+
+<hr>
+
+<p>参考资料：</p>
+
+<ol><br><li><p><a href="http://www.chinaz.com/manage/2015/1022/460805.shtml" target="_blank" rel="external">腾讯产品经理刘涵宇：给产品经理和设计师的用户体验知识</a></p></li><br><li><p><a href="https://book.douban.com/subject/6523997/" target="_blank" rel="external">用户体验要素</a></p></li><br></ol>
+
+
+<hr>
+
+<p>许可协议: <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="external">署名-非商用-相同方式共享 3.0</a><br>转载请保留原文链接及作者名。</p>]]></content>
+    <summary type="html">
+    <![CDATA[<p>你每天在看各种产品的干货分享时，是不是经常看到一个词叫“用户体验”？是不是经常听到一些人吐槽“某某APP用户体验太不好了”？用户体验，一个听上去好高大上的词。那么，究竟什么是<strong>用户体验</strong>呢？</p>
+
+<p>如果你想系统了解用户体验所指为何，如何将用户体验要素作为一种方法论指导产品设计和开发，不妨看看此拙文。</p>]]>
+    
+    </summary>
+    
+      <category term="体验" scheme="http://zongxiaomiao.com/tags/%E4%BD%93%E9%AA%8C/"/>
+    
+      <category term="设计" scheme="http://zongxiaomiao.com/tags/%E8%AE%BE%E8%AE%A1/"/>
+    
+      <category term="大话产品" scheme="http://zongxiaomiao.com/categories/%E5%A4%A7%E8%AF%9D%E4%BA%A7%E5%93%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[关于需求的11个真相]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/07/%E5%85%B3%E4%BA%8E%E9%9C%80%E6%B1%82%E7%9A%8411%E4%B8%AA%E7%9C%9F%E7%9B%B8/"/>
+    <id>http://zongxiaomiao.com/2016/01/07/关于需求的11个真相/</id>
+    <published>2016-01-07T05:46:31.000Z</published>
+    <updated>2016-01-07T05:46:31.000Z</updated>
+    <content type="html"><![CDATA[<p>只有当自己知道需要什么的时候，才有可能会获得它，这也是探索需求的必要性。</p>
+<p>我们常常谈需求，但是需求真的是我们想象的那样吗？下面我就给大家梳理一下，关于需求你可能误解了的11个真相。</p>
+<a id="more"></a>
+<blockquote>
+<p>写需求其实并非是在谈需求。</p>
+</blockquote>
+<p>需求活动主要不是编写需求文档，相反，它专注于理解<strong>业务问题</strong>，并为之提供<strong>解决方案</strong>。</p>
+<p>怎么样才算理解了业务问题呢？</p>
+<p>即你做的是哪个行业的产品，就对这个行业的商业模式、产业链、竞争状态等要有所了解。而只有深入了解了业务本身，才有助于发现使用<strong>场景</strong>，并为之提供解决方案，让用户用得爽。</p>
+<blockquote>
+<p>如果我们必须构建产品，那么它必须为拥有它的人提供最理想的价值。</p>
+</blockquote>
+<p>作为产品开发者或设计者，要深谙一点：即我们关注最终结果的拥有者，只是间接地关注用户。但是在免费时代，很多公司并不靠产品本身盈利，所以<strong>不能孤立地看这个上图中的曲线</strong>，应当将整个<strong>产品生态</strong>搭建起来，看看哪个环节是赢利点。</p>
+<p>很多大公司，平台级的产品均是不盈利的，通过专心打磨产品获取千万级的用户，然后通过其他方式进行盈利，例如在线广告、增值服务或电商。</p>
+<blockquote>
+<p>你必须知道要求是什么，才能构建正确的产品。</p>
+</blockquote>
+<p>要理解产品打算为用户完成什么，以怎样的方式完成，就必须理解拥有者的业务工作。产品经理得到需求，描述产品的<strong>功能</strong>（做什么）以及产品的<strong>属性</strong>（做到什么程度）。</p>
+<p>不幸地是，交流的无奈导致需求并非总是被恰如其分地理解了。</p>
+<blockquote>
+<p>构建一个产品和解决一个业务问题之间，存在巨大的差别。前者不一定实现后者。</p>
+</blockquote>
+<p>这一点是对第一点的补充。做一个产品就是为了解决一个业务问题，因此开发工作必须从<strong>问题</strong>开始，而不是从<strong>解决方案</strong>开始。</p>
+<blockquote>
+<p>需求不一定要写下来，但是构建者必须知道它们。</p>
+</blockquote>
+<p>需求文档是为了更好的<strong>沟通想法</strong>，一份高效准确的需求文档能够让开发人员和设计人员非常明确需求是什么，从而实现它。但很多时候，口头沟通更方便、直接，特别是一些细节的确认，往往需要<strong>口头表达</strong>。</p>
+<p>但值得注意的是，口头沟通需求效率虽然高，但是不是所有需求都能用这种方式来沟通。编写需求是为了让利益相关者和产品经理彻底地<strong>理解</strong>需求，也有利于追踪文档。</p>
+<blockquote>
+<p>客户不一定能给你正确答案，有时候他也不知道要什么。</p>
+</blockquote>
+<p>利益相关者在描述一个需求时是由困难的，交流的无奈是存在的。所以产品经理应该把握业务的<strong>复杂性和规模</strong>。</p>
+<p>有时候，产品经理应该如实记录下客户的要求；有时候，应该从解决方案中导出需求，有时候必须提出创新，得到更好的解决方案。</p>
+<blockquote>
+<p>需求不是偶然得到的，要通过某种有序的过程得到。</p>
+</blockquote>
+<p>做产品就像拍电影，要先有一个剧本，确保剧情有序地发生。</p>
+<p>任务的次序、重点和应用程度需要采用该过程的人或团队来决定，参与这个过程的人必须能看到为什么不同的任务是重要的、哪些任务对项目最重要。但优先级是可以调整的，过程中要灵活变通。</p>
+<blockquote>
+<p>怎么迭代都行，只要理解了业务的需求。</p>
+</blockquote>
+<p>敏捷迭代越来越成为新宠，取代着原始的瀑布流开发方法。但是冷静的头脑在开发之前已经将需求过程吸收到开发的生命周期中了。</p>
+<p>聪明的办法<strong>不是废除需求，而是从一个不同的方向接近需求</strong>。真正值得关注的是，既要发现需求，又不必编写无用的、不成熟的文档。</p>
+<blockquote>
+<p>所有的方法和工具都无法弥补糟糕的想法和糟糕的手艺。</p>
+</blockquote>
+<p>这一点是对第7点和第8点的补充。</p>
+<p>有序的过程并不能替代思考。需求收集、验证、编写文档的过程并<strong>不是一种流程，而是由提交的产物驱动</strong>的。</p>
+<p>要记住，自动化的工具只是辅助手段，产品经理<strong>最重要的工具就是：脑袋、眼睛和耳朵</strong>。</p>
+<blockquote>
+<p>要想成功地实现需求，需求就必须可度量、可测试。</p>
+</blockquote>
+<p>需求可以主要分为以下三类：</p>
+<ul>
+<li>功能需求：产品支持其拥有者的业务时必须做的事情。</li>
+<li>非功能需求：产品要再拥有者的环境中取得成功，必须将功能完成得多好的量化描述。</li>
+<li>限制条件：全局性的需求。</li>
+</ul>
+<p>例如，产品有一个需求是“应该对新用户有吸引力”：<br>建立可测量的指标即：注册时间少于2分钟、数据项（例如姓名、邮件地址等）犹豫时间不超过5秒。</p>
+<p>可以很肯定地说，如果你不能为需求找到<strong>测量指标</strong>，那么它就不是需求，只是一种<strong>无根据的想法</strong>。</p>
+<blockquote>
+<p>作为产品经理，你终将改变用户思考这个问题的方式。</p>
+</blockquote>
+<p>产品经理的部分工作就是帮助人们尽早理解和质疑他们的需求，这样他们就可以帮助你发现它们真正的需求。</p>
+<p>当产品经理开始<strong>理解</strong>需求时，尤其是在需求来自于不同利益相关者时，就开始建立起一套<strong>抽象</strong>概念，通过<strong>展示</strong>业务过程的模型渐渐参透工作的本质，得到清晰、可测量的需求，并把这些<strong>反馈</strong>给利益相关者。</p>
+<p>在做这些事情的时候，产品经理就在渐渐改进（改变）他们对业务的看法。</p>
+<p><strong>简言之，需求就是产品支持其拥有者的业务所必须完成的事。而产品经理的工作就是理解需求，理解到应该做什么、做到什么程度，并建立起一套解决问题的方案，反馈给产生需求的人。</strong></p>
+<hr>
+<p>参考：<br><a href="http://book.douban.com/subject/2078680/" target="_blank" rel="external">掌握需求过程（第三版）</a></p>
+<hr>
+<p>许可协议: <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="external">署名-非商用-相同方式共享 3.0</a><br>转载请保留原文链接及作者名。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>只有当自己知道需要什么的时候，才有可能会获得它，这也是探索需求的必要性。</p>
+<p>我们常常谈需求，但是需求真的是我们想象的那样吗？下面我就给大家梳理一下，关于需求你可能误解了的11个真相。</p>]]>
+    
+    </summary>
+    
+      <category term="产品" scheme="http://zongxiaomiao.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="需求" scheme="http://zongxiaomiao.com/tags/%E9%9C%80%E6%B1%82/"/>
+    
+      <category term="大话产品" scheme="http://zongxiaomiao.com/categories/%E5%A4%A7%E8%AF%9D%E4%BA%A7%E5%93%81/"/>
+    
+  </entry>
+  
+</feed>

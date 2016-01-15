@@ -29,7 +29,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1209576-b1150e306f34926f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1209576-17d5e04f53a326ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1209576-fafef6c1a2d57980.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-01-15T05:03:15.000Z">
+<meta property="og:updated_time" content="2016-01-15T06:28:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从零开始学Axure原型设计（高级篇）">
 <meta name="twitter:description" content="如果你熟悉了Axure的部件库，那么你可以得心应手地画出心目中产品的线框图；如果你会用Axure的母版、动态面板功能，那么你应该能够画出一些简单网站的原型图；但只有你精通了Axure的条件逻辑、变量、函数等高级交互，才能将心中的产品形态恣意地通过这款软件表现出来。
@@ -141,6 +141,8 @@ var _hmt = _hmt || [];
                             
                                 <li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/anne93/anne93.github.io" title="GitHub"></a></li>
                             
+                                <li id="RSS"><a class="RSS" target="_blank" href="/atom.xml" title="RSS"></a></li>
+                            
                         </ul>
                     </nav>
                 </section>
@@ -215,6 +217,8 @@ var _hmt = _hmt || [];
                             
                                 <li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/anne93/anne93.github.io" title="GitHub"></a></li>
                             
+                                <li id="RSS"><a class="RSS" target="_blank" href="/atom.xml" title="RSS"></a></li>
+                            
                         </ul>
             </nav>
         </header>                
@@ -265,12 +269,13 @@ var _hmt = _hmt || [];
 <p>下面小喵就给大家仔细梳理一下Axure的高级交互内容，以及如何运用Axure这款软件自带的界面规范文档来提高交付的原型在开发和设计阶段的精准度。</p>
 <p>虽然标题用的是高级篇，其实是相对于入门篇和进阶篇而言的，没有大家想象的那么『高级』和复杂。</p>
 <a id="more"></a>
-<h2 id="u6761_u4EF6_u751F_u6210_u5668"><a href="#u6761_u4EF6_u751F_u6210_u5668" class="headerlink" title="条件生成器"></a>条件生成器</h2><h5 id="u6761_u4EF6_u903B_u8F91"><a href="#u6761_u4EF6_u903B_u8F91" class="headerlink" title="条件逻辑"></a>条件逻辑</h5><pre>if&nbsp;(condition&nbsp;1)&nbsp;{
-当&nbsp;condition&nbsp;1&nbsp;为&nbsp;true&nbsp;时执行的动作};else&nbsp;if&nbsp;(condition&nbsp;2)&nbsp;{
-当&nbsp;condition&nbsp;2&nbsp;为&nbsp;true&nbsp;时执行的动作};else&nbsp;{
-当&nbsp;condition&nbsp;1&nbsp;和&nbsp;condition&nbsp;2&nbsp;都不为&nbsp;true&nbsp;时执行的动作};</pre>
-
-<p>在Javascript语言中的if-then-else语句是最常见的条件逻辑。</p>
+<h2 id="u6761_u4EF6_u751F_u6210_u5668"><a href="#u6761_u4EF6_u751F_u6210_u5668" class="headerlink" title="条件生成器"></a>条件生成器</h2><h5 id="u6761_u4EF6_u903B_u8F91"><a href="#u6761_u4EF6_u903B_u8F91" class="headerlink" title="条件逻辑"></a>条件逻辑</h5><pre><code>if (condition 1) {
+当 condition 1 为 true 时执行的动作};
+else if (condition 2) {
+当 condition 2 为 true 时执行的动作};
+else {
+当 condition 1 和 condition 2 都不为 true 时执行的动作};
+</code></pre><p>在Javascript语言中的if-then-else语句是最常见的条件逻辑。</p>
 <p>And和Or是条件运算符，用于连接两个或两个以上的句子。</p>
 <h4 id="u65B0_u589E_u6761_u4EF6"><a href="#u65B0_u589E_u6761_u4EF6" class="headerlink" title="新增条件"></a>新增条件</h4><p>在用例编辑器顶部有『新增条件』的选项，点击后进入条件生成器。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1209576-1d265057bbb66d83.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
@@ -372,7 +377,7 @@ var _hmt = _hmt || [];
         <p><span>本文标题:</span><a href="/2016/01/15/从零开始学Axure原型设计（高级篇）/">从零开始学Axure原型设计（高级篇）</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 粽小喵 的个人博客">粽小喵</a></p>
         <p><span>发布时间:</span>2016年01月15日 - 12时59分</p>
-        <p><span>最后更新:</span>2016年01月15日 - 13时03分</p>
+        <p><span>最后更新:</span>2016年01月15日 - 14时28分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/01/15/从零开始学Axure原型设计（高级篇）/" title="从零开始学Axure原型设计（高级篇）">http://zongxiaomiao.com/2016/01/15/从零开始学Axure原型设计（高级篇）/</a>
             <span class="copy-path" data-clipboard-text="原文: http://zongxiaomiao.com/2016/01/15/从零开始学Axure原型设计（高级篇）/　　作者: 粽小喵" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
