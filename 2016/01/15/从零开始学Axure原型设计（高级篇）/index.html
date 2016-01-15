@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>从零开始学Axure原型设计（高级篇） | 粽小喵</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="如果你熟悉了Axure的部件库，那么你可以得心应手地画出心目中产品的线框图；如果你会用Axure的母版、动态面板功能，那么你应该能够画出一些简单网站的原型图；但只有你精通了Axure的条件逻辑、变量、函数等高级交互，才能将心中的产品形态恣意地通过这款软件表现出来。
+下面小喵就给大家仔细梳理一下Axure的高级交互内容，以及如何运用Axure这款软件自带的界面规范文档来提高交付的原型在开发和设计阶段">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始学Axure原型设计（高级篇）">
+<meta property="og:url" content="http://zongxiaomiao.com/2016/01/15/从零开始学Axure原型设计（高级篇）/index.html">
+<meta property="og:site_name" content="粽小喵">
+<meta property="og:description" content="如果你熟悉了Axure的部件库，那么你可以得心应手地画出心目中产品的线框图；如果你会用Axure的母版、动态面板功能，那么你应该能够画出一些简单网站的原型图；但只有你精通了Axure的条件逻辑、变量、函数等高级交互，才能将心中的产品形态恣意地通过这款软件表现出来。
+下面小喵就给大家仔细梳理一下Axure的高级交互内容，以及如何运用Axure这款软件自带的界面规范文档来提高交付的原型在开发和设计阶段">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1209576-1d265057bbb66d83.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1209576-36e4e38045ee3060.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1209576-82e2171eab14d7bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1209576-55cde81d0f22e385.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1209576-7a38b621c677ba8e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1209576-0577bea545be7f70.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1209576-ba75fdd84f8293bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1209576-b06f2c9322054e27.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1209576-8e22af145a0e3b92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1209576-1d33054202140f82.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1209576-50ee4ff38202e1b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1209576-942f8bcf89439ca3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1209576-17e3e4d4ba3a36f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1209576-b1150e306f34926f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1209576-17d5e04f53a326ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1209576-fafef6c1a2d57980.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2016-01-15T05:03:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="从零开始学Axure原型设计（高级篇）">
+<meta name="twitter:description" content="如果你熟悉了Axure的部件库，那么你可以得心应手地画出心目中产品的线框图；如果你会用Axure的母版、动态面板功能，那么你应该能够画出一些简单网站的原型图；但只有你精通了Axure的条件逻辑、变量、函数等高级交互，才能将心中的产品形态恣意地通过这款软件表现出来。
+下面小喵就给大家仔细梳理一下Axure的高级交互内容，以及如何运用Axure这款软件自带的界面规范文档来提高交付的原型在开发和设计阶段">
+  
+    <link rel="alternative" href="/atom.xml" title="粽小喵" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/icon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+
+  <script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "//hm.baidu.com/hm.js?c6aef175a75217d13a1390ac73184fca";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+  </script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/apple-touch-icon.png" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/">粽小喵</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">产品经理|专栏作者|猫奴</p>
+        
+                
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/anne93/anne93.github.io" title="GitHub"></a></li>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/Axure/" style="font-size: 16.67px;">Axure</a> <a href="/tags/PM/" style="font-size: 13.33px;">PM</a> <a href="/tags/Sketch/" style="font-size: 13.33px;">Sketch</a> <a href="/tags/UML/" style="font-size: 10px;">UML</a> <a href="/tags/产品/" style="font-size: 20px;">产品</a> <a href="/tags/体验/" style="font-size: 10px;">体验</a> <a href="/tags/原型/" style="font-size: 20px;">原型</a> <a href="/tags/商业/" style="font-size: 10px;">商业</a> <a href="/tags/工具/" style="font-size: 16.67px;">工具</a> <a href="/tags/广告/" style="font-size: 10px;">广告</a> <a href="/tags/技术/" style="font-size: 13.33px;">技术</a> <a href="/tags/推荐系统/" style="font-size: 10px;">推荐系统</a> <a href="/tags/架构/" style="font-size: 10px;">架构</a> <a href="/tags/社交/" style="font-size: 10px;">社交</a> <a href="/tags/设计/" style="font-size: 10px;">设计</a> <a href="/tags/转型/" style="font-size: 10px;">转型</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a> <a href="/tags/需求/" style="font-size: 13.33px;">需求</a> <a href="/tags/面经/" style="font-size: 10px;">面经</a> <a href="/tags/香港/" style="font-size: 10px;">香港</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.woshipm.com/author/tutti93">人人都是产品经理</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.jianshu.com/users/e0695d7614af/latest_articles">简书专栏</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.mojiax.com/user?uid=%E7%B2%BD%E5%B0%8F%E5%96%B5">墨加专栏</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注产品，偶尔文艺。</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">粽小喵</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img lazy-src="/img/apple-touch-icon.png" class="js-avatar">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">粽小喵</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">产品经理|专栏作者|猫奴</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/anne93/anne93.github.io" title="GitHub"></a></li>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-从零开始学Axure原型设计（高级篇）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/15/从零开始学Axure原型设计（高级篇）/" class="article-date">
+      <time datetime="2016-01-15T04:59:28.000Z" itemprop="datePublished">2016-01-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      从零开始学Axure原型设计（高级篇）
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/交互设计/">交互设计</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Axure/">Axure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型/">原型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如果你熟悉了Axure的部件库，那么你可以得心应手地画出心目中产品的线框图；如果你会用Axure的母版、动态面板功能，那么你应该能够画出一些简单网站的原型图；但只有你精通了Axure的条件逻辑、变量、函数等高级交互，才能将心中的产品形态恣意地通过这款软件表现出来。</p>
+<p>下面小喵就给大家仔细梳理一下Axure的高级交互内容，以及如何运用Axure这款软件自带的界面规范文档来提高交付的原型在开发和设计阶段的精准度。</p>
+<p>虽然标题用的是高级篇，其实是相对于入门篇和进阶篇而言的，没有大家想象的那么『高级』和复杂。</p>
+<a id="more"></a>
+<h2 id="u6761_u4EF6_u751F_u6210_u5668"><a href="#u6761_u4EF6_u751F_u6210_u5668" class="headerlink" title="条件生成器"></a>条件生成器</h2><h5 id="u6761_u4EF6_u903B_u8F91"><a href="#u6761_u4EF6_u903B_u8F91" class="headerlink" title="条件逻辑"></a>条件逻辑</h5><pre>if&nbsp;(condition&nbsp;1)&nbsp;{
+当&nbsp;condition&nbsp;1&nbsp;为&nbsp;true&nbsp;时执行的动作};else&nbsp;if&nbsp;(condition&nbsp;2)&nbsp;{
+当&nbsp;condition&nbsp;2&nbsp;为&nbsp;true&nbsp;时执行的动作};else&nbsp;{
+当&nbsp;condition&nbsp;1&nbsp;和&nbsp;condition&nbsp;2&nbsp;都不为&nbsp;true&nbsp;时执行的动作};</pre>
+
+<p>在Javascript语言中的if-then-else语句是最常见的条件逻辑。</p>
+<p>And和Or是条件运算符，用于连接两个或两个以上的句子。</p>
+<h4 id="u65B0_u589E_u6761_u4EF6"><a href="#u65B0_u589E_u6761_u4EF6" class="headerlink" title="新增条件"></a>新增条件</h4><p>在用例编辑器顶部有『新增条件』的选项，点击后进入条件生成器。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-1d265057bbb66d83.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>新增条件</p>
+<p>当我们进入条件生成器对话框时，首先看到的是满足以下『全部』或『任意』一个条件，在描述框中我们可以看到，如果选择『全部』则是『And』，如果选择『任意』则是『Or』。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-36e4e38045ee3060.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>条件生成器的多个条件控制</p>
+<p>条件生成器允许用户创建条件表达式，将你需要满足的条件通过填空的形式告诉Axure，如下图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-82e2171eab14d7bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>条件生成器和可创建的表达式</p>
+<p>其中，<strong>值的类型</strong>包括：</p>
+<table><thead><tr class="firstRow"><th>值的类型</th><th>描述</th></tr></thead><tbody><tr><td>值（Value）</td><td>文本或数字的值或变量</td></tr><tr><td>变量值（Value of Variable）</td><td>存储在变量中的当前值</td></tr><tr><td>变量值长度(Length of Variable Value)</td><td>一个变量的值的字符数</td></tr><tr><td>部件文字(Text on Widget)</td><td>每个部件上面可编辑的文字，不包含: 动态面板、图片热区、垂直线、水平线、内部框架、下拉列表、列表框。</td></tr><tr><td>焦点部件上的文字(Text on Focused Widget)</td><td>光标焦点所在部件上的文字</td></tr><tr><td>部件值长度(Length of Widget Value)</td><td>表单中文本的字符数，仅包含单行和多行文本框、下拉列表和列表框。</td></tr><tr><td>选中项文字(Selected Option of)</td><td>下拉列表或列表选择框被选中项的文字。</td></tr><tr><td>选中状态值(Is selected of)</td><td>检测复选框或单选按钮是否选中, 或者一个部件是否是选中状态。</td></tr><tr><td>动态面板状态(State of panel)</td><td>动态面板的当前状态。</td></tr><tr><td>部件可见性(Visibility of widget)</td><td>无论一个部件当前状态是可见还是隐藏。</td></tr><tr><td>按下的键 (Key pressed)</td><td>键盘上按下的键或组合。</td></tr><tr><td>鼠标拖拽(Drag cursor)</td><td>拖拽过程中光标的位置。</td></tr><tr><td>部件范围(Area of widget)</td><td>部件之间是否接触（拖拽使用）。</td></tr><tr><td>自适应视图(Adaptive view)</td><td>自适应视图当前的视图。</td></tr></tbody></table>
+
+<p>这些值的类型不用可以记住，用的时候参照就好了，用多了就记住了。</p>
+<h4 id="u6761_u4EF6_u6848_u4F8B_u5B9E_u6218_u2014_u2014_u7528_u6237_u767B_u9646_u6846"><a href="#u6761_u4EF6_u6848_u4F8B_u5B9E_u6218_u2014_u2014_u7528_u6237_u767B_u9646_u6846" class="headerlink" title="条件案例实战——用户登陆框"></a>条件案例实战——用户登陆框</h4><ul>
+<li>Step 1<br>以简书的登陆框为例，截图登陆框，并拖入『单行文本框』覆盖掉原有的两个文本输入框，分别命名为『用户名输入框』和『密码输入框』，将『密码输入框』的属性设置为密码，这样输入密码时会自动变成不显示的状态；拖入图片热区，完全覆盖掉原有的登陆按钮，并命名为『登陆按钮』。</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-55cde81d0f22e385.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>制作登陆框</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-7a38b621c677ba8e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>密码输入框的属性设置为密码</p>
+<p>-Step 2<br>假设用户名为zongxiaomiao，密码为123456。点击『登陆按钮』部件，建立两个条件用例：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-0577bea545be7f70.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>设置条件用例</p>
+<p>因为我们需要同时满足用户名和密码都正确才能登陆，所以连接两个条件的是and而不是or，也就是满足全部条件而不是任意条件。</p>
+<p>如果文本输入框里的文字同时满足了两个条件，我们就打开简书的主页，在链接——打开链接中输入外部链接地址为：www.jianshu.com。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-ba75fdd84f8293bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>如果同时满足两个条件则进入简书主页</p>
+<ul>
+<li>Step 3<br>如果两个条件中有一个条件不满足，则在登陆框上显示如下字样：</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-b06f2c9322054e27.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>登陆失败提示字样</p>
+<p>我们将这个图片置于设计区域，将其设置为隐藏状态（右键——设为隐藏），并命名为『登陆失败提示』。</p>
+<p>同时新增用例2，设置else if true时触发的动作时显示（我们默认加载页面时会隐藏它）提示登陆失败的字样，并且加入淡入淡出的动画，动画时间为500毫秒，这样加载时不会太生硬。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-8e22af145a0e3b92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>将新增动作设置为『显示』，配置为显示登录失败提示的图片</p>
+<p>在文末可以下载案例和观看演示。</p>
+<h2 id="u53D8_u91CF"><a href="#u53D8_u91CF" class="headerlink" title="变量"></a>变量</h2><h4 id="Axure_u4E2D_u7684_u53D8_u91CF"><a href="#Axure_u4E2D_u7684_u53D8_u91CF" class="headerlink" title="Axure中的变量"></a>Axure中的变量</h4><ul>
+<li><p>局部变量：顾名思义，局部变量即在局部的动作中生效。</p>
+</li>
+<li><p>全局变量：在整个原型中都有效。当一个数据从页面A传递到页面B时就需要全局变量。<br>因此，局部变量可以有相同名称，而全局变量不能重复名称。默认情况下有一个叫『OnLoadVariable』的变量。变量名的命名规则是字母或数字，少于25字符，不包含空格。</p>
+</li>
+</ul>
+<h4 id="u53D8_u91CF_u5B9E_u6218_u6848_u4F8B_uFF1A_u5168_u5C40_u53D8_u91CF_u5728_u9875_u9762_u95F4_u7684_u52A8_u6001_u9762_u677F_u4EA4_u4E92"><a href="#u53D8_u91CF_u5B9E_u6218_u6848_u4F8B_uFF1A_u5168_u5C40_u53D8_u91CF_u5728_u9875_u9762_u95F4_u7684_u52A8_u6001_u9762_u677F_u4EA4_u4E92" class="headerlink" title="变量实战案例：全局变量在页面间的动态面板交互"></a>变量实战案例：全局变量在页面间的动态面板交互</h4><p>做出这个页面的<a href="http://www.xinli001.com/ceshi/99897458/start/" target="_blank" rel="external">一张图揭示你散发出的核心气质心理测试</a>的页面间跳转的效果，可以运用『全局变量』+『动态面板』来实现。大家可以先去网站做一下这个心理测试，然后构思一下如何用全局变量和动态面板在两个页面之间完成这个交互。</p>
+<ul>
+<li>Step 1<br>在Axure中创建两个页面Home和Page 1，在Home页面中导入测试所需的图片，并拖入下拉列表框，在下拉列表框中设置『第一张』到『第九张』的选项。注意，要想默认选项为空，则新建一个选项，输入空格键即可。</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-1d33054202140f82.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>下拉列表框</p>
+<ul>
+<li>Step 2<br>选中下拉列表框，点击『当选项改变时』新建用例1，新增条件为当选中项值的选项为『第一张』时（也就是用户在下拉列表中选择了第一张这个选项）。</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-50ee4ff38202e1b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>新建用例，添加条件判断</p>
+<p>然后退出条件设置对话框，在用力编辑器中选择『设置变量值』，在配置动作一览中新增变量『MyChoice』，并将MyChoice这个变量的值设为『第一张』</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-942f8bcf89439ca3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>设置全局变量，并设置跳转页面</p>
+<p>以此类推，新增9个用例，分别对应9个选项，如下图所示：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-17e3e4d4ba3a36f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>设置选项对应的变量值</p>
+<ul>
+<li>Step 3<br>在Page 1页面中创建动态面板，拖入多行文本框，将每个选项对应的测试结果输入其中。</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-b1150e306f34926f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>设置动态面板状态内容</p>
+<ul>
+<li>Step 4<br>在页面交互栏新增用例『页面载入时』，设置动态面板状态，在状态下拉列表框中选择状态『Value』，并点击『名称或状态』旁的函数fx，选择我们之前设置好的全局变量『MyChoice』即可。</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-17d5e04f53a326ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>全局变量对应的动态面板的状态设置</p>
+<p>打开预览，即可看到效果。</p>
+<p>案例下载和演示见文末。</p>
+<h2 id="u51FD_u6570"><a href="#u51FD_u6570" class="headerlink" title="函数"></a>函数</h2><p>理解了变量和条件逻辑，再来学习函数就不难了。Axure中的函数类型非常多，一共有10类，并且每一类下面还有很多细分，总结如下图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1209576-fafef6c1a2d57980.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>函数类型和举例</p>
+<p>除了条件逻辑、变量和函数之外，Axure还有一个特别强大的部件叫做『中继器』。但是中继器这个部件的使用频率并不是很高，在这里就不详细展开了。</p>
+<p>简单来说，中继器扮演的是一个『数据库』的角色，但这不是一个真正存在的数据库，你可以对中继器数据集中的数据按条件进行<strong>增加、删除、修改、排序和过滤</strong>等操作。中继器用来显示重复的文本、图片和链接。</p>
+<p>中继器由项和数据集组成。在数据集中可以填充我们预先准备的数据，这些数据可以是文字也可以是图片（右键数据输入框可导入图片）。</p>
+<p>因为中继器是部件，所以也需要通过添加用例交互来控制动作。同时，通过变量、函数来控制其展示的数据。</p>
+<p>Axure从入门到精通需要大量的实战练习。软件本身是不断变化的，掌握其根本的原理，融会贯通，多思考和练习就能让这款软件为你发挥最大的功效。</p>
+<hr>
+<p>案例下载：</p>
+<ol>
+<li><p><a href="http://pan.baidu.com/s/1dDYqRnF" target="_blank" rel="external">用户登陆案例下载</a><br>下载密码: ejsx<br><a href="http://4znmgh.axshare.com/#c=2" target="_blank" rel="external">案例演示</a></p>
+</li>
+<li><p><a href="http://pan.baidu.com/s/1i4znpWx" target="_blank" rel="external">全局变量案例下载</a><br>下载密码: tddw<br><a href="http://etq7wr.axshare.com/" target="_blank" rel="external">案例演示</a></p>
+</li>
+</ol>
+
+      
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/01/15/从零开始学Axure原型设计（高级篇）/">从零开始学Axure原型设计（高级篇）</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 粽小喵 的个人博客">粽小喵</a></p>
+        <p><span>发布时间:</span>2016年01月15日 - 12时59分</p>
+        <p><span>最后更新:</span>2016年01月15日 - 13时03分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/01/15/从零开始学Axure原型设计（高级篇）/" title="从零开始学Axure原型设计（高级篇）">http://zongxiaomiao.com/2016/01/15/从零开始学Axure原型设计（高级篇）/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zongxiaomiao.com/2016/01/15/从零开始学Axure原型设计（高级篇）/　　作者: 粽小喵" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/01/14/产品经理必知必会——产品策划全流程/">
+                    产品经理必知必会——产品策划全流程
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u6761_u4EF6_u751F_u6210_u5668"><span class="toc-number">1.</span> <span class="toc-text">条件生成器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#u6761_u4EF6_u903B_u8F91"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">条件逻辑</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u65B0_u589E_u6761_u4EF6"><span class="toc-number">1.0.1.</span> <span class="toc-text">新增条件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u6761_u4EF6_u6848_u4F8B_u5B9E_u6218_u2014_u2014_u7528_u6237_u767B_u9646_u6846"><span class="toc-number">1.0.2.</span> <span class="toc-text">条件案例实战——用户登陆框</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u53D8_u91CF"><span class="toc-number">2.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Axure_u4E2D_u7684_u53D8_u91CF"><span class="toc-number">2.0.1.</span> <span class="toc-text">Axure中的变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u53D8_u91CF_u5B9E_u6218_u6848_u4F8B_uFF1A_u5168_u5C40_u53D8_u91CF_u5728_u9875_u9762_u95F4_u7684_u52A8_u6001_u9762_u677F_u4EA4_u4E92"><span class="toc-number">2.0.2.</span> <span class="toc-text">变量实战案例：全局变量在页面间的动态面板交互</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u51FD_u6570"><span class="toc-number">3.</span> <span class="toc-text">函数</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+<div class="share">
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+    <a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+    <a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+    </div>
+    <script>
+        window._bd_share_config={
+            "common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+</div>
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/01/15/从零开始学Axure原型设计（高级篇）/" data-title="从零开始学Axure原型设计（高级篇）" data-url="http://zongxiaomiao.com/2016/01/15/从零开始学Axure原型设计（高级篇）/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"zongxiaomiao"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/01/14/产品经理必知必会——产品策划全流程/" title="下一篇: 产品经理必知必会——产品策划全流程">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/01/15/从零开始学Axure原型设计（高级篇）/">从零开始学Axure原型设计（高级篇）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/14/产品经理必知必会——产品策划全流程/">产品经理必知必会——产品策划全流程</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/13/大型网站技术架构/">大型网站技术架构</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/12/计算广告：互联网广告产品逻辑/">计算广告：互联网广告产品逻辑</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/11/结网：成为伟大的产品经理前先成为最挑剔的用户/">结网：成为伟大的产品经理前先成为最挑剔的用户</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/10/从零开始学Axure（入门篇）/">从零开始学Axure（入门篇）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/10/从零开始学Axure原型设计（进阶篇）/">从零开始学Axure原型设计（进阶篇）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/09/社交红利带给我们什么？/">社交红利带给我们什么？</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/09/运用UML进行产品需求表达/">运用UML进行产品需求表达</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/09/推荐系统：网站如何发现用户所爱/">推荐系统：网站如何发现用户所爱</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/09/六个步骤做好产品需求/">六个步骤做好产品需求</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/09/2015-我的转型年/">2015,我的转型年</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/09/腾讯产品offer－从暑期实习生到产培生再到校招的坎坷之路/">腾讯产品offer－从暑期实习生到产培生再到校招的坎坷之路</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/08/什么是原型设计（简而言之版）/">什么是原型设计（简而言之版）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/08/从零开始学Sketch——进阶篇/">从零开始学Sketch——进阶篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/08/从零开始学Sketch——入门篇/">从零开始学Sketch——入门篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/07/我在香港的这半年/">我在香港的这半年</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/07/用户体验作为一种方法论/">用户体验作为一种方法论</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/07/关于需求的11个真相/">关于需求的11个真相</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+        <script>
+            var yiliaConfig = {
+            fancybox: true,
+            mathjax: true,
+            animate: true,
+            isHome: false,
+            isPost: true,
+            isArchive: false,
+            isTag: false,
+            isCategory: false,
+            open_in_new: false
+            }
+        </script>
+        
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2016 粽小喵
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的静态博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减双栏 Hexo 博客主题">Yelee</a> by MOxFIVE
+            </div>
+        </div>
+        <div class="visit">
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <span id="site-visit" >本站到访数: 
+                    <span id="busuanzi_value_site_uv"></span>
+                </span>
+            </span>
+            <span id="busuanzi_container_page_pv" style='display:none'>
+                <span id="page-visit">, 本页阅读量: 
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+            </span>
+        </div>
+    </div>
+</footer>
+    </div>
+    
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+
+  </div>
+  
+ 
+</body>
+</html>
