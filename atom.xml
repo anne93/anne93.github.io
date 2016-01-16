@@ -4,7 +4,7 @@
   <subtitle><![CDATA[产品经理|专栏作者|猫奴]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zongxiaomiao.com/"/>
-  <updated>2016-01-15T06:28:23.000Z</updated>
+  <updated>2016-01-16T07:20:41.000Z</updated>
   <id>http://zongxiaomiao.com/</id>
   
   <author>
@@ -15,12 +15,91 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[从《启示录》中获得的启示]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/16/%E4%BB%8E%E3%80%8A%E5%90%AF%E7%A4%BA%E5%BD%95%E3%80%8B%E4%B8%AD%E8%8E%B7%E5%BE%97%E7%9A%84%E5%90%AF%E7%A4%BA/"/>
+    <id>http://zongxiaomiao.com/2016/01/16/从《启示录》中获得的启示/</id>
+    <published>2016-01-16T07:18:41.000Z</published>
+    <updated>2016-01-16T07:20:41.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>总体感受</strong></p>
+<p>这本书高屋建瓴，可以说是站在CEO的角度看如何做产品，对于刚入门的小白产品经理用处只能说是“不明觉厉”。从目前几个我能理解得上去的点，简单概括一下这本书带给我的收获。这本书是一本三年后还值得再读的书。</p>
+<p><strong>从巴顿将军的忠告说起</strong></p>
+<blockquote>
+<p>永远不要告诉别人怎么做，告诉它们做什么。</p>
+</blockquote>
+<p>这对产品经理而言，首先是在收集需求时，常听到客户建议“怎么做”产品，而不是产品应该“做什么”，产品经理应该把倾听的重点放在“做什么”上；其次，产品经理不要告诉设计如何设计产品，而要告诉它们设计“什么”。</p>
+<p><strong>评估产品机会的十大军规</strong></p>
+<ol>
+<li>产品要解决什么问题？——产品价值</li>
+</ol>
+<p>这个问题最难回答。尝试用一句话概括清楚，不要泛泛停留在产品的功能和特色上。</p>
+<ol>
+<li><p>为谁解决这个问题？——目标市场</p>
+</li>
+<li><p>成功的机会有多大？——市场规模</p>
+</li>
+</ol>
+<p>求助行业分析师、公司财务等，避免浮华。</p>
+<ol>
+<li><p>怎样判断产品成功与否？——度量指标／收益指标</p>
+</li>
+<li><p>有哪些同类产品？——竞争格局</p>
+</li>
+<li><p>为什么我们最适合做这个产品？——竞争优势</p>
+</li>
+<li><p>时机合适吗？——市场时机</p>
+</li>
+<li><p>如何把产品推向市场？——营销组合策略</p>
+</li>
+<li><p>成功的必要条件时什么？——解决方案要满足的条件</p>
+</li>
+<li><p>根据以上问题，给出评估结论。</p>
+</li>
+</ol>
+<p><strong>产品说明文档需要满足的五大要求</strong></p>
+<ol>
+<li><p>完整描述用户体验——用户需求＋交互设计＋视觉设计；</p>
+</li>
+<li><p>准确描述软件行为——原型展示；</p>
+</li>
+<li><p>直观，面向多种对象都可读；</p>
+</li>
+<li><p>可修改；</p>
+</li>
+<li><p>管理好衍生物（优先级表、资源列表、线框图、实体模型等），但应该有一个主体来代表产品；</p>
+</li>
+</ol>
+<p>——作者认为只有<strong>高保真产品原型</strong>可以满足以上所有需求。</p>
+<p>用例可以做完有效的补充，用来描述重要的产品行为。</p>
+<p>展示补充文档的方式也是在原型上增加注释，如果不能实现，应该要保持信息同步。</p>
+<blockquote>
+<p>书籍名称：《启示录：打造用户喜爱的产品》</p>
+<p>作者：Cargan.M</p>
+<p>出版社：华中科技大学出版社（2011年）</p>
+</blockquote>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Rh2wpYzr0Ps67raurD9PyPcTQvsq5TX3sGKf1iaX7rogBAqbHrqpnlEdU9gCPvVCYib3ic43PDYr6FicQ/0?wx_fmt=jpeg" alt=""></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><strong>总体感受</strong></p>
+<p>这本书高屋建瓴，可以说是站在CEO的角度看如何做产品，对于刚入门的小白产品经理用处只能说是“不明觉厉”。从目前几个我能理解得上去的点，简单概括一下这本书带给我的收获。这本书是一本三年后还值得再读的书。</p>
+<p>]]>
+    </summary>
+    
+      <category term="PM" scheme="http://zongxiaomiao.com/tags/PM/"/>
+    
+      <category term="产品" scheme="http://zongxiaomiao.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="读书有疑" scheme="http://zongxiaomiao.com/categories/%E8%AF%BB%E4%B9%A6%E6%9C%89%E7%96%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[从零开始学Axure原型设计（高级篇）]]></title>
     <link href="http://zongxiaomiao.com/2016/01/15/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6Axure%E5%8E%9F%E5%9E%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E9%AB%98%E7%BA%A7%E7%AF%87%EF%BC%89/"/>
     <id>http://zongxiaomiao.com/2016/01/15/从零开始学Axure原型设计（高级篇）/</id>
     <published>2016-01-15T04:59:28.000Z</published>
-    <updated>2016-01-15T06:28:23.000Z</updated>
-    <content type="html"><![CDATA[<p>如果你熟悉了Axure的部件库，那么你可以得心应手地画出心目中产品的线框图；如果你会用Axure的母版、动态面板功能，那么你应该能够画出一些简单网站的原型图；但只有你精通了Axure的条件逻辑、变量、函数等高级交互，才能将心中的产品形态恣意地通过这款软件表现出来。</p>
+    <updated>2016-01-15T11:11:30.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://image.woshipm.com/wp-files/2016/01/axurehanshu.jpg" alt=""></p>
+<p>如果你熟悉了Axure的部件库，那么你可以得心应手地画出心目中产品的线框图；如果你会用Axure的母版、动态面板功能，那么你应该能够画出一些简单网站的原型图；但只有你精通了Axure的条件逻辑、变量、函数等高级交互，才能将心中的产品形态恣意地通过这款软件表现出来。</p>
 <p>下面小喵就给大家仔细梳理一下Axure的高级交互内容，以及如何运用Axure这款软件自带的界面规范文档来提高交付的原型在开发和设计阶段的精准度。</p>
 <p>虽然标题用的是高级篇，其实是相对于入门篇和进阶篇而言的，没有大家想象的那么『高级』和复杂。</p>
 <a id="more"></a>
@@ -122,7 +201,8 @@ else {
 </ol>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>如果你熟悉了Axure的部件库，那么你可以得心应手地画出心目中产品的线框图；如果你会用Axure的母版、动态面板功能，那么你应该能够画出一些简单网站的原型图；但只有你精通了Axure的条件逻辑、变量、函数等高级交互，才能将心中的产品形态恣意地通过这款软件表现出来。</p>
+    <![CDATA[<p><img src="http://image.woshipm.com/wp-files/2016/01/axurehanshu.jpg" alt=""></p>
+<p>如果你熟悉了Axure的部件库，那么你可以得心应手地画出心目中产品的线框图；如果你会用Axure的母版、动态面板功能，那么你应该能够画出一些简单网站的原型图；但只有你精通了Axure的条件逻辑、变量、函数等高级交互，才能将心中的产品形态恣意地通过这款软件表现出来。</p>
 <p>下面小喵就给大家仔细梳理一下Axure的高级交互内容，以及如何运用Axure这款软件自带的界面规范文档来提高交付的原型在开发和设计阶段的精准度。</p>
 <p>虽然标题用的是高级篇，其实是相对于入门篇和进阶篇而言的，没有大家想象的那么『高级』和复杂。</p>]]>
     
