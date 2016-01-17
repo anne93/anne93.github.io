@@ -4,7 +4,7 @@
   <subtitle><![CDATA[产品经理|专栏作者|猫奴]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zongxiaomiao.com/"/>
-  <updated>2016-01-16T07:21:48.000Z</updated>
+  <updated>2016-01-17T06:49:09.000Z</updated>
   <id>http://zongxiaomiao.com/</id>
   
   <author>
@@ -13,6 +13,75 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[产品开发全流程]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/17/%E4%BA%A7%E5%93%81%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B/"/>
+    <id>http://zongxiaomiao.com/2016/01/17/产品开发全流程/</id>
+    <published>2016-01-17T06:38:28.000Z</published>
+    <updated>2016-01-17T06:49:09.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="u4E00_u4E9B_u6982_u5FF5"><a href="#u4E00_u4E9B_u6982_u5FF5" class="headerlink" title="一些概念"></a>一些概念</h2><ul>
+<li>软件=程序+软件工程</li>
+<li>程序=数据结构+算法</li>
+<li>软件分类：系统软件、应用软件、恶意软件。</li>
+<li>Bug：软件的行为和用户的期望值不一样就叫Bug。</li>
+<li>单元测试：针对独立模块进行的测试，在最基本的功能、参数上验证程序的正确性，确保没有Bug，为后面的模块调用铺路。</li>
+<li>回归测试：在新版本上，旧版本原本通过单元测试的用例出现了，为了避免这些错误，进行测试。</li>
+</ul>
+<a id="more"></a>
+<h2 id="u5178_u578B_u7684_u5F00_u53D1_u6D41_u7A0B"><a href="#u5178_u578B_u7684_u5F00_u53D1_u6D41_u7A0B" class="headerlink" title="典型的开发流程"></a>典型的开发流程</h2><ul>
+<li><h4 id="u7011_u5E03_u6D41_uFF1A"><a href="#u7011_u5E03_u6D41_uFF1A" class="headerlink" title="瀑布流："></a>瀑布流：</h4></li>
+</ul>
+<p>瀑布流开发流程有一些缺陷，比如步骤的严格分离、不可逆、用户接入时间较晚等。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RjeqddicoweYTZLQtO3btZPRcATZHCdKPlBHXnqkePTiaKtRyicy6PAVOjqaavbTF5SFLWsandR48oXQ/0?wx_fmt=png" alt=""></p>
+<p>瀑布流开发流程</p>
+<ul>
+<li><h4 id="u8FED_u4EE3_u5F00_u53D1_uFF08RUP_u5DE5_u4F5C_u6D41-_u9A7C_u5CF0_u56FE_uFF09"><a href="#u8FED_u4EE3_u5F00_u53D1_uFF08RUP_u5DE5_u4F5C_u6D41-_u9A7C_u5CF0_u56FE_uFF09" class="headerlink" title="迭代开发（RUP工作流-驼峰图）"></a>迭代开发（RUP工作流-驼峰图）</h4></li>
+</ul>
+<p>图中的阴影面积代表不同角色在各个阶段的参与程度。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RjeqddicoweYTZLQtO3btZPRulHfVhavsxhAdxEyN77vsI2ecmMzWxwpENIr52eBQLU0GFe9KTibKPQ/0?wx_fmt=png" alt=""></p>
+<p>RUP驼峰图</p>
+<ul>
+<li><h4 id="u6E10_u8FDB_u5F0F_u4EA4_u4ED8_u6D41_u7A0B"><a href="#u6E10_u8FDB_u5F0F_u4EA4_u4ED8_u6D41_u7A0B" class="headerlink" title="渐进式交付流程"></a>渐进式交付流程</h4></li>
+</ul>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RjeqddicoweYTZLQtO3btZPRW6zd19llD4LoibqUl1KVtAYMKOnicySibziaf6pBYtCZtKqOxibhmbB6S6g/0?wx_fmt=png" alt=""></p>
+<p>渐进式交付</p>
+<p>其中渐进式交付又可以分为MVP和MBP，分别对应最小可行产品和最强最美产品的思路。</p>
+<ul>
+<li><h4 id="u654F_u6377_u6D41_u7A0B"><a href="#u654F_u6377_u6D41_u7A0B" class="headerlink" title="敏捷流程"></a>敏捷流程</h4></li>
+</ul>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RjeqddicoweYTZLQtO3btZPR3t1cqIc8y2gNY8Vp4diaKHgB5Ukcdjon3o1x3Ed8g4wdCCubBG3LzRQ/0?wx_fmt=png" alt=""></p>
+<p>敏捷方法和现有方法的对比，敏捷的步骤如下：</p>
+<ul>
+<li>找出要做的事情；</li>
+<li>分解目标，认领任务；</li>
+<li>执行目标，外部人士在这个阶段不能打扰；</li>
+<li>发布版本，获取反馈。</li>
+<li>循环往复以上步骤，类似戴明环（Plan-Do-Check-Act/Adjust），</li>
+</ul>
+<p>但是真正做起来却不那么容易，比如如何获取优先级，如何合理地划分任务，如何衡量每天的任务是否准确的完成了而没有偏离最初的目标。</p>
+<hr>
+<p>参考书籍：《构建之法》</p>
+<div class="visitor_edit" style=""></div>]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="u4E00_u4E9B_u6982_u5FF5"><a href="#u4E00_u4E9B_u6982_u5FF5" class="headerlink" title="一些概念"></a>一些概念</h2><ul>
+<li>软件=程序+软件工程</li>
+<li>程序=数据结构+算法</li>
+<li>软件分类：系统软件、应用软件、恶意软件。</li>
+<li>Bug：软件的行为和用户的期望值不一样就叫Bug。</li>
+<li>单元测试：针对独立模块进行的测试，在最基本的功能、参数上验证程序的正确性，确保没有Bug，为后面的模块调用铺路。</li>
+<li>回归测试：在新版本上，旧版本原本通过单元测试的用例出现了，为了避免这些错误，进行测试。</li>
+</ul>]]>
+    
+    </summary>
+    
+      <category term="产品" scheme="http://zongxiaomiao.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="开发" scheme="http://zongxiaomiao.com/tags/%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="技术之光" scheme="http://zongxiaomiao.com/categories/%E6%8A%80%E6%9C%AF%E4%B9%8B%E5%85%89/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[从《启示录》中获得的启示]]></title>
@@ -2233,98 +2302,6 @@ else {
       <category term="体验" scheme="http://zongxiaomiao.com/tags/%E4%BD%93%E9%AA%8C/"/>
     
       <category term="设计" scheme="http://zongxiaomiao.com/tags/%E8%AE%BE%E8%AE%A1/"/>
-    
-      <category term="大话产品" scheme="http://zongxiaomiao.com/categories/%E5%A4%A7%E8%AF%9D%E4%BA%A7%E5%93%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[关于需求的11个真相]]></title>
-    <link href="http://zongxiaomiao.com/2016/01/07/%E5%85%B3%E4%BA%8E%E9%9C%80%E6%B1%82%E7%9A%8411%E4%B8%AA%E7%9C%9F%E7%9B%B8/"/>
-    <id>http://zongxiaomiao.com/2016/01/07/关于需求的11个真相/</id>
-    <published>2016-01-07T05:46:31.000Z</published>
-    <updated>2016-01-07T05:46:31.000Z</updated>
-    <content type="html"><![CDATA[<p>只有当自己知道需要什么的时候，才有可能会获得它，这也是探索需求的必要性。</p>
-<p>我们常常谈需求，但是需求真的是我们想象的那样吗？下面我就给大家梳理一下，关于需求你可能误解了的11个真相。</p>
-<a id="more"></a>
-<blockquote>
-<p>写需求其实并非是在谈需求。</p>
-</blockquote>
-<p>需求活动主要不是编写需求文档，相反，它专注于理解<strong>业务问题</strong>，并为之提供<strong>解决方案</strong>。</p>
-<p>怎么样才算理解了业务问题呢？</p>
-<p>即你做的是哪个行业的产品，就对这个行业的商业模式、产业链、竞争状态等要有所了解。而只有深入了解了业务本身，才有助于发现使用<strong>场景</strong>，并为之提供解决方案，让用户用得爽。</p>
-<blockquote>
-<p>如果我们必须构建产品，那么它必须为拥有它的人提供最理想的价值。</p>
-</blockquote>
-<p>作为产品开发者或设计者，要深谙一点：即我们关注最终结果的拥有者，只是间接地关注用户。但是在免费时代，很多公司并不靠产品本身盈利，所以<strong>不能孤立地看这个上图中的曲线</strong>，应当将整个<strong>产品生态</strong>搭建起来，看看哪个环节是赢利点。</p>
-<p>很多大公司，平台级的产品均是不盈利的，通过专心打磨产品获取千万级的用户，然后通过其他方式进行盈利，例如在线广告、增值服务或电商。</p>
-<blockquote>
-<p>你必须知道要求是什么，才能构建正确的产品。</p>
-</blockquote>
-<p>要理解产品打算为用户完成什么，以怎样的方式完成，就必须理解拥有者的业务工作。产品经理得到需求，描述产品的<strong>功能</strong>（做什么）以及产品的<strong>属性</strong>（做到什么程度）。</p>
-<p>不幸地是，交流的无奈导致需求并非总是被恰如其分地理解了。</p>
-<blockquote>
-<p>构建一个产品和解决一个业务问题之间，存在巨大的差别。前者不一定实现后者。</p>
-</blockquote>
-<p>这一点是对第一点的补充。做一个产品就是为了解决一个业务问题，因此开发工作必须从<strong>问题</strong>开始，而不是从<strong>解决方案</strong>开始。</p>
-<blockquote>
-<p>需求不一定要写下来，但是构建者必须知道它们。</p>
-</blockquote>
-<p>需求文档是为了更好的<strong>沟通想法</strong>，一份高效准确的需求文档能够让开发人员和设计人员非常明确需求是什么，从而实现它。但很多时候，口头沟通更方便、直接，特别是一些细节的确认，往往需要<strong>口头表达</strong>。</p>
-<p>但值得注意的是，口头沟通需求效率虽然高，但是不是所有需求都能用这种方式来沟通。编写需求是为了让利益相关者和产品经理彻底地<strong>理解</strong>需求，也有利于追踪文档。</p>
-<blockquote>
-<p>客户不一定能给你正确答案，有时候他也不知道要什么。</p>
-</blockquote>
-<p>利益相关者在描述一个需求时是由困难的，交流的无奈是存在的。所以产品经理应该把握业务的<strong>复杂性和规模</strong>。</p>
-<p>有时候，产品经理应该如实记录下客户的要求；有时候，应该从解决方案中导出需求，有时候必须提出创新，得到更好的解决方案。</p>
-<blockquote>
-<p>需求不是偶然得到的，要通过某种有序的过程得到。</p>
-</blockquote>
-<p>做产品就像拍电影，要先有一个剧本，确保剧情有序地发生。</p>
-<p>任务的次序、重点和应用程度需要采用该过程的人或团队来决定，参与这个过程的人必须能看到为什么不同的任务是重要的、哪些任务对项目最重要。但优先级是可以调整的，过程中要灵活变通。</p>
-<blockquote>
-<p>怎么迭代都行，只要理解了业务的需求。</p>
-</blockquote>
-<p>敏捷迭代越来越成为新宠，取代着原始的瀑布流开发方法。但是冷静的头脑在开发之前已经将需求过程吸收到开发的生命周期中了。</p>
-<p>聪明的办法<strong>不是废除需求，而是从一个不同的方向接近需求</strong>。真正值得关注的是，既要发现需求，又不必编写无用的、不成熟的文档。</p>
-<blockquote>
-<p>所有的方法和工具都无法弥补糟糕的想法和糟糕的手艺。</p>
-</blockquote>
-<p>这一点是对第7点和第8点的补充。</p>
-<p>有序的过程并不能替代思考。需求收集、验证、编写文档的过程并<strong>不是一种流程，而是由提交的产物驱动</strong>的。</p>
-<p>要记住，自动化的工具只是辅助手段，产品经理<strong>最重要的工具就是：脑袋、眼睛和耳朵</strong>。</p>
-<blockquote>
-<p>要想成功地实现需求，需求就必须可度量、可测试。</p>
-</blockquote>
-<p>需求可以主要分为以下三类：</p>
-<ul>
-<li>功能需求：产品支持其拥有者的业务时必须做的事情。</li>
-<li>非功能需求：产品要再拥有者的环境中取得成功，必须将功能完成得多好的量化描述。</li>
-<li>限制条件：全局性的需求。</li>
-</ul>
-<p>例如，产品有一个需求是“应该对新用户有吸引力”：<br>建立可测量的指标即：注册时间少于2分钟、数据项（例如姓名、邮件地址等）犹豫时间不超过5秒。</p>
-<p>可以很肯定地说，如果你不能为需求找到<strong>测量指标</strong>，那么它就不是需求，只是一种<strong>无根据的想法</strong>。</p>
-<blockquote>
-<p>作为产品经理，你终将改变用户思考这个问题的方式。</p>
-</blockquote>
-<p>产品经理的部分工作就是帮助人们尽早理解和质疑他们的需求，这样他们就可以帮助你发现它们真正的需求。</p>
-<p>当产品经理开始<strong>理解</strong>需求时，尤其是在需求来自于不同利益相关者时，就开始建立起一套<strong>抽象</strong>概念，通过<strong>展示</strong>业务过程的模型渐渐参透工作的本质，得到清晰、可测量的需求，并把这些<strong>反馈</strong>给利益相关者。</p>
-<p>在做这些事情的时候，产品经理就在渐渐改进（改变）他们对业务的看法。</p>
-<p><strong>简言之，需求就是产品支持其拥有者的业务所必须完成的事。而产品经理的工作就是理解需求，理解到应该做什么、做到什么程度，并建立起一套解决问题的方案，反馈给产生需求的人。</strong></p>
-<hr>
-<p>参考：<br><a href="http://book.douban.com/subject/2078680/" target="_blank" rel="external">掌握需求过程（第三版）</a></p>
-<hr>
-<p>许可协议: <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="external">署名-非商用-相同方式共享 3.0</a><br>转载请保留原文链接及作者名。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>只有当自己知道需要什么的时候，才有可能会获得它，这也是探索需求的必要性。</p>
-<p>我们常常谈需求，但是需求真的是我们想象的那样吗？下面我就给大家梳理一下，关于需求你可能误解了的11个真相。</p>]]>
-    
-    </summary>
-    
-      <category term="产品" scheme="http://zongxiaomiao.com/tags/%E4%BA%A7%E5%93%81/"/>
-    
-      <category term="需求" scheme="http://zongxiaomiao.com/tags/%E9%9C%80%E6%B1%82/"/>
     
       <category term="大话产品" scheme="http://zongxiaomiao.com/categories/%E5%A4%A7%E8%AF%9D%E4%BA%A7%E5%93%81/"/>
     
