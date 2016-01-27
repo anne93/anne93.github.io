@@ -4,7 +4,7 @@
   <subtitle><![CDATA[产品经理|专栏作者|猫奴]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zongxiaomiao.com/"/>
-  <updated>2016-01-19T12:52:31.000Z</updated>
+  <updated>2016-01-27T11:51:59.000Z</updated>
   <id>http://zongxiaomiao.com/</id>
   
   <author>
@@ -13,6 +13,75 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[产品经理常用的那些图]]></title>
+    <link href="http://zongxiaomiao.com/2016/01/27/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E5%B8%B8%E7%94%A8%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9B%BE/"/>
+    <id>http://zongxiaomiao.com/2016/01/27/产品经理常用的那些图/</id>
+    <published>2016-01-27T11:45:10.000Z</published>
+    <updated>2016-01-27T11:51:59.000Z</updated>
+    <content type="html"><![CDATA[<p>图形相比文字更加直观，在产品设计中频繁被运用。原型图、信息结构图、泳道图、用例图等是产品经理在日常工作中经常使用的梳理思维和进行表达的工具，并且结合小喵自己使用的情况，推荐大家几款实用的绘制工具。</p>
+<h1 id="1-__u6D41_u7A0B_u56FE"><a href="#1-__u6D41_u7A0B_u56FE" class="headerlink" title="1. 流程图"></a>1. 流程图</h1><blockquote>
+<p>流程图是对过程、算法、流程的一种图像表示。</p>
+</blockquote>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgUtBic8JWfiaWDhibcpn2pWiaiakqwH6vnHicaKZrdNj6dGDpichDg2deh5wVu0scYlYVJHYa6DJDVT4uUg/0?wx_fmt=png" alt=""></p>
+<p>应对灯泡不亮的简单流程图,图片来自维基百科</p>
+<p>在产品设计中，流程图就是通过一系列逻辑关系（条件逻辑、先后顺序、因果关联、输入输出等），描述特定情境下满足特定用户需求、完成特定任务的步骤。它应该是相对模式化的。</p>
+<a id="more"></a>
+<p>流程图包括的要素有：角色（例如：灯泡）、流转（连接线）、顺序（指向关系）、规则（是否、条件）、输入、输出。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgUtBic8JWfiaWDhibcpn2pWiaiagfTEia4tIS35NJictbdvV06386BQAQMk9Ngib8uqtxJa7pAn5wvJiaHQlA/0?wx_fmt=png" alt=""></p>
+<p>常见的流程图符号</p>
+<p>产品经理可以用流程图帮助自己梳理清楚设计的逻辑，并且在后期开发阶段为开发人员提供参考。</p>
+<p>流程图中经常用于梳理业务的一种图是泳道图。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgUtBic8JWfiaWDhibcpn2pWiaiaRmtF3Vsiaf7dib2Pao2PG8czuTiaPmeL5vNxWdlFD6qpFCMkfribzwkyAw/0?wx_fmt=png" alt=""></p>
+<p>图片来源：heidixie的新浪微博</p>
+<p>⭐️ 工具推荐：PPT, Axure</p>
+<h1 id="2-__u4EA7_u54C1_u8BBE_u8BA1_u8349_u56FE"><a href="#2-__u4EA7_u54C1_u8BBE_u8BA1_u8349_u56FE" class="headerlink" title="2. 产品设计草图"></a>2. 产品设计草图</h1><p>在产品设计初期，确认基本功能时，产品经理可以用设计草图来帮助自己思考、完善功能设计。相比原型图和线框图来说，草图更为自由，它不限制你的表达，让你完全focus在你要思考的问题上。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgUtBic8JWfiaWDhibcpn2pWiaiaVZyfxJ0Y3tG4dG1Xt66tQS6myb35PkDl9UmwhxsljBwll1HiaUGriaXg/0?wx_fmt=png" alt=""></p>
+<p>产品设计草图，来源:Flickr</p>
+<p>产品设计草图主要包含的要素有：角色、任务、逻辑（条件）、输入、输出。比如在上图中，用户通过输入一些内容，然后点击搜索后才会跳转到第二个页面。</p>
+<p>关于产品设计草图，大家可以参考这两本经典书籍：《用户体验草图设计》、《关键设计报告》。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgUtBic8JWfiaWDhibcpn2pWiaiaibAYPaQZelTdLQ0XwSStOqFvPMaIBNwgdzaogo2sDPgyxIlIv4m7MVg/0?wx_fmt=png" alt=""></p>
+<p>⭐️ 工具推荐：手绘、Mockplus</p>
+<h1 id="3-__u539F_u578B_u56FE"><a href="#3-__u539F_u578B_u56FE" class="headerlink" title="3. 原型图"></a>3. 原型图</h1><p>在确定了产品的基本功能之后，进入到原型设计阶段，这个阶段产品经理需要关注原型图。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgUtBic8JWfiaWDhibcpn2pWiaia7P9Mobm9Ldia1yWdfvTXOXKvjIseMLWAxbliaRxtDBwao86Atnib8ib1Iw/0?wx_fmt=png" alt=""></p>
+<p>原型图中表单交互的形式，点击后的过渡效果</p>
+<p>原型图的要素主要有：信息（类型、结构、梳理）、布局、权重（哪些信息更重要）、交互形式。</p>
+<p>要学习更多关于原型的知识，可以参考《从零开始学Axure》系列文章。</p>
+<p>⭐️ 工具推荐：Sketch, Axure, Mockplus</p>
+<h1 id="4-__u4FE1_u606F_u7ED3_u6784_u56FE"><a href="#4-__u4FE1_u606F_u7ED3_u6784_u56FE" class="headerlink" title="4. 信息结构图"></a>4. 信息结构图</h1><p>唐杰在《杰出产品经理》一书中提到：信息结构图是一种接近数据库结构的图表，但是他并不是真正意义的数据库结构。技术人员会根据这张图表的内容再结合产品原型或需求文档，然后规划和设计出真正意义上的<strong>数据库结构</strong>。</p>
+<p>也就是说，信息结构描述的是某个对象的属性，例如下面这张脑图中，分别对『文章』和『评论』两个对象进行了属性的描述，这也是后期在开发过程中需要明确的数据库结构。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgUtBic8JWfiaWDhibcpn2pWiaia7qCuBXDLdYonq8TYt2Getf4NObjvdWg1noaSckzk1wmOKTM1lWfvibA/0?wx_fmt=png" alt=""></p>
+<p>信息结构图</p>
+<p>⭐️ 工具推荐：Mindmanager, MindNode(Mac)</p>
+<h1 id="5-__u6D4B_u8BD5_u7528_u4F8B_u56FE"><a href="#5-__u6D4B_u8BD5_u7528_u4F8B_u56FE" class="headerlink" title="5. 测试用例图"></a>5. 测试用例图</h1><p>测试用例图主要关注角色、任务和事件三要素，如下图是用户点餐的用例图。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgUtBic8JWfiaWDhibcpn2pWiaiaNM609sDe6yMiccwpn9KfrlLCNjUBWlf1Nx5gMwpGjyv3yzMuMU2vlug/0?wx_fmt=png" alt=""></p>
+<p>测试用例图实际上是把复杂的流程图中的场景拆分为一个一个的Case（用例）进行分析。</p>
+<p>⭐️ 工具推荐：Axure</p>
+<h1 id="6-__u7518_u7279_u56FE"><a href="#6-__u7518_u7279_u56FE" class="headerlink" title="6. 甘特图"></a>6. 甘特图</h1><p>甘特图（Gantt Chart）由亨利·甘特于1910年开发的，他通过条状图来显示项目，进度，和其他时间相关的系统进展的内在关系随着时间进展的情况。甘特图需要关注的要素有时间、活动、顺序。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgUtBic8JWfiaWDhibcpn2pWiaiaaSzX4zlkeQiaT2MxOZ23w7GbbibHaMrDxULbmsXyCDMIbtyHHb1CrYEQ/0?wx_fmt=png" alt=""></p>
+<p>Omniplan绘制的甘特图</p>
+<p>⭐️ 工具推荐：Excel, OmniPlan(Mac), MS Project</p>
+<p>用好以上六大图，在梳理业务流程、产品逻辑的时候会更加清晰，在控制项目节奏和把握整体进度上也会更加有的放矢。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>图形相比文字更加直观，在产品设计中频繁被运用。原型图、信息结构图、泳道图、用例图等是产品经理在日常工作中经常使用的梳理思维和进行表达的工具，并且结合小喵自己使用的情况，推荐大家几款实用的绘制工具。</p>
+<h1 id="1-__u6D41_u7A0B_u56FE"><a href="#1-__u6D41_u7A0B_u56FE" class="headerlink" title="1. 流程图"></a>1. 流程图</h1><blockquote>
+<p>流程图是对过程、算法、流程的一种图像表示。</p>
+</blockquote>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgUtBic8JWfiaWDhibcpn2pWiaiakqwH6vnHicaKZrdNj6dGDpichDg2deh5wVu0scYlYVJHYa6DJDVT4uUg/0?wx_fmt=png" alt=""></p>
+<p>应对灯泡不亮的简单流程图,图片来自维基百科</p>
+<p>在产品设计中，流程图就是通过一系列逻辑关系（条件逻辑、先后顺序、因果关联、输入输出等），描述特定情境下满足特定用户需求、完成特定任务的步骤。它应该是相对模式化的。</p>]]>
+    
+    </summary>
+    
+      <category term="PM" scheme="http://zongxiaomiao.com/tags/PM/"/>
+    
+      <category term="流程图" scheme="http://zongxiaomiao.com/tags/%E6%B5%81%E7%A8%8B%E5%9B%BE/"/>
+    
+      <category term="大话产品" scheme="http://zongxiaomiao.com/categories/%E5%A4%A7%E8%AF%9D%E4%BA%A7%E5%93%81/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[『全球化』之溯源与想象]]></title>
@@ -2079,136 +2148,6 @@
     <![CDATA[<p>Sketch是一款矢量绘图应用，而矢量绘图无疑是目前进行网页、图标以及界面设计的最好方式。</p>
 <p>在初识了Sketch的界面布局和基础工具之后，我们就可以开始进入高阶的Sketch工具篇学习了。这篇文章主要会涉及Sketch模板、插件的使用，以及Sketch在具体使用过程中的一些技巧分享。</p>
 <p>如果你曾接触过PS、AI、Axure等软件，那么接下来的内容你应该不会陌生，因为所有的设计软件学习的路径都是相似的，都是从认识基本功能框架到外部资源整合运用，最终形成个人风格的一个过程。</p>]]>
-    
-    </summary>
-    
-      <category term="Sketch" scheme="http://zongxiaomiao.com/tags/Sketch/"/>
-    
-      <category term="原型" scheme="http://zongxiaomiao.com/tags/%E5%8E%9F%E5%9E%8B/"/>
-    
-      <category term="交互设计" scheme="http://zongxiaomiao.com/categories/%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[从零开始学Sketch——入门篇]]></title>
-    <link href="http://zongxiaomiao.com/2016/01/08/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6Sketch%E2%80%94%E2%80%94%E5%85%A5%E9%97%A8%E7%AF%87/"/>
-    <id>http://zongxiaomiao.com/2016/01/08/从零开始学Sketch——入门篇/</id>
-    <published>2016-01-08T13:11:00.000Z</published>
-    <updated>2016-01-09T06:16:53.000Z</updated>
-    <content type="html"><![CDATA[<p>如果你是一枚交互设计师或者UI设计师，那么你一定知道Sketch这个强大的矢量设计软件；如果你用过Photoshop，那么在你接触了Sketch之后就能了解到这款产品相对于PS的优点，说不定会跟我一样变成一个Sketch的死忠粉。</p>
-<p>扁平化设计的流行和屏幕分辨率的提升推动了Sketch这款软件的流行。</p>
-<h2 id="u4EC0_u4E48_u662FSketch"><a href="#u4EC0_u4E48_u662FSketch" class="headerlink" title="什么是Sketch"></a>什么是Sketch</h2><p>Sketch是一款矢量绘图应用，而矢量绘图无疑是目前进行网页、图标以及界面设计的最好方式。</p>
-<p>Sketch有以下特点：</p>
-<ul>
-<li>矢量文件，不失真；</li>
-<li>Symbol（图形样式）和Style（文本样式）功能，有利于批量修改和复用；</li>
-<li>每个图层都支持多种填充模式（Fills可以添加/隐藏填充效果）；</li>
-<li>多种尺寸导出功能，可导出部件；</li>
-<li>自动保存所有历史记录，便于追溯修改。<br>但是Sketch也不是十全十美的，比如它对于位图的处理能力就远不及PS。但这并不影响它成为一款优秀的设计软件。<a id="more"></a>
-</li>
-</ul>
-<h2 id="Sketch_u754C_u9762"><a href="#Sketch_u754C_u9762" class="headerlink" title="Sketch界面"></a>Sketch界面</h2><p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-22edbd0253f51834.png" alt="1209576-22edbd0253f51834" title="Sketch界面分布"></p>
-<p>图片来源：极客学院ERICYU</p>
-<p>Sketch的界面重要包含五部分的内容：page，layer，画板，检查器和工具栏。</p>
-<ul>
-<li>Page：页面管理；</li>
-<li>Layer：页面下的图层；</li>
-<li>蒙版：图片遮罩效果（右键，选择use as a mask）<br>Step 1 导入图片+画出一个正圆</li>
-</ul>
-<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-955b848d198afcfc.png" alt="1209576-955b848d198afcfc" title="Step 1"></p>
-<p>导入图片+画出一个正圆</p>
-<p>Step 2 将图片置于正圆之上，并右键选中圆形，点击“USE AS A MASK”</p>
-<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-ccd041c660982a85.png" alt="1209576-ccd041c660982a85" title="Step 2"></p>
-<p>将图片置于正圆之上，并右键选中圆形，点击“USE AS A MASK”</p>
-<p>Step 3 完成! 注意把圆形的边框设置为透明。</p>
-<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-dd17bad2af7a242a.png" alt="1209576-dd17bad2af7a242a" title="Step 3"></p>
-<p>完成，注意把圆形的边框设置为透明</p>
-<p>布尔运算——图层之间的关系</p>
-<p>在刚刚的头像下面，制作一个个性标签，运用图层之间的布尔运算。</p>
-<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-dab4e48af1be9bfc.png" alt="1209576-dab4e48af1be9bfc" title="布尔运算"></p>
-<p>画两个一模一样的圆形，其中一个圆形与矩形形成substract的关系。</p>
-<p>（只需要在Layer中拖拽圆形至矩形即可）</p>
-<p>Artboard：画板，快捷键A，内置了多种尺寸的画板；</p>
-<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-0cc4e8e9dd7e6f27.png" alt="1209576-0cc4e8e9dd7e6f27" title="画板"></p>
-<p>Artboard内置画板</p>
-<p>检查器：</p>
-<p>通用属性：可调整大小。</p>
-<p>样式属性：填充（颜色、图片），模糊、渐变、阴影等效果。</p>
-<p>工具栏</p>
-<p>右键工具栏选择customize可以自定义工具栏。</p>
-<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-48154d0ecc0e0673.png" alt="1209576-48154d0ecc0e0673" title="工具栏"></p>
-<p>自定义工具栏</p>
-<h2 id="Sketch_u57FA_u7840_u5DE5_u5177"><a href="#Sketch_u57FA_u7840_u5DE5_u5177" class="headerlink" title="Sketch基础工具"></a>Sketch基础工具</h2><p><strong>添加、选择、移动图层</strong></p>
-<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-932d75515ed57961.png" alt="1209576-932d75515ed57961" title="Sketch基础工具"></p>
-<p>添加图层</p>
-<p>当你按住Shift键添加图层时，创建的是正圆或者正方形或者正多边形。</p>
-<p>按住COMMAND+D可以批量复制图层。</p>
-<p>按住Alt键可以复制一个图形。</p>
-<p>可以将图层归为组。</p>
-<p><strong>图形的编辑</strong></p>
-<p>点的控制手柄</p>
-<p>当创建一个矩形时，双击四个角上的锚点可以选择不同类型的手柄。</p>
-<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-d16c11bb1754e0d2.png" alt="1209576-d16c11bb1754e0d2" title="Sketch图形的编辑"></p>
-<p>图形点的控制手柄</p>
-<p><strong>蒙版</strong></p>
-<p>限制蒙版：不希望文字被蒙版所裁切，可以右键点击“Ignoring underlying mask”。</p>
-<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-560a862cc885edfb.png" alt="1209576-560a862cc885edfb" title="Sketch模板"></p>
-<p>在蒙版上创建文字，避免模板限制文字超出蒙版区域</p>
-<p><strong>ALPHA蒙版</strong></p>
-<p>通过设置ALPHA模板，可以让图片拥有渐变效果。</p>
-<p>Step 1 选择Mask的模式</p>
-<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-5320d11617cb604b.png" alt="1209576-5320d11617cb604b" title="Mask"></p>
-<p>设置ALPHA蒙版</p>
-<p>Step 2 选择渐变方式</p>
-<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-2f42bfeade948699.png" alt="1209576-2f42bfeade948699" title="渐变"></p>
-<p>fills选中渐变样式</p>
-<p>剪刀工具和复制旋转工具</p>
-<p>剪刀工具：可以剪切矩形的一条边，让它变成一个开口的矩形；</p>
-<p>复制旋转工具，可以得到一个图形的360度旋转复制后的效果，如下图：</p>
-<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-749d88d818a448a2.png" alt="1209576-749d88d818a448a2" title="旋转复制"></p>
-<p>旋转复制效果</p>
-<p><strong>文本处理</strong><br>运用TEXT STYLE可以复用文字样式</p>
-<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-896137d8f7255f98.png" alt="1209576-896137d8f7255f98" title="复用文字"></p>
-<p>text style</p>
-<p>将文本转换为轮廓（矢量）</p>
-<p>将文本的一笔一划都变为path。</p>
-<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-63d9a006cb7f9cb7.png" alt="1209576-63d9a006cb7f9cb7" title="path"></p>
-<p>将文本转换为轮廓</p>
-<p>转化后，可以使用渐变作为文字样式。</p>
-<p><strong>图片编辑</strong></p>
-<p>位图编辑</p>
-<p>高斯模糊效果；</p>
-<p>color adjust工具：亮度、对比度、饱和度；</p>
-<p>建立选区、裁剪；</p>
-<p>建立9宫格图片，可以将图片各部分的比例确定下来，进行大小改变。</p>
-<h2 id="u5B9E_u6218_u5E94_u7528"><a href="#u5B9E_u6218_u5E94_u7528" class="headerlink" title="实战应用"></a>实战应用</h2><p>下面这张图片是我制作的简书app登陆页面，大家可以运用上面学到的技巧来进行制作。</p>
-<p><img src="http://image.woshipm.com/wp-files/2015/12/1209576-9ac7f8474463effd.jpg" alt="1209576-9ac7f8474463effd" title="登陆界面"></p>
-<p>简书登陆页面（自创版）</p>
-<p>制作步骤如下：</p>
-<ul>
-<li>创建画板：选择artboard的iphone 5大小</li>
-<li>设置背景：设置背景为白色</li>
-<li>基本布局：调用sketch库的template（在菜单栏file下面的第二个选项），选择iOS UI design，选择iphone上方的状态栏为白色（图中看不出来，因为背景色也是白色）；</li>
-<li>画出输入框（利用布尔运算）</li>
-<li>微博登陆按钮：创建矩形。</li>
-<li>注册按钮：橘黄色的箭头。</li>
-<li>文字：选择宋体，转化为轮廓。</li>
-<li>细节完善：小图标制作，线条颜色微调。</li>
-</ul>
-<p>快用Sketch动手做一个属于你的登陆页面吧！</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>如果你是一枚交互设计师或者UI设计师，那么你一定知道Sketch这个强大的矢量设计软件；如果你用过Photoshop，那么在你接触了Sketch之后就能了解到这款产品相对于PS的优点，说不定会跟我一样变成一个Sketch的死忠粉。</p>
-<p>扁平化设计的流行和屏幕分辨率的提升推动了Sketch这款软件的流行。</p>
-<h2 id="u4EC0_u4E48_u662FSketch"><a href="#u4EC0_u4E48_u662FSketch" class="headerlink" title="什么是Sketch"></a>什么是Sketch</h2><p>Sketch是一款矢量绘图应用，而矢量绘图无疑是目前进行网页、图标以及界面设计的最好方式。</p>
-<p>Sketch有以下特点：</p>
-<ul>
-<li>矢量文件，不失真；</li>
-<li>Symbol（图形样式）和Style（文本样式）功能，有利于批量修改和复用；</li>
-<li>每个图层都支持多种填充模式（Fills可以添加/隐藏填充效果）；</li>
-<li>多种尺寸导出功能，可导出部件；</li>
-<li>自动保存所有历史记录，便于追溯修改。<br>但是Sketch也不是十全十美的，比如它对于位图的处理能力就远不及PS。但这并不影响它成为一款优秀的设计软件。]]>
     
     </summary>
     
