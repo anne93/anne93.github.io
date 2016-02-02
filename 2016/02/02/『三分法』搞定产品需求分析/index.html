@@ -3,44 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>计算广告：互联网广告产品逻辑 | 粽小喵</title>
+  <title>『三分法』搞定产品需求分析 | 粽小喵</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="全文结构
-主线：商业逻辑驱动的在线广告产品和技术的升级。
-辅线：数据的加工、利用与交易。
-一、在线广告综述1. 广告的本质和功能广告的根本目的是广告主通过媒体达到低成本的用户接触。
-广告的功能：brand awareness + direct response（目前互联网广告着重靠效果广告盈利）
-2. 在线广告的类型：1）横幅广告：占据固定版面，动态素材。
-2）文字链广告：一段链接到广告主落地页的">
+  <meta name="description" content="需求分析是产品经理的主要工作内容之一。需求是如何产生的？如何管理需求？如何让开发、设计更好地理解需求、实现需求？如何做好产品需求决策？在这篇短文中，小喵尝试综合目前主流的产品需求分析方法，理顺产品需求分析的思路。
+总的来说，整个产品需求分析主要做三件事：分类（谁的需求，哪类需求）、分析（性价比）、分级（优先级），简称三分法。细致地来看，需求分析分为几个阶段，每个阶段做的事情可以用下图表示：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="计算广告：互联网广告产品逻辑">
-<meta property="og:url" content="http://zongxiaomiao.com/2016/01/12/计算广告：互联网广告产品逻辑/index.html">
+<meta property="og:title" content="『三分法』搞定产品需求分析">
+<meta property="og:url" content="http://zongxiaomiao.com/2016/02/02/『三分法』搞定产品需求分析/index.html">
 <meta property="og:site_name" content="粽小喵">
-<meta property="og:description" content="全文结构
-主线：商业逻辑驱动的在线广告产品和技术的升级。
-辅线：数据的加工、利用与交易。
-一、在线广告综述1. 广告的本质和功能广告的根本目的是广告主通过媒体达到低成本的用户接触。
-广告的功能：brand awareness + direct response（目前互联网广告着重靠效果广告盈利）
-2. 在线广告的类型：1）横幅广告：占据固定版面，动态素材。
-2）文字链广告：一段链接到广告主落地页的">
-<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5I0HRcxAbLQeNctnI52U4cLPUn3PYCz9tlt2sh8NaoBkjqkJ1icRxVOEg/0?wx_fmt=png">
-<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5I1vmmD0lciaJJ71DJnvL1IBstlRIgSwbbqiarIqvUb6HiatnBibocw8SOLA/0?wx_fmt=png">
-<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5IqXewCE512pdEGuwxmeVEICZWC7cFwrfp62bS3zmT129icDFicd9Albicg/0?wx_fmt=png">
-<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5I06pqt6JUFiaTEhj41eHO3GRQv7xT7iaPve410m394Tz4O8LhbyHSjkOg/0?wx_fmt=png">
-<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5Ivm9edrDryAjC54b5MB4jAGs15sKfSFdSgiae8kEzCn7LP77WNtsfLBw/0?wx_fmt=png">
-<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5IsfAngiaXKM96qzia8LoNv4XNRokiaKd8kibzjMq583NcgDUSyKs4SCKdNw/0?wx_fmt=png">
-<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5IDsFiczGkCE5YS4lIM1UdI44OMAoLtTMSpjbsV79bay6bvgribZYzTsBg/0?wx_fmt=png">
-<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Rh2wpYzr0Ps67raurD9PyPcTQvsq5TX3sGKf1iaX7rogBAqbHrqpnlEdU9gCPvVCYib3ic43PDYr6FicQ/0?wx_fmt=jpeg">
-<meta property="og:updated_time" content="2016-01-12T14:16:59.000Z">
+<meta property="og:description" content="需求分析是产品经理的主要工作内容之一。需求是如何产生的？如何管理需求？如何让开发、设计更好地理解需求、实现需求？如何做好产品需求决策？在这篇短文中，小喵尝试综合目前主流的产品需求分析方法，理顺产品需求分析的思路。
+总的来说，整个产品需求分析主要做三件事：分类（谁的需求，哪类需求）、分析（性价比）、分级（优先级），简称三分法。细致地来看，需求分析分为几个阶段，每个阶段做的事情可以用下图表示：">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RhDe7zQxkChLDWamSDa70vIPGxSCuseg9CRYnJUiaYXMJvtb3wkz9JVjyo3IRuLCLaKn38neryNbvQ/0?wx_fmt=png">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RhDe7zQxkChLDWamSDa70vIAff4KpNglIbhIwBJPn8CvjBQybZCSn4ia8UricxcpicNHiclEbsemDb1Pg/0?wx_fmt=png">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RhDe7zQxkChLDWamSDa70vIfcWNwG6yPibMWpUTNqj3bNR87NE0flu4N4TObTxV4VaacPia0nZfUDTg/0?wx_fmt=png">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RhDe7zQxkChLDWamSDa70vImNwSUibK7Q7PSHtyvufGqicJxiarqricxu8uy8AcrbtBfhGrqpJ4hPL69Q/0?wx_fmt=png">
+<meta property="og:updated_time" content="2016-02-02T06:50:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="计算广告：互联网广告产品逻辑">
-<meta name="twitter:description" content="全文结构
-主线：商业逻辑驱动的在线广告产品和技术的升级。
-辅线：数据的加工、利用与交易。
-一、在线广告综述1. 广告的本质和功能广告的根本目的是广告主通过媒体达到低成本的用户接触。
-广告的功能：brand awareness + direct response（目前互联网广告着重靠效果广告盈利）
-2. 在线广告的类型：1）横幅广告：占据固定版面，动态素材。
-2）文字链广告：一段链接到广告主落地页的">
+<meta name="twitter:title" content="『三分法』搞定产品需求分析">
+<meta name="twitter:description" content="需求分析是产品经理的主要工作内容之一。需求是如何产生的？如何管理需求？如何让开发、设计更好地理解需求、实现需求？如何做好产品需求决策？在这篇短文中，小喵尝试综合目前主流的产品需求分析方法，理顺产品需求分析的思路。
+总的来说，整个产品需求分析主要做三件事：分类（谁的需求，哪类需求）、分析（性价比）、分级（优先级），简称三分法。细致地来看，需求分析分为几个阶段，每个阶段做的事情可以用下图表示：">
   
     <link rel="alternative" href="/atom.xml" title="粽小喵" type="application/atom+xml">
   
@@ -231,11 +212,11 @@ var _hmt = _hmt || [];
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-计算广告：互联网广告产品逻辑" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-『三分法』搞定产品需求分析" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/12/计算广告：互联网广告产品逻辑/" class="article-date">
-      <time datetime="2016-01-12T13:43:58.000Z" itemprop="datePublished">2016-01-12</time>
+      <a href="/2016/02/02/『三分法』搞定产品需求分析/" class="article-date">
+      <time datetime="2016-02-02T06:48:31.000Z" itemprop="datePublished">2016-02-02</time>
 </a>
     </div>
   
@@ -248,7 +229,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      计算广告：互联网广告产品逻辑
+      『三分法』搞定产品需求分析
     </h1>
   
 
@@ -257,13 +238,13 @@ var _hmt = _hmt || [];
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/读书有疑/">读书有疑</a>
+    <a class="article-category-link" href="/categories/大话产品/">大话产品</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/商业/">商业</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/广告/">广告</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品/">产品</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/需求/">需求</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -272,93 +253,28 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>全文结构</strong></p>
-<p>主线：商业逻辑驱动的在线广告产品和技术的升级。</p>
-<p>辅线：数据的加工、利用与交易。</p>
-<h1 id="u4E00_u3001_u5728_u7EBF_u5E7F_u544A_u7EFC_u8FF0"><a href="#u4E00_u3001_u5728_u7EBF_u5E7F_u544A_u7EFC_u8FF0" class="headerlink" title="一、在线广告综述"></a>一、在线广告综述</h1><h4 id="1-__u5E7F_u544A_u7684_u672C_u8D28_u548C_u529F_u80FD"><a href="#1-__u5E7F_u544A_u7684_u672C_u8D28_u548C_u529F_u80FD" class="headerlink" title="1. 广告的本质和功能"></a>1. 广告的本质和功能</h4><p>广告的根本目的是广告主通过媒体达到低成本的用户接触。</p>
-<p>广告的功能：brand awareness + direct response（目前互联网广告着重靠效果广告盈利）</p>
-<h4 id="2-__u5728_u7EBF_u5E7F_u544A_u7684_u7C7B_u578B_uFF1A"><a href="#2-__u5728_u7EBF_u5E7F_u544A_u7684_u7C7B_u578B_uFF1A" class="headerlink" title="2. 在线广告的类型："></a>2. 在线广告的类型：</h4><p>1）横幅广告：占据固定版面，动态素材。</p>
-<p>2）文字链广告：一段链接到广告主落地页的文字，用于展示广告和搜索广告。</p>
-<p>3）富媒体广告：向用户侵入式地投送广告素材，如弹窗。</p>
-<p>4）视频广告：前插片、后插片、暂停等形式。</p>
-<p>5）社交广告：利用社交环境植入广告（原生广告），社交广告希望达到的效果是通过用户的扩散式传播获得更大的影响力和口碑。<strong>内容展现与触发逻辑有高度一致性</strong>。</p>
-<p>6）移动广告：横幅、开屏、插屏、积分墙、推荐墙。</p>
-<p>7）邮件定向营销广告（EDM）。</p>
+        <p>需求分析是产品经理的主要工作内容之一。需求是如何产生的？如何管理需求？如何让开发、设计更好地理解需求、实现需求？如何做好产品需求决策？在这篇短文中，小喵尝试综合目前主流的产品需求分析方法，理顺产品需求分析的思路。</p>
+<p>总的来说，<strong>整个产品需求分析主要做三件事：分类（谁的需求，哪类需求）、分析（性价比）、分级（优先级）</strong>，简称<strong>三分法</strong>。细致地来看，需求分析分为几个阶段，每个阶段做的事情可以用下图表示：</p>
 <a id="more"></a>
-<p>其他泛广告类型：</p>
-<p>1）团购：本质是一种按效果付费的泛广告类型（广告主付出推广费+用户让利）。</p>
-<p>2）游戏联运：推广渠道和游戏开发商分成的发行模式。</p>
-<p>3）固定位导航：按时间付费。</p>
-<p>4）返利购买：</p>
-<h4 id="3-_u5728_u7EBF_u5E7F_u544A_u7684_u53D1_u5C55_u5386_u7A0B"><a href="#3-_u5728_u7EBF_u5E7F_u544A_u7684_u53D1_u5C55_u5386_u7A0B" class="headerlink" title="3.在线广告的发展历程"></a>3.在线广告的发展历程</h4><p>在线广告的发展，定向技术和交易形式的进化是一条主线。</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5I0HRcxAbLQeNctnI52U4cLPUn3PYCz9tlt2sh8NaoBkjqkJ1icRxVOEg/0?wx_fmt=png" alt=""></p>
-<p>在线广告交易形式发展历史</p>
-<h1 id="u4E8C_u3001_u8BA1_u7B97_u5E7F_u544A_u57FA_u7840"><a href="#u4E8C_u3001_u8BA1_u7B97_u5E7F_u544A_u57FA_u7840" class="headerlink" title="二、计算广告基础"></a>二、计算广告基础</h1><p>在线广告中计算到底是为了解决什么问题？解决这些问题需要什么样的业务描述框架？</p>
-<h4 id="1-__u5E7F_u544A_u6548_u679C_u4EA7_u751F_u8FC7_u7A0B"><a href="#1-__u5E7F_u544A_u6548_u679C_u4EA7_u751F_u8FC7_u7A0B" class="headerlink" title="1. 广告效果产生过程"></a>1. 广告效果产生过程</h4><p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5I1vmmD0lciaJJ71DJnvL1IBstlRIgSwbbqiarIqvUb6HiatnBibocw8SOLA/0?wx_fmt=png" alt=""></p>
-<p>广告效果产生过程示意：从点击率到转化率</p>
-<h4 id="2-__u4E92_u8054_u7F51_u5E7F_u544A_u7684_u6280_u672F_u7279_u70B9"><a href="#2-__u4E92_u8054_u7F51_u5E7F_u544A_u7684_u6280_u672F_u7279_u70B9" class="headerlink" title="2. 互联网广告的技术特点"></a>2. 互联网广告的技术特点</h4><p>1）计算和技术导向；</p>
-<p>2）效果的可衡量性；</p>
-<p>3）创意和投放方式的标准化；</p>
-<p>4）媒体概念的多样化；</p>
-<p>5）数据驱动的投放决策。</p>
-<h4 id="3-__u8BA1_u7B97_u5E7F_u544A_u7684_u6838_u5FC3_u95EE_u9898"><a href="#3-__u8BA1_u7B97_u5E7F_u544A_u7684_u6838_u5FC3_u95EE_u9898" class="headerlink" title="3. 计算广告的核心问题"></a>3. 计算广告的核心问题</h4><p>核心问题：为一系列<strong>用户（u）</strong>与<strong>环境（c）</strong>的组合找到最合适的<strong>广告投放策略（a）</strong>以优化整体广告活动的利润。</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5IqXewCE512pdEGuwxmeVEICZWC7cFwrfp62bS3zmT129icDFicd9Albicg/0?wx_fmt=png" alt=""></p>
-<p>在线广告结算方式比较</p>
-<h1 id="u4E09_u3001_u5728_u7EBF_u5E7F_u544A_u4EA7_u54C1_u6982_u89C8"><a href="#u4E09_u3001_u5728_u7EBF_u5E7F_u544A_u4EA7_u54C1_u6982_u89C8" class="headerlink" title="三、在线广告产品概览"></a>三、在线广告产品概览</h1><p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5I06pqt6JUFiaTEhj41eHO3GRQv7xT7iaPve410m394Tz4O8LhbyHSjkOg/0?wx_fmt=png" alt=""></p>
-<p>在线广告产品进化示意图</p>
-<h4 id="1-__u5546_u4E1A_u4EA7_u54C1_u7684_u8BBE_u8BA1_u539F_u5219"><a href="#1-__u5546_u4E1A_u4EA7_u54C1_u7684_u8BBE_u8BA1_u539F_u5219" class="headerlink" title="1. 商业产品的设计原则"></a>1. 商业产品的设计原则</h4><p>1）相对于产品功能，要特别关注产品中的策略部分。</p>
-<p>2）要特别关注数据，让运营和产品优化形成闭环（以数据分析开始，以数据结束）。</p>
-<p>3）便捷性、可用性至上。</p>
-<h4 id="2-__u9700_u6C42_u65B9_u5C42_u7EA7_u7EC4_u7EC7_u4E0E_u63A5_u53E3"><a href="#2-__u9700_u6C42_u65B9_u5C42_u7EA7_u7EC4_u7EC7_u4E0E_u63A5_u53E3" class="headerlink" title="2. 需求方层级组织与接口"></a>2. 需求方层级组织与接口</h4><p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5Ivm9edrDryAjC54b5MB4jAGs15sKfSFdSgiae8kEzCn7LP77WNtsfLBw/0?wx_fmt=png" alt=""></p>
-<p>广告层级关系示意</p>
-<p>1）广告计划：预算、时间范围等基本信息。</p>
-<p>2）广告组：设定受众定向条件和出价。</p>
-<p>3）广告创意</p>
-<p>一般而言，广告平台会提供与界面功能相对应的API接口，以便大的需求方可以通过编程的方式进行批量投放和优化（带宽或操作次数有限制）。</p>
-<h4 id="3-__u4F9B_u7ED9_u65B9_u7BA1_u7406_u63A5_u53E3"><a href="#3-__u4F9B_u7ED9_u65B9_u7BA1_u7406_u63A5_u53E3" class="headerlink" title="3. 供给方管理接口"></a>3. 供给方管理接口</h4><p>分媒体、广告位两个层次。</p>
-<h1 id="u56DB_u3001_u5408_u7EA6_u5E7F_u544A"><a href="#u56DB_u3001_u5408_u7EA6_u5E7F_u544A" class="headerlink" title="四、合约广告"></a>四、合约广告</h1><p>cpt结算：线下广告的商业逻辑照搬到线上，售卖对象为广告位。</p>
-<p>cpm结算：售卖对象为“广告位+人群”</p>
-<p>受众定向方法：</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5IsfAngiaXKM96qzia8LoNv4XNRokiaKd8kibzjMq583NcgDUSyKs4SCKdNw/0?wx_fmt=png" alt=""></p>
-<p>常见受众定向方法一览</p>
-<p>1）地域定向；</p>
-<p>2）人口属性定向：年龄、性别、教育、收入等；</p>
-<p>3）频道定向：适合垂直类媒体，如汽车、母婴等；</p>
-<p>4）上下文定向：通过单次当前页面浏览推断即时兴趣；</p>
-<p>5）行为定向：多次上下文定向融合的结果；</p>
-<p>6）精确位置定向：移动广告；</p>
-<p>7）重定向：某广告主对过去一段时间的访客投放广告以提升效果；</p>
-<p>8）新客推荐定向；</p>
-<p>9）团购：利用价格工具，降低决策门槛；</p>
-<h1 id="u4E94_u3001_u539F_u751F_u5E7F_u544A"><a href="#u4E94_u3001_u539F_u751F_u5E7F_u544A" class="headerlink" title="五、原生广告"></a>五、原生广告</h1><ol>
-<li>原生广告相关产品：</li>
-</ol>
-<p>1）信息流广告：微博、QQ空间等；</p>
-<p>2）搜索广告：内容即广告；</p>
-<ol>
-<li>移动广告的特点：</li>
-</ol>
-<p>1）情景广告的可能性；</p>
-<p>2）大量潜在的本地化广告主。</p>
-<p><span style="font-size: 17px; font-weight: bold; line-height: 1.6;"></span></p>
-<blockquote>
-<p>书目：《计算广告 互联网商业变现的市场与技术》</p>
-<p>作者：刘鹏 王超</p>
-<p>出版社：人民邮电出版社</p>
-</blockquote>
-<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RgJ39xcxbwTRIt0Ye3mEW5IDsFiczGkCE5YS4lIM1UdI44OMAoLtTMSpjbsV79bay6bvgribZYzTsBg/0?wx_fmt=png" alt=""></p>
-<p>计算广告 互联网商业变现的市场与技术（来源：亚马逊）</p>
-<h1 id="u9898_u5916_u8BDD_uFF1A"><a href="#u9898_u5916_u8BDD_uFF1A" class="headerlink" title="题外话："></a>题外话：</h1><p>我们来看看最近被黑得风生水起的百度的广告体系，不得不感慨，贵公司非常会赚钱：</p>
-<p>百度的在线广告分六个部分：凤巢，网盟，问答知心，教育知心，医疗知心，闪投。</p>
-<blockquote>
-<p>凤巢，也就是大搜，就是打开百度首页开始进行搜索的业务，这个是百度营收的最大一部分，从我那里统计得出的数据来看，仅仅凤巢每天从广告主那里获得的利润就有1.2～1.5个亿。非常可怕的赚钱机器。在我去的时候，正在准备做微型凤巢，就是希望做出一个能快速反应出投放广告的效果的实验性质的系统。<br>网盟，就是中小商家投广告的平台，中国网民每天打开小网站弹出的格式各样的小广告，大多数是网盟来提供服务的。</p>
-<p>问答知心，教育知心和医疗知心最开始是希望对主要广告来源进行细分，但是在我走的时候，问答和教育基本上已经不怎么维护了，但是医疗还在进行，我看过一次他们医疗推广的文案和图片，恶心的我晚上都没吃饭。</p>
-<p>闪投是快速投放广告的一个渠道，只要你掏钱，百度会帮你把创意，投放区域，投放时间什么的都搞定。</p>
-<p>——摘自一位曾在百度就职的员工公开发表的文章</p>
-</blockquote>
-<p><span style="font-size: 17px; font-weight: bold; line-height: 1.6;"><br></span></p>
-<p><span style="font-size: 17px; font-weight: bold; line-height: 1.6;"><br></span></p>
-<p><span style="font-size: 17px; font-weight: bold; line-height: 1.6;"><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1Rh2wpYzr0Ps67raurD9PyPcTQvsq5TX3sGKf1iaX7rogBAqbHrqpnlEdU9gCPvVCYib3ic43PDYr6FicQ/0?wx_fmt=jpeg" alt=""><br></span></p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RhDe7zQxkChLDWamSDa70vIPGxSCuseg9CRYnJUiaYXMJvtb3wkz9JVjyo3IRuLCLaKn38neryNbvQ/0?wx_fmt=png" alt=""></p>
+<p>需求思路</p>
+<h2 id="u641C_u96C6_u9700_u6C42"><a href="#u641C_u96C6_u9700_u6C42" class="headerlink" title="搜集需求"></a>搜集需求</h2><p>一个产品在不同阶段需求的来源侧重有所不同。在产品初始阶段，主要的需求由产品经理来策划，需求的类型更多地偏向功能类需求（做加法，），目标是做出一个<strong>可用</strong>的产品；在成熟阶段需要兼听来自不同部门的同事、客户、用户的反馈，需求的类型偏向于运营类、设计类需求，目标是做出一个<strong>易用</strong>甚至<strong>好用</strong>的产品。</p>
+<p>具体的需求挖掘方法有很多，其中业务发展方向是很重要的一环。通过调查问卷、焦点小组的形式我们可以得到用户的反馈，但是不能仅仅『听』用户描述的，而是要把用户的『需要』转化为『需求』，分清楚用户要的是马，还是要宝马。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RhDe7zQxkChLDWamSDa70vIAff4KpNglIbhIwBJPn8CvjBQybZCSn4ia8UricxcpicNHiclEbsemDb1Pg/0?wx_fmt=png" alt=""></p>
+<p>福特与马车</p>
+<h2 id="u5206_u6790_u9700_u6C42"><a href="#u5206_u6790_u9700_u6C42" class="headerlink" title="分析需求"></a>分析需求</h2><p>产品经理应该有一张Excel表格，用来记录日常工作中采集到的需求描述，并将需求分为新增、优化、Bugfix和简单的想法（idea，记录灵感）。注意，这里的灵感是基于用户的心理模型设计，而不是基于业务或者工程模型，更不是基于产品经理自己的想法。</p>
+<p>我们也可以将功能分为功能类、运营类、数据类、设计类需求。同时记录下需求的提出者、提出时间。</p>
+<p>在分析需求是否值得做时，主要关注做了这个需求能够为这个产品带来什么，是用户的增长？还是付费的增加？做这个功能需要花多少人力、时间，投入产出比如何？如果涉及到改版，要注意尊重用户的习惯，因为『位移』对于用户而言，就是『消失』。</p>
+<p>分析完毕后记录下该需求的后续计划是什么（排期、留存、暂缓、合并、搁置），并且给出相应的理由（减少日后纷争）。</p>
+<p>对于一些BUG类的需求，因为是必须解决的，所以不需要进一步的筛选，直接转到需求处理阶段。</p>
+<h2 id="u7B5B_u9009_u9700_u6C42"><a href="#u7B5B_u9009_u9700_u6C42" class="headerlink" title="筛选需求"></a>筛选需求</h2><p>筛选需求和分析需求有时是放在一起进行的。在这个阶段，产品的相关人员会在一起开需求评审会，评审会的目的是筛选出一批需求，进行打包，整理出一个版本并交由上级复合，确认后进入需求处理（开发）阶段。</p>
+<p>在评审的时候可以用四象限定位法来分析某个需求值不值得现在做，对每个需求的紧急度和重要度打分（1-5分）。用不同的小圆点表示不同需求，并以颜色区分其类别。必要时可以乘以权重。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RhDe7zQxkChLDWamSDa70vIfcWNwG6yPibMWpUTNqj3bNR87NE0flu4N4TObTxV4VaacPia0nZfUDTg/0?wx_fmt=png" alt=""></p>
+<p>四象限分析法</p>
+<p>同时还可以用卡诺模型来评估某个功能做了对于用户来说的惊喜度。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RhDe7zQxkChLDWamSDa70vImNwSUibK7Q7PSHtyvufGqicJxiarqricxu8uy8AcrbtBfhGrqpJ4hPL69Q/0?wx_fmt=png" alt=""></p>
+<p>KANO模型扩展图</p>
+<h2 id="u5C0F_u7ED3"><a href="#u5C0F_u7ED3" class="headerlink" title="小结"></a>小结</h2><p>产品需求分析和管理在产品经理的日常工作中占了非常大的比重，要有条不紊地管理需求、分析需求，需要形成自己的一套方法论，并且用自己习惯的方式（Excel，脑图，Word）记录下来，留存备案。这样对于理解一款产品和反省自身的工作很有帮助。</p>
 
       
       
@@ -368,13 +284,13 @@ var _hmt = _hmt || [];
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/01/12/计算广告：互联网广告产品逻辑/">计算广告：互联网广告产品逻辑</a></p>
+        <p><span>本文标题:</span><a href="/2016/02/02/『三分法』搞定产品需求分析/">『三分法』搞定产品需求分析</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 粽小喵 的个人博客">粽小喵</a></p>
-        <p><span>发布时间:</span>2016年01月12日 - 21时43分</p>
-        <p><span>最后更新:</span>2016年01月12日 - 22时16分</p>
+        <p><span>发布时间:</span>2016年02月02日 - 14时48分</p>
+        <p><span>最后更新:</span>2016年02月02日 - 14时50分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/01/12/计算广告：互联网广告产品逻辑/" title="计算广告：互联网广告产品逻辑">http://zongxiaomiao.com/2016/01/12/计算广告：互联网广告产品逻辑/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://zongxiaomiao.com/2016/01/12/计算广告：互联网广告产品逻辑/　　作者: 粽小喵" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/02/02/『三分法』搞定产品需求分析/" title="『三分法』搞定产品需求分析">http://zongxiaomiao.com/2016/02/02/『三分法』搞定产品需求分析/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zongxiaomiao.com/2016/02/02/『三分法』搞定产品需求分析/　　作者: 粽小喵" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -387,16 +303,10 @@ var _hmt = _hmt || [];
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/01/13/大型网站技术架构/">
-                    大型网站技术架构
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/01/11/结网：成为伟大的产品经理前先成为最挑剔的用户/">
-                    结网：成为伟大的产品经理前先成为最挑剔的用户
+                <a href="/2016/01/27/产品经理常用的那些图/">
+                    产品经理常用的那些图
                 </a>
             </div>
         
@@ -407,7 +317,7 @@ var _hmt = _hmt || [];
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u4E00_u3001_u5728_u7EBF_u5E7F_u544A_u7EFC_u8FF0"><span class="toc-number">1.</span> <span class="toc-text">一、在线广告综述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-__u5E7F_u544A_u7684_u672C_u8D28_u548C_u529F_u80FD"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">1. 广告的本质和功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-__u5728_u7EBF_u5E7F_u544A_u7684_u7C7B_u578B_uFF1A"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">2. 在线广告的类型：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-_u5728_u7EBF_u5E7F_u544A_u7684_u53D1_u5C55_u5386_u7A0B"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">3.在线广告的发展历程</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u4E8C_u3001_u8BA1_u7B97_u5E7F_u544A_u57FA_u7840"><span class="toc-number">2.</span> <span class="toc-text">二、计算广告基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-__u5E7F_u544A_u6548_u679C_u4EA7_u751F_u8FC7_u7A0B"><span class="toc-number">2.0.0.1.</span> <span class="toc-text">1. 广告效果产生过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-__u4E92_u8054_u7F51_u5E7F_u544A_u7684_u6280_u672F_u7279_u70B9"><span class="toc-number">2.0.0.2.</span> <span class="toc-text">2. 互联网广告的技术特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-__u8BA1_u7B97_u5E7F_u544A_u7684_u6838_u5FC3_u95EE_u9898"><span class="toc-number">2.0.0.3.</span> <span class="toc-text">3. 计算广告的核心问题</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u4E09_u3001_u5728_u7EBF_u5E7F_u544A_u4EA7_u54C1_u6982_u89C8"><span class="toc-number">3.</span> <span class="toc-text">三、在线广告产品概览</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-__u5546_u4E1A_u4EA7_u54C1_u7684_u8BBE_u8BA1_u539F_u5219"><span class="toc-number">3.0.0.1.</span> <span class="toc-text">1. 商业产品的设计原则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-__u9700_u6C42_u65B9_u5C42_u7EA7_u7EC4_u7EC7_u4E0E_u63A5_u53E3"><span class="toc-number">3.0.0.2.</span> <span class="toc-text">2. 需求方层级组织与接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-__u4F9B_u7ED9_u65B9_u7BA1_u7406_u63A5_u53E3"><span class="toc-number">3.0.0.3.</span> <span class="toc-text">3. 供给方管理接口</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u56DB_u3001_u5408_u7EA6_u5E7F_u544A"><span class="toc-number">4.</span> <span class="toc-text">四、合约广告</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u4E94_u3001_u539F_u751F_u5E7F_u544A"><span class="toc-number">5.</span> <span class="toc-text">五、原生广告</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u9898_u5916_u8BDD_uFF1A"><span class="toc-number">6.</span> <span class="toc-text">题外话：</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u641C_u96C6_u9700_u6C42"><span class="toc-number">1.</span> <span class="toc-text">搜集需求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5206_u6790_u9700_u6C42"><span class="toc-number">2.</span> <span class="toc-text">分析需求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7B5B_u9009_u9700_u6C42"><span class="toc-number">3.</span> <span class="toc-text">筛选需求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5C0F_u7ED3"><span class="toc-number">4.</span> <span class="toc-text">小结</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -471,7 +381,7 @@ var _hmt = _hmt || [];
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/01/12/计算广告：互联网广告产品逻辑/" data-title="计算广告：互联网广告产品逻辑" data-url="http://zongxiaomiao.com/2016/01/12/计算广告：互联网广告产品逻辑/"></div>
+    <div class="ds-thread" data-thread-key="2016/02/02/『三分法』搞定产品需求分析/" data-title="『三分法』搞定产品需求分析" data-url="http://zongxiaomiao.com/2016/02/02/『三分法』搞定产品需求分析/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -496,15 +406,13 @@ var _hmt = _hmt || [];
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/01/13/大型网站技术架构/" title="上一篇: 大型网站技术架构">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/01/11/结网：成为伟大的产品经理前先成为最挑剔的用户/" title="下一篇: 结网：成为伟大的产品经理前先成为最挑剔的用户">
+            <a href="/2016/01/27/产品经理常用的那些图/" title="下一篇: 产品经理常用的那些图">
                 <i class="fa fa-angle-right"></i>
             </a>
         

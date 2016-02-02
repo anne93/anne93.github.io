@@ -4,7 +4,7 @@
   <subtitle><![CDATA[产品经理|专栏作者|猫奴]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zongxiaomiao.com/"/>
-  <updated>2016-01-27T11:51:59.000Z</updated>
+  <updated>2016-02-02T06:50:55.000Z</updated>
   <id>http://zongxiaomiao.com/</id>
   
   <author>
@@ -13,6 +13,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[『三分法』搞定产品需求分析]]></title>
+    <link href="http://zongxiaomiao.com/2016/02/02/%E3%80%8E%E4%B8%89%E5%88%86%E6%B3%95%E3%80%8F%E6%90%9E%E5%AE%9A%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/"/>
+    <id>http://zongxiaomiao.com/2016/02/02/『三分法』搞定产品需求分析/</id>
+    <published>2016-02-02T06:48:31.000Z</published>
+    <updated>2016-02-02T06:50:55.000Z</updated>
+    <content type="html"><![CDATA[<p>需求分析是产品经理的主要工作内容之一。需求是如何产生的？如何管理需求？如何让开发、设计更好地理解需求、实现需求？如何做好产品需求决策？在这篇短文中，小喵尝试综合目前主流的产品需求分析方法，理顺产品需求分析的思路。</p>
+<p>总的来说，<strong>整个产品需求分析主要做三件事：分类（谁的需求，哪类需求）、分析（性价比）、分级（优先级）</strong>，简称<strong>三分法</strong>。细致地来看，需求分析分为几个阶段，每个阶段做的事情可以用下图表示：</p>
+<a id="more"></a>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RhDe7zQxkChLDWamSDa70vIPGxSCuseg9CRYnJUiaYXMJvtb3wkz9JVjyo3IRuLCLaKn38neryNbvQ/0?wx_fmt=png" alt=""></p>
+<p>需求思路</p>
+<h2 id="u641C_u96C6_u9700_u6C42"><a href="#u641C_u96C6_u9700_u6C42" class="headerlink" title="搜集需求"></a>搜集需求</h2><p>一个产品在不同阶段需求的来源侧重有所不同。在产品初始阶段，主要的需求由产品经理来策划，需求的类型更多地偏向功能类需求（做加法，），目标是做出一个<strong>可用</strong>的产品；在成熟阶段需要兼听来自不同部门的同事、客户、用户的反馈，需求的类型偏向于运营类、设计类需求，目标是做出一个<strong>易用</strong>甚至<strong>好用</strong>的产品。</p>
+<p>具体的需求挖掘方法有很多，其中业务发展方向是很重要的一环。通过调查问卷、焦点小组的形式我们可以得到用户的反馈，但是不能仅仅『听』用户描述的，而是要把用户的『需要』转化为『需求』，分清楚用户要的是马，还是要宝马。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RhDe7zQxkChLDWamSDa70vIAff4KpNglIbhIwBJPn8CvjBQybZCSn4ia8UricxcpicNHiclEbsemDb1Pg/0?wx_fmt=png" alt=""></p>
+<p>福特与马车</p>
+<h2 id="u5206_u6790_u9700_u6C42"><a href="#u5206_u6790_u9700_u6C42" class="headerlink" title="分析需求"></a>分析需求</h2><p>产品经理应该有一张Excel表格，用来记录日常工作中采集到的需求描述，并将需求分为新增、优化、Bugfix和简单的想法（idea，记录灵感）。注意，这里的灵感是基于用户的心理模型设计，而不是基于业务或者工程模型，更不是基于产品经理自己的想法。</p>
+<p>我们也可以将功能分为功能类、运营类、数据类、设计类需求。同时记录下需求的提出者、提出时间。</p>
+<p>在分析需求是否值得做时，主要关注做了这个需求能够为这个产品带来什么，是用户的增长？还是付费的增加？做这个功能需要花多少人力、时间，投入产出比如何？如果涉及到改版，要注意尊重用户的习惯，因为『位移』对于用户而言，就是『消失』。</p>
+<p>分析完毕后记录下该需求的后续计划是什么（排期、留存、暂缓、合并、搁置），并且给出相应的理由（减少日后纷争）。</p>
+<p>对于一些BUG类的需求，因为是必须解决的，所以不需要进一步的筛选，直接转到需求处理阶段。</p>
+<h2 id="u7B5B_u9009_u9700_u6C42"><a href="#u7B5B_u9009_u9700_u6C42" class="headerlink" title="筛选需求"></a>筛选需求</h2><p>筛选需求和分析需求有时是放在一起进行的。在这个阶段，产品的相关人员会在一起开需求评审会，评审会的目的是筛选出一批需求，进行打包，整理出一个版本并交由上级复合，确认后进入需求处理（开发）阶段。</p>
+<p>在评审的时候可以用四象限定位法来分析某个需求值不值得现在做，对每个需求的紧急度和重要度打分（1-5分）。用不同的小圆点表示不同需求，并以颜色区分其类别。必要时可以乘以权重。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RhDe7zQxkChLDWamSDa70vIfcWNwG6yPibMWpUTNqj3bNR87NE0flu4N4TObTxV4VaacPia0nZfUDTg/0?wx_fmt=png" alt=""></p>
+<p>四象限分析法</p>
+<p>同时还可以用卡诺模型来评估某个功能做了对于用户来说的惊喜度。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/aqQVcYsU1RhDe7zQxkChLDWamSDa70vImNwSUibK7Q7PSHtyvufGqicJxiarqricxu8uy8AcrbtBfhGrqpJ4hPL69Q/0?wx_fmt=png" alt=""></p>
+<p>KANO模型扩展图</p>
+<h2 id="u5C0F_u7ED3"><a href="#u5C0F_u7ED3" class="headerlink" title="小结"></a>小结</h2><p>产品需求分析和管理在产品经理的日常工作中占了非常大的比重，要有条不紊地管理需求、分析需求，需要形成自己的一套方法论，并且用自己习惯的方式（Excel，脑图，Word）记录下来，留存备案。这样对于理解一款产品和反省自身的工作很有帮助。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>需求分析是产品经理的主要工作内容之一。需求是如何产生的？如何管理需求？如何让开发、设计更好地理解需求、实现需求？如何做好产品需求决策？在这篇短文中，小喵尝试综合目前主流的产品需求分析方法，理顺产品需求分析的思路。</p>
+<p>总的来说，<strong>整个产品需求分析主要做三件事：分类（谁的需求，哪类需求）、分析（性价比）、分级（优先级）</strong>，简称<strong>三分法</strong>。细致地来看，需求分析分为几个阶段，每个阶段做的事情可以用下图表示：</p>]]>
+    
+    </summary>
+    
+      <category term="产品" scheme="http://zongxiaomiao.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="需求" scheme="http://zongxiaomiao.com/tags/%E9%9C%80%E6%B1%82/"/>
+    
+      <category term="大话产品" scheme="http://zongxiaomiao.com/categories/%E5%A4%A7%E8%AF%9D%E4%BA%A7%E5%93%81/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[产品经理常用的那些图]]></title>
@@ -2061,101 +2104,6 @@
       <category term="原型" scheme="http://zongxiaomiao.com/tags/%E5%8E%9F%E5%9E%8B/"/>
     
       <category term="大话产品" scheme="http://zongxiaomiao.com/categories/%E5%A4%A7%E8%AF%9D%E4%BA%A7%E5%93%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[从零开始学Sketch——进阶篇]]></title>
-    <link href="http://zongxiaomiao.com/2016/01/08/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6Sketch%E2%80%94%E2%80%94%E8%BF%9B%E9%98%B6%E7%AF%87/"/>
-    <id>http://zongxiaomiao.com/2016/01/08/从零开始学Sketch——进阶篇/</id>
-    <published>2016-01-08T13:33:22.000Z</published>
-    <updated>2016-01-09T06:17:42.000Z</updated>
-    <content type="html"><![CDATA[<p>Sketch是一款矢量绘图应用，而矢量绘图无疑是目前进行网页、图标以及界面设计的最好方式。</p>
-<p>在初识了Sketch的界面布局和基础工具之后，我们就可以开始进入高阶的Sketch工具篇学习了。这篇文章主要会涉及Sketch模板、插件的使用，以及Sketch在具体使用过程中的一些技巧分享。</p>
-<p>如果你曾接触过PS、AI、Axure等软件，那么接下来的内容你应该不会陌生，因为所有的设计软件学习的路径都是相似的，都是从认识基本功能框架到外部资源整合运用，最终形成个人风格的一个过程。</p>
-<a id="more"></a>
-<h2 id="Sketch_u6A21_u677F"><a href="#Sketch_u6A21_u677F" class="headerlink" title="Sketch模板"></a>Sketch模板</h2><h3 id="Sketch_u81EA_u5E26_u6A21_u677F"><a href="#Sketch_u81EA_u5E26_u6A21_u677F" class="headerlink" title="Sketch自带模板"></a>Sketch自带模板</h3><p>Sketch自带模板也就是Sketch在file菜单栏下的template。</p>
-<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-1f47b58bb3fb2cbf.png" alt="1209576-1f47b58bb3fb2cbf"></p>
-<p>进入Template</p>
-<p>在使用的过程中，我们只需要将所需的模板<strong>复制</strong>到我们的Artboard中就好了。需要注意的是，在调整大小时需要固定长款比例。</p>
-<h3 id="Sketch_u81EA_u5B9A_u4E49_u6A21_u677F"><a href="#Sketch_u81EA_u5B9A_u4E49_u6A21_u677F" class="headerlink" title="Sketch自定义模板"></a>Sketch自定义模板</h3><p>在Sketchappsources网站中，有许多Sketch的模板可以下载，我们可以将这些控件导入到Sketch中。</p>
-<p>亦或是在工作中，团队经常用到一些固定的组件，为避免重复劳动，我们可以把它们转存为模板。这个复用的思维跟Axure中的自定义母版是一样的。</p>
-<p>具体的步骤如下：</p>
-<p>Step 1：下载或自建一个Sketch文档，内含需要导入的模板；</p>
-<p>Step 2：点击File下的“Save as template”；</p>
-<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-5fd96b100396d2d5.png" alt="1209576-5fd96b100396d2d5"></p>
-<p>所有的Sketch文件都可以直接Save as template</p>
-<p>Step 3：给你的自定义模板命名；</p>
-<p>Step 4：点击模板菜单栏目录时就会出现你所自定义的模板了。</p>
-<p>要运用好模板，除了平时多加积累素材之外，还需要注意模板与模板之间的独立不重复和规格的统一，比如iPhone手机顶端信号栏的宽度这样的细节。</p>
-<h2 id="Sketch_u63D2_u4EF6"><a href="#Sketch_u63D2_u4EF6" class="headerlink" title="Sketch插件"></a>Sketch插件</h2><p>插件是设计软件必备的神器，无论是PS还是AI都有强大的插件库，当然Sketch也是如此。</p>
-<h3 id="u5B89_u88C5_u63D2_u4EF6_u7684_u65B9_u6CD5"><a href="#u5B89_u88C5_u63D2_u4EF6_u7684_u65B9_u6CD5" class="headerlink" title="安装插件的方法"></a>安装插件的方法</h3><p>Sketch的插件多是技术大牛写的，获取的方法有三个：</p>
-<p>方法一：下载Sketch Toolbox这个工具，在里面之间下载你所需要的插件库，然后在Sketch工具栏中点击Plugins就可以看到你下载的插件库了；</p>
-<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-f10894f2ac4a2f5b.png" alt="1209576-f10894f2ac4a2f5b"></p>
-<p>Sketch Toolbox</p>
-<p>方法二：在Github上搜索自己需要的插件名，然后直接打包下载就好了。</p>
-<p>方法三：在Sketch的Plugin菜单下点击manage plugins，在弹出的对话框中点击“get plugins”。</p>
-<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-fe6547134a19f17c.png" alt="1209576-fe6547134a19f17c"></p>
-<p>点击Get plugins，会跳转到sketch的官网插件库</p>
-<h3 id="u63A8_u8350_u51E0_u4E2A_u8D85_u70AB_u63D2_u4EF6"><a href="#u63A8_u8350_u51E0_u4E2A_u8D85_u70AB_u63D2_u4EF6" class="headerlink" title="推荐几个超炫插件"></a>推荐几个超炫插件</h3><p>关于插件，建议一开始的时候不要安装太多。推荐以下几个插件库，可以满足日常工作需求：</p>
-<p><strong>Content Generator：</strong>可以自动填充类型图片、姓名、联系方式等信息，避免手动输入带来的不便；</p>
-<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-23421d9b0b977a15.gif" alt="1209576-23421d9b0b977a15"></p>
-<p>自动填充用户头像.gif</p>
-<p><strong>Rename it：</strong></p>
-<p>这个插件的用途是批量修改图形名称。</p>
-<p>比如上面那个动图，我们可以全选所有的矩形，然后点击rename it插件，将其命名为“%N”，即可得到一串倒序排列的矩形命名。<br>主要的规则有：</p>
-<ul>
-<li>输入 “%N” 将对象编号；</li>
-<li>输入“+”和“button”可以将所有选中的对象名变为以button结尾的命名；</li>
-<li>输入新的图层名时，使用 “_” 号代替原图层名。如：big _button，表示的是保留原命名，并在一头一尾加入big和button；</li>
-<li>输入 “%w” 或者 “%h” 来添加图层的长和宽。<br><strong>Sketch Measure插件：</strong></li>
-</ul>
-<p>这个插件可以添加图形尺寸、距离、颜色和文本属性的标注，并会自动把附注编组，方便你自己修改和管理。</p>
-<p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-1430738a8c2d982a.png" alt="1209576-1430738a8c2d982a"></p>
-<p>图形的长宽标注</p>
-<p>运用Sketch Measure插件可以在团队合作的时候，可以更方便的把设计稿交付给相关同事。</p>
-<p><strong>Sketch Notebook：</strong></p>
-<p>给一个对象添加注释、评论，可以更加自由地对设计稿进行标注和说明。</p>
-<p><strong>Sketch Color Swatches：</strong></p>
-<p>这个插件便于我们在设计初期参考一些别的网站基础配色。</p>
-<p>配合Sip这款取色工具，我们可以直接获得我们想要的网站配色。以简书为例：</p>
-<ul>
-<li><p>首先，吸取5个简书官网的主色色值；<br><img src="http://image.woshipm.com/wp-files/2016/01/1209576-851c2016319479d5.png" alt="1209576-851c2016319479d5"></p>
-</li>
-<li><p>然后，在Swatch插件中输入色值编号，得到色板。<br><img src="http://image.woshipm.com/wp-files/2016/01/1209576-de6b317368e0133b.png" alt="1209576-de6b317368e0133b"></p>
-</li>
-</ul>
-<p>Color Swatches: 输入色值，得到色板</p>
-<ul>
-<li>Export as Flinto Document: 这个插件可以将我们的设计稿转换为Flinto文件形式，以便在Flinto这个软件中完成动态交互设计，因为Sketch是不提供动态交互功能的。<br>当然，现在也越来越流行Sketch+Keynote的结合了，说白了就是把Sketch里设计好的帧画面和元件拖拽到Keynote里，然后用Keynote构造原型。这也是一个不错的选择哦！</li>
-</ul>
-<h2 id="Sketch_Mirror"><a href="#Sketch_Mirror" class="headerlink" title="Sketch Mirror"></a>Sketch Mirror</h2><p>要说Sketch脱颖而出的理由，很重要的一点就是它满足了实时在手机端查看的功能，这是Axure所不具备的。</p>
-<p>在手机上下载Sketch Mirror这款APP，然后在Mac端工具栏中点击Sketch mirror，只要两台设备在同一wifi环境下，就可以同步查看了。</p>
-<h3 id="u4F7F_u7528Sketch_u7684_u5FEB_u6377_u952E"><a href="#u4F7F_u7528Sketch_u7684_u5FEB_u6377_u952E" class="headerlink" title="使用Sketch的快捷键"></a>使用Sketch的快捷键</h3><p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-a122a31254cc5260-3.png" alt="1209576-a122a31254cc5260-3"></p>
-<p>快捷键一览表，感谢图片作者：康上明学</p>
-<h2 id="u5B9E_u6218_uFF1A_u5236_u4F5C_u56FE_u7247_u5206_u4EABAPP-_u4E2A_u4EBA_u5C55_u793A_u9875"><a href="#u5B9E_u6218_uFF1A_u5236_u4F5C_u56FE_u7247_u5206_u4EABAPP-_u4E2A_u4EBA_u5C55_u793A_u9875" class="headerlink" title="实战：制作图片分享APP-个人展示页"></a>实战：制作图片分享APP-个人展示页</h2><p><img src="http://image.woshipm.com/wp-files/2016/01/1209576-e605cc5124525b5e.png" alt="1209576-e605cc5124525b5e"></p>
-<p>运用模板和插件制作图片分享APP个人展示页</p>
-<p>制作的步骤如下：</p>
-<ul>
-<li>画布设置与布局：选择iPhone 5作为Artboard，将画布分割为上下两部分，用矩形分割，将元素分组；</li>
-<li>打开template，选择iOS design UI模板，负责头部信号栏（白色）置于画布顶端，并调整大小；</li>
-<li>将图片展示部分用20个小正方形分割，并用content generator插件填充自定义为“views”的风景图片，同时设置将头像和封面照；</li>
-<li>输入文字，调整细节。<br>关于Sketch的进阶篇就介绍到这里。大家在平时的生活中可以多思考一下优秀APP的页面如果让你来做，你的思路是怎样的，然后去实践、运用，遇到不懂的地方就上论坛去问；同时，养成复盘每一个作品制作过程的习惯，想一想哪些地方可以优化，哪怕是很小的细节改善，都能带来很大的效率提升。</li>
-</ul>
-<p>一起进步吧！</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Sketch是一款矢量绘图应用，而矢量绘图无疑是目前进行网页、图标以及界面设计的最好方式。</p>
-<p>在初识了Sketch的界面布局和基础工具之后，我们就可以开始进入高阶的Sketch工具篇学习了。这篇文章主要会涉及Sketch模板、插件的使用，以及Sketch在具体使用过程中的一些技巧分享。</p>
-<p>如果你曾接触过PS、AI、Axure等软件，那么接下来的内容你应该不会陌生，因为所有的设计软件学习的路径都是相似的，都是从认识基本功能框架到外部资源整合运用，最终形成个人风格的一个过程。</p>]]>
-    
-    </summary>
-    
-      <category term="Sketch" scheme="http://zongxiaomiao.com/tags/Sketch/"/>
-    
-      <category term="原型" scheme="http://zongxiaomiao.com/tags/%E5%8E%9F%E5%9E%8B/"/>
-    
-      <category term="交互设计" scheme="http://zongxiaomiao.com/categories/%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   
